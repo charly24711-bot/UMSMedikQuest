@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedikQuest - RPG Clínico UPMS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="rpg-cabinet">
+    
+    <!-- ========================================================
+         PANTALLA 1: FACHADA DE LA FACULTAD (TITLE SCREEN)
+         ======================================================== -->
+    <div id="screenTitle" class="title-screen">
+      <div class="title-badge-wrap">
+        <span class="title-badge">🏛️ UNIVERSIDAD PRIVADA MARÍA SERRANA • FILIAL CDE</span>
+      </div>
+
+      <div class="title-hero">
+        <h1>MEDIKQUEST</h1>
+        <p>
+          Simulador de Criterio Clínico y Razonamiento Médico.<br>
+          Rotación Integral de 1° Año de Medicina en el Campus Central.
+        </p>
+        <button class="btn-start" onclick="startGameFromFacade()">
+          ▶ INGRESAR A LA FACULTAD
+        </button>
+      </div>
+
+      <div style="text-align: center;">
+        <span style="font-family: var(--font-retro); font-size: 0.55rem; color: #cbd5e1; text-shadow: 1px 1px 2px #000;">
+          PRESIONÁ EL BOTÓN PARA INICIAR LA ROTACIÓN
+        </span>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         PANTALLA 2: JUEGO / ROTACIÓN CLÍNICA (GAMEPLAY)
+         ======================================================== -->
+    <div id="screenGame" style="display: none; flex-direction: column; width: 100%;">
+      <!-- Header HUD -->
+      <header class="rpg-header">
+        <div class="hud-title">
+          <span>🩺 MEDIKQUEST: 1° AÑO</span>
+        </div>
+        <div class="hud-stats">
+          <div class="stat-item">
+            <span class="stat-label">ENERGÍA:</span>
+            <span class="stat-val-hp" id="hpText">❤️❤️❤️</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">XP:</span>
+            <span class="stat-val-xp" id="xpText">0000</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Escenario Clínico y Monitores -->
+      <main class="rpg-stage">
+        <div class="stage-backdrop">
+          <div class="stage-monitor"><div class="ecg-line"></div></div>
+          <div class="stage-monitor"><div class="ecg-line" style="background:#38bdf8;"></div></div>
+        </div>
+
+        <!-- Estudiante de Medicina (Jugador) -->
+        <div class="actor">
+          <span class="actor-tag">ESTUDIANTE</span>
+          <div class="student-sprite">👩‍⚕️</div>
+        </div>
+
+        <!-- Cama de Paciente -->
+        <div class="actor">
+          <span class="actor-tag" style="border-color:#ef4444; color:#ef4444;">PACIENTE DE GUARDIA</span>
+          <div class="patient-bed">
+            <div class="bed-pillow"></div>
+            <div class="patient-sprite">🛌</div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Cuadro de Diálogo del Profesor Mentor -->
+      <section class="dialog-box">
+        <div class="prof-avatar-frame">
+          <img id="profImg" src="dra_viviana_ruiz_fiel.jpg" alt="Profesor Mentor">
+        </div>
+        <div class="dialog-content">
+          <div>
+            <span class="prof-name" id="profName">DRA. NIDIA VIVIANA RUIZ</span>
+            <span class="case-subject-badge" id="subjectBadge">COORDINACIÓN ACADÉMICA</span>
+          </div>
+          <p class="prof-speech" id="profSpeech">
+            Cargando...
+          </p>
+        </div>
+      </section>
+
+      <!-- Opciones de Decisión Clínica -->
+      <section class="action-grid" id="optionsContainer">
+        <!-- Generado dinámicamente -->
+      </section>
+
+      <!-- Barra de herramientas inferior -->
+      <footer class="stage-footer">
+        <button class="btn-tool" onclick="showHint()">💡 PISTA DEL PROFESOR</button>
+        <button class="btn-tool" onclick="showTitleScreen()">🏛️ VOLVER A LA FACHADA</button>
+      </footer>
+    </div>
+
+  </div>
+
+  <script src="preguntas.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
