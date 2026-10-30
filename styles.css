@@ -126,6 +126,24 @@ body {
   transition: all 0.5s ease;
 }
 
+.student-pixel-art-sprite {
+  width: 54px;
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.85));
+  animation: walk-bob 0.5s infinite alternate ease-in-out;
+}
+
+.stage-student-pixel {
+  width: 52px;
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
+  animation: bob 1.4s ease-in-out infinite alternate;
+}
+
 .student-character {
   font-size: 48px;
   filter: drop-shadow(0 6px 8px rgba(0,0,0,0.8));
