@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;600;800;900&display=swap');
 
 :root {
-  --bg-dark: #070b14;
-  --panel-bg: rgba(13, 20, 36, 0.95);
+  --bg-dark: #050811;
+  --panel-bg: rgba(11, 17, 32, 0.96);
   --border-neon: #38bdf8;
   --gold: #fbbf24;
   --green: #10b981;
@@ -29,7 +29,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  padding: 14px;
   background-image: 
     radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
     radial-gradient(circle at 80% 90%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
@@ -38,24 +38,24 @@ body {
 /* Arcade Cabinet Frame */
 .rpg-cabinet {
   width: 100%;
-  max-width: 860px;
+  max-width: 880px;
   background: var(--panel-bg);
   border: 3px solid #1e293b;
   border-radius: 20px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(56, 189, 248, 0.2);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), 0 0 25px rgba(56, 189, 248, 0.25);
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-/* Retro Scanlines Effect */
+/* Retro Scanlines */
 .rpg-cabinet::after {
   content: " ";
   display: block;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.22) 50%);
   background-size: 100% 4px;
   z-index: 100;
   pointer-events: none;
@@ -63,12 +63,114 @@ body {
 }
 
 /* ========================================================
-   PANTALLA 1: FACHADA DE LA FACULTAD (TITLE SCREEN)
+   ESCENA 0: INTRO CINEMÁTICA (LLEGADA A LA FACULTAD)
+   ======================================================== */
+.intro-cinematic {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  background-image: url('fachada_upms_pixel.jpg');
+  background-size: cover;
+  background-position: center top;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Letterbox Bars */
+.cinema-bar-top, .cinema-bar-bottom {
+  height: 48px;
+  background: #000000;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.cinema-title {
+  font-family: var(--font-retro);
+  font-size: 0.6rem;
+  color: #64748b;
+  letter-spacing: 1px;
+}
+
+.btn-skip {
+  background: transparent;
+  border: 1px solid #475569;
+  color: #94a3b8;
+  font-family: var(--font-retro);
+  font-size: 0.55rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-skip:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* Walking Student Sprite Animation across facade */
+.walking-student-wrapper {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+  transition: all 0.5s ease;
+}
+
+.student-character {
+  font-size: 48px;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.8));
+  animation: walk-bob 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes walk-bob {
+  0% { transform: translateY(0) rotate(-2deg); }
+  100% { transform: translateY(-8px) rotate(2deg); }
+}
+
+/* Cinematic Subtitle Box */
+.cinema-subtitle-box {
+  background: rgba(3, 7, 18, 0.92);
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin: 0 20px 14px;
+  z-index: 15;
+  box-shadow: 0 0 20px rgba(0,0,0,0.9), 0 0 10px rgba(251, 191, 36, 0.2);
+  min-height: 75px;
+}
+
+.cinema-subtitle-label {
+  font-family: var(--font-retro);
+  font-size: 0.55rem;
+  color: var(--gold);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.cinema-subtitle-text {
+  font-family: var(--font-retro);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* ========================================================
+   ESCENA 1: MENÚ DE TÍTULO PRINCIPAL
    ======================================================== */
 .title-screen {
   position: relative;
   width: 100%;
-  height: 580px;
+  height: 560px;
   background-image: url('fachada_upms_pixel.jpg');
   background-size: cover;
   background-position: center top;
@@ -85,33 +187,33 @@ body {
 
 .title-badge {
   display: inline-block;
-  background: rgba(0, 50, 25, 0.9);
+  background: rgba(0, 50, 25, 0.92);
   border: 2px solid #00e676;
   color: #a7f3d0;
   font-family: var(--font-retro);
   font-size: 0.65rem;
   letter-spacing: 1px;
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: 999px;
   box-shadow: 0 0 15px rgba(0, 230, 118, 0.4);
 }
 
 .title-hero {
   text-align: center;
-  background: rgba(7, 11, 20, 0.85);
+  background: rgba(7, 11, 20, 0.88);
   backdrop-filter: blur(8px);
-  padding: 24px;
+  padding: 26px 20px;
   border-radius: 16px;
   border: 2px solid rgba(56, 189, 248, 0.3);
   margin: 0 auto;
-  max-width: 650px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  max-width: 660px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.85);
 }
 
 .title-hero h1 {
   font-family: var(--font-retro);
-  font-size: 1.6rem;
-  line-height: 1.4;
+  font-size: 1.7rem;
+  line-height: 1.35;
   color: var(--gold);
   text-shadow: 0 0 12px rgba(251, 191, 36, 0.6), 3px 3px 0 #000;
   margin-bottom: 12px;
@@ -121,7 +223,7 @@ body {
   font-size: 0.95rem;
   color: var(--text-main);
   line-height: 1.5;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .btn-start {
@@ -129,17 +231,20 @@ body {
   border: 3px solid #ffffff;
   color: #050a14;
   font-family: var(--font-retro);
-  font-size: 0.9rem;
-  padding: 16px 28px;
+  font-size: 0.85rem;
+  padding: 16px 26px;
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 6px 20px rgba(0, 230, 118, 0.5);
   animation: pulse-btn 1.5s infinite;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .btn-start:hover {
-  transform: translateY(-2px) scale(1.03);
+  transform: translateY(-2px) scale(1.02);
   box-shadow: 0 8px 25px rgba(0, 230, 118, 0.7);
 }
 
@@ -149,7 +254,36 @@ body {
 }
 
 /* ========================================================
-   HEADER HUD (ESTADÍSTICAS DEL ALUMNO)
+   ESCENA 2: RECEPCIÓN Y MESA DE ENTRADA
+   ======================================================== */
+.reception-screen {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  background-image: url('recepcion_upms_pixel.jpg');
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.reception-badge {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--font-retro);
+  font-size: 0.65rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+
+/* ========================================================
+   ESCENA 3: HEADER HUD (ESTADÍSTICAS DEL ALUMNO)
    ======================================================== */
 .rpg-header {
   background: #090e1a;
@@ -320,7 +454,7 @@ body {
   width: 110px;
   height: 110px;
   flex-shrink: 0;
-  background: #000;
+  background: #201b2c;
   border: 3px solid var(--border-neon);
   border-radius: 12px;
   overflow: hidden;
@@ -364,6 +498,7 @@ body {
   font-size: 0.95rem;
   line-height: 1.5;
   color: var(--text-main);
+  white-space: pre-line;
 }
 
 /* ========================================================
@@ -441,7 +576,7 @@ body {
   flex-shrink: 0;
 }
 
-/* Footer / Action Toolbar */
+/* Footer Toolbar */
 .stage-footer {
   padding: 10px 16px 14px;
   display: flex;

@@ -61,18 +61,53 @@ const BANCO_UPMS_PRIMER_ANHO = {
             { texto: "Acidosis Respiratoria pura por retención de CO2", correcta: false, feedback: "Incorrecto. La pCO2 está en 28 mmHg (baja por compensación, no retenida)." },
             { texto: "Alcalosis Metabólica descompensada", correcta: false, feedback: "Incorrecto. El bicarbonato está consumido (11 mEq/L), típico de exceso de ácidos fijos." }
           ]
-        },
+        }
+      ]
+    },
+    {
+      id: "laboratorios",
+      nombre: "Gestión de Laboratorio y Bioseguridad (MED-01-03)",
+      docente: {
+        nombre: "Lic. Patricia Gómez (Encargada de Laboratorios)",
+        avatar: "patricia_gomez_pixel.jpg",
+        cargo: "Coordinación de Laboratorios de Simulación y Ciencias"
+      },
+      casos: [
         {
-          id: "bioq-02",
-          unidad: "Unidad VIII: Fase Preanalítica de Laboratorio",
-          paciente: "El interno extrae sangre venosa para perfil lipídico y enzimas cardíacas. Utiliza una aguja de calibre muy fino (25G) aspirando con excesiva fuerza. El laboratorio rechaza el tubo porque el suero está teñido de color rojizo.",
-          pregunta: "¿Qué error preanalítico invalidó la muestra y qué electrolito intracelular se elevará falsamente?",
-          pistaDocente: "La rotura mecánica de los glóbulos rojos libera grandes cantidades del catión más abundante del LIC...",
+          id: "lab-01",
+          unidad: "Unidad VIII: Bioseguridad y Fase Preanalítica",
+          paciente: "Para la práctica de bioquímica, un estudiante extrae sangre en tubo sin anticoagulante para dosar electrolitos, pero agita bruscamente el tubo y lo deja al sol. El suero resultante queda con coloración rojiza intensa por hemólisis.",
+          pregunta: "Como encargada de laboratorio, ¿por qué Patricia debe rechazar la muestra y qué ion estará falsamente elevado?",
+          pistaDocente: "El potasio se encuentra en concentraciones 30 veces mayores dentro del glóbulo rojo que en el plasma...",
           opciones: [
-            { texto: "Hemólisis de la muestra con falsa elevación de Potasio (K+)", correcta: true, feedback: "¡Exacto! La hemólisis libera la alta concentración de potasio intracelular (~150 mEq/L) al suero, falseando el ionograma." },
-            { texto: "Muestra lipémica con elevación de Sodio (Na+)", correcta: false, feedback: "Incorrecto. El sodio es extracelular y la lipemia da aspecto lechoso, no rojizo." },
-            { texto: "Coagulación precoz por exceso de EDTA", correcta: false, feedback: "Incorrecto. El EDTA quelaría el calcio pero no generaría suero rojizo." },
-            { texto: "Ictericia preanalítica por degradación de glucosa", correcta: false, feedback: "Incorrecto. La ictericia tiñe de amarillo anaranjado por bilirrubina." }
+            { texto: "Muestra hemolizada con falsa elevación de Potasio (K+)", correcta: true, feedback: "¡Exacto! La hemólisis libera el K+ intracelular, arruinando la confiabilidad del ionograma." },
+            { texto: "Muestra lipémica con alteración de sodio", correcta: false, feedback: "Incorrecto. El aspecto rojizo es por hemoglobina libre, no por lípidos." },
+            { texto: "Muestra coagulada con aumento de cloro", correcta: false, feedback: "Incorrecto. Los tubos de suero deben coagular, el problema fue la lisis celular." },
+            { texto: "Muestra ictérica por bilirrubina", correcta: false, feedback: "Incorrecto. La ictericia da un tono amarillo verdoso." }
+          ]
+        }
+      ]
+    },
+    {
+      id: "ciclos",
+      nombre: "Ciclos de Formación y Medicina Interna",
+      docente: {
+        nombre: "Dr. Ángel Adrián Gómez Rosso",
+        avatar: "dr_angel_pixel.jpg",
+        cargo: "Coordinación de Ciclos de Formación"
+      },
+      casos: [
+        {
+          id: "ciclo-01",
+          unidad: "Unidad V: Relación Médico-Paciente y Triaje",
+          paciente: "En el área de urgencias de la facultad ingresan simultáneamente dos pacientes: uno con sospecha de luxación anterior de hombro con mucho dolor pero hemodinámicamente estable, y otro con dolor torácico opresivo, diaforesis y disnea.",
+          pregunta: "¿Cuál es el criterio clínico y bioético de priorización (triaje) que debe aplicar el médico?",
+          pistaDocente: "Evalúa el riesgo de compromiso vital inmediato frente al dolor articular...",
+          opciones: [
+            { texto: "Priorizar al paciente con dolor torácico para descartar síndrome coronario agudo de riesgo vital", correcta: true, feedback: "¡Criterio médico impecable! El dolor torácico con disnea representa riesgo de paro, mientras que la luxación es urgente pero no compromete la vida en minutos." },
+            { texto: "Atender primero al que llegó antes por orden de llegada estricto", correcta: false, feedback: "Incorrecto. El triaje médico se basa en riesgo vital y gravedad, no en turno administrativo." },
+            { texto: "Atender a la luxación porque grita de dolor", correcta: false, feedback: "Incorrecto. La intensidad subjetiva del dolor no siempre correlaciona con riesgo vital." },
+            { texto: "Derivar a ambos a otro hospital", correcta: false, feedback: "Incorrecto. El médico tiene la obligación ética y legal de estabilizar en urgencias." }
           ]
         }
       ]
@@ -83,20 +118,20 @@ const BANCO_UPMS_PRIMER_ANHO = {
       docente: {
         nombre: "Dra. Nidia Viviana Ruiz (Coordinadora Académica)",
         avatar: "dra_viviana_ruiz_fiel.jpg",
-        cargo: "Coordinación Académica y Medicina Social"
+        cargo: "Coordinación General Académica"
       },
       casos: [
         {
           id: "antrop-01",
-          unidad: "Unidad III: Interculturalidad en Salud y Pluralismo Médico",
-          paciente: "Madre de una comunidad rural acude con su hijo de 3 años deshidratado. Manifiesta que el niño tiene 'Ojéa / Mal de Ojo' y que antes de venir al hospital lo llevó al curandero para que le rece y le frote ruda. El médico de guardia se burla de su creencia y la madre se niega a internar al niño.",
-          pregunta: "Desde la perspectiva de la competencia cultural y la relación médico-paciente (Modelo Deliberativo), ¿cuál debió ser la conducta profesional?",
-          pistaDocente: "Recuerda que la interculturalidad no es imponer la biomedicina, sino construir un puente de diálogo respetando los saberes populares...",
+          unidad: "Unidad III: Interculturalidad y Modelo Biopsicosocial",
+          paciente: "Una madre acude con su niño deshidratado asegurando que tiene 'Ojéa / Mal de Ojo' y fue tratada por un yuyero. Si el médico descalifica su creencia, la madre se retira sin permitir el tratamiento.",
+          pregunta: "Desde el modelo deliberativo y la competencia cultural, ¿cómo debe actuar el médico?",
+          pistaDocente: "La interculturalidad busca tender un puente de confianza sin abandonar la terapia de rehidratación...",
           opciones: [
-            { texto: "Validar y respetar la preocupación de la madre, explicar empáticamente la deshidratación y acordar el tratamiento médico sin descalificar sus creencias", correcta: true, feedback: "¡Excelente actitud médica! La competencia cultural busca el diálogo intercultural y la alianza terapéutica con la familia para garantizar la salud del niño." },
-            { texto: "Expulsar a la madre por negligencia infantil y llamar a la policía", correcta: false, feedback: "Incorrecto. Criminalizar la creencia cultural destruye el acceso al sistema de salud." },
-            { texto: "Darle la razón en que el mal de ojo es la causa biológica y no medicarlo", correcta: false, feedback: "Incorrecto. El médico no debe abandonar la evidencia científica ni la rehidratación urgente." },
-            { texto: "Ignorar la conversación y medicarlo por la fuerza sin consentimiento", correcta: false, feedback: "Incorrecto. Viola el consentimiento informado y los principios bioéticos de autonomía y beneficencia." }
+            { texto: "Escuchar con empatía, validar la preocupación materna y consensuar el suero oral sin confrontar su cosmovisión", correcta: true, feedback: "¡Brillante! El modelo deliberativo genera alianza terapéutica y salva vidas respetando la diversidad cultural." },
+            { texto: "Burlarse de la creencia y expulsar a la familia", correcta: false, feedback: "Incorrecto. Destruye el acceso a la salud y pone en peligro al menor." },
+            { texto: "Aceptar que el mal de ojo es la causa biológica y no hidratar", correcta: false, feedback: "Incorrecto. El médico no debe renunciar a la ciencia médica." },
+            { texto: "Tratar al niño por la fuerza con intervención policial", correcta: false, feedback: "Incorrecto. Rompe los principios bioéticos de beneficencia y autonomía." }
           ]
         }
       ]

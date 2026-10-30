@@ -11,9 +11,43 @@
   <div class="rpg-cabinet">
     
     <!-- ========================================================
-         PANTALLA 1: FACHADA DE LA FACULTAD (TITLE SCREEN)
+         ESCENA 0: INTRO CINEMÁTICA (LLEGADA A LA FACULTAD)
          ======================================================== -->
-    <div id="screenTitle" class="title-screen">
+    <div id="screenIntro" class="intro-cinematic">
+      <!-- Barra superior cinemática -->
+      <div class="cinema-bar-top">
+        <span class="cinema-title">UPMS FILIAL CDE • PRÓLOGO</span>
+        <button class="btn-skip" onclick="skipToTitle()">SALTAR INTRO ⏭</button>
+      </div>
+
+      <!-- Sprite del estudiante caminando por la fachada -->
+      <div id="walkingStudent" class="walking-student-wrapper">
+        <div class="student-character">🚶‍♂️🎒</div>
+      </div>
+
+      <!-- Subtítulos de narración y barra inferior -->
+      <div>
+        <div class="cinema-subtitle-box">
+          <span class="cinema-subtitle-label">DIARIO DEL ESTUDIANTE</span>
+          <p id="cinemaSubtitle" class="cinema-subtitle-text">
+            Iniciando...
+          </p>
+        </div>
+        <div class="cinema-bar-bottom">
+          <span style="font-family: var(--font-retro); font-size: 0.55rem; color: #64748b;">
+            1er AÑO • MEDICINA GENERAL
+          </span>
+          <span style="font-family: var(--font-retro); font-size: 0.55rem; color: var(--gold);">
+            AUTO-AVANCE ▶
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         ESCENA 1: MENÚ DE TÍTULO PRINCIPAL (MEDIKQUEST)
+         ======================================================== -->
+    <div id="screenTitle" class="title-screen" style="display: none;">
       <div class="title-badge-wrap">
         <span class="title-badge">🏛️ UNIVERSIDAD PRIVADA MARÍA SERRANA • FILIAL CDE</span>
       </div>
@@ -24,20 +58,48 @@
           Simulador de Criterio Clínico y Razonamiento Médico.<br>
           Rotación Integral de 1° Año de Medicina en el Campus Central.
         </p>
-        <button class="btn-start" onclick="startGameFromFacade()">
-          ▶ INGRESAR A LA FACULTAD
+        <button class="btn-start" onclick="enterReception()">
+          <span>▶</span> INGRESAR A RECEPCIÓN DE LA FACULTAD
         </button>
       </div>
 
       <div style="text-align: center;">
         <span style="font-family: var(--font-retro); font-size: 0.55rem; color: #cbd5e1; text-shadow: 1px 1px 2px #000;">
-          PRESIONÁ EL BOTÓN PARA INICIAR LA ROTACIÓN
+          PRESIONÁ EL BOTÓN PARA INGRESAR AL EDIFICIO
         </span>
       </div>
     </div>
 
     <!-- ========================================================
-         PANTALLA 2: JUEGO / ROTACIÓN CLÍNICA (GAMEPLAY)
+         ESCENA 2: HALL DE RECEPCIÓN (CHECK-IN DEL ALUMNO)
+         ======================================================== -->
+    <div id="screenReception" class="reception-screen" style="display: none;">
+      <span class="reception-badge">📍 ÁREA DE RECEPCIÓN Y MESA DE ENTRADA</span>
+
+      <section class="dialog-box" style="margin: 0; border-radius: 14px; border: 2px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.9);">
+        <div class="prof-avatar-frame" style="border-color: var(--gold);">
+          <img src="patricia_gomez_pixel.jpg" alt="Recepción">
+        </div>
+        <div class="dialog-content">
+          <div>
+            <span class="prof-name" style="color: var(--gold);">SECRETARÍA ACADÉMICA Y RECEPCIÓN</span>
+            <span class="case-subject-badge" style="border-color: var(--gold); color: var(--gold);">CAMPUS CENTRAL</span>
+          </div>
+          <p class="prof-speech" id="receptionSpeech">
+            Cargando recepción...
+          </p>
+        </div>
+      </section>
+
+      <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
+        <button class="btn-start" style="padding: 12px 20px; font-size: 0.75rem;" onclick="startClinicalRotation()">
+          <span>🩺</span> PASAR A LAS AULAS Y PRÁCTICAS CLÍNICAS ▶
+        </button>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         ESCENA 3: JUEGO / ROTACIÓN CLÍNICA (GAMEPLAY)
          ======================================================== -->
     <div id="screenGame" style="display: none; flex-direction: column; width: 100%;">
       <!-- Header HUD -->
@@ -83,15 +145,15 @@
       <!-- Cuadro de Diálogo del Profesor Mentor -->
       <section class="dialog-box">
         <div class="prof-avatar-frame">
-          <img id="profImg" src="dra_viviana_ruiz_fiel.jpg" alt="Profesor Mentor">
+          <img id="profImg" src="dr_rene_amarilla_pixel.jpg" alt="Profesor Mentor">
         </div>
         <div class="dialog-content">
           <div>
-            <span class="prof-name" id="profName">DRA. NIDIA VIVIANA RUIZ</span>
-            <span class="case-subject-badge" id="subjectBadge">COORDINACIÓN ACADÉMICA</span>
+            <span class="prof-name" id="profName">DR. ERNALDO RENÉ AMARILLA</span>
+            <span class="case-subject-badge" id="subjectBadge">CÁTEDRA DE ANATOMÍA I</span>
           </div>
           <p class="prof-speech" id="profSpeech">
-            Cargando...
+            Cargando caso...
           </p>
         </div>
       </section>
@@ -104,7 +166,7 @@
       <!-- Barra de herramientas inferior -->
       <footer class="stage-footer">
         <button class="btn-tool" onclick="showHint()">💡 PISTA DEL PROFESOR</button>
-        <button class="btn-tool" onclick="showTitleScreen()">🏛️ VOLVER A LA FACHADA</button>
+        <button class="btn-tool" onclick="goToTitleMenu()">🏛️ MENÚ DE LA FACHADA</button>
       </footer>
     </div>
 
