@@ -12,7 +12,7 @@
   const STORAGE_KEY = 'medikquest_upms_profile_v1';
 
   const DEFAULT_PROFILE = {
-    name: 'Carlos Rolón',
+    name: 'Carlos',
     gender: 'm', // 'm' | 'f'
     skin: 'trigueno', // 'moreno' | 'bronceado' | 'trigueno' | 'claro'
     hairStyle: 'corto', // 'corto' | 'fade' | 'coleta' | 'suelto'
@@ -52,8 +52,8 @@
     update(fields) {
       if (!fields || typeof fields !== 'object') return;
       if (typeof fields.name === 'string') {
-        const sanitized = fields.name.replace(/\s+/g, ' ').trim().slice(0, 26);
-        fields.name = sanitized || this.data.name;
+        // Enforce 15 chars max, allow empty string while user is deleting!
+        fields.name = fields.name.slice(0, 15);
       }
       this.data = { ...this.data, ...fields };
       this.save();
@@ -63,8 +63,13 @@
       return { ...this.data };
     }
 
+    getRawName() {
+      return this.data.name !== undefined ? this.data.name : '';
+    }
+
     getName() {
-      return this.data.name || 'Estudiante';
+      const trimmed = (this.data.name || '').trim();
+      return trimmed || 'Estudiante';
     }
 
     getTitle() {

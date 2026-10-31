@@ -92,8 +92,8 @@
         <div class="customizer-form">
           <!-- Nombre del alumno -->
           <div class="custom-group">
-            <label class="custom-label" for="inputStudentName">NOMBRE Y APELLIDO:</label>
-            <input type="text" id="inputStudentName" class="pixel-input" placeholder="Tu nombre..." maxlength="24" value="Carlos">
+            <label class="custom-label" for="inputStudentName">NOMBRE DEL ALUMNO (MÁX. 15 CARACTERES):</label>
+            <input type="text" id="inputStudentName" class="pixel-input" placeholder="Tu nombre..." maxlength="15" value="Carlos">
           </div>
 
           <!-- Género -->
@@ -168,19 +168,19 @@
 
 
     <!-- ========================================================
-         ESCENA 2: HALL DE RECEPCIÓN (CHECK-IN DEL ALUMNO)
+         ESCENA 2: LABORATORIOS DE CIENCIAS Y SIMULACIÓN (CHECK-IN)
          ======================================================== -->
     <div id="screenReception" class="reception-screen" style="display: none;">
-      <span class="reception-badge">📍 ÁREA DE RECEPCIÓN Y MESA DE ENTRADA</span>
+      <span class="reception-badge">📍 ACCESO A LABORATORIOS DE CIENCIAS Y SIMULACIÓN</span>
 
       <section class="dialog-box" style="margin: 0; border-radius: 14px; border: 2px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.9);">
         <div class="prof-avatar-frame" style="border-color: var(--gold);">
-          <img src="patricia_gomez_pixel.jpg" alt="Recepción">
+          <img src="patricia_gomez_pixel.jpg" alt="Lic. Patricia Gómez">
         </div>
         <div class="dialog-content">
           <div>
-            <span class="prof-name" style="color: var(--gold);">SECRETARÍA ACADÉMICA Y RECEPCIÓN</span>
-            <span class="case-subject-badge" style="border-color: var(--gold); color: var(--gold);">CAMPUS CENTRAL</span>
+            <span class="prof-name" style="color: var(--gold);">LIC. PATRICIA GÓMEZ</span>
+            <span class="case-subject-badge" style="border-color: var(--gold); color: var(--gold);">ENCARGADA DE LABORATORIOS</span>
           </div>
           <p class="prof-speech" id="receptionSpeech">
             Cargando recepción...
@@ -189,7 +189,7 @@
       </section>
 
       <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
-        <button id="btnStartRotation" class="btn-start" style="padding: 12px 20px; font-size: 0.75rem;">
+        <button id="btnStartRotation" class="btn-start" style="padding: 12px 20px; font-size: 0.85rem;">
           <span>🩺</span> PASAR A LAS AULAS Y PRÁCTICAS CLÍNICAS ▶
         </button>
       </div>

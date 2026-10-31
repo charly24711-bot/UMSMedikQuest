@@ -12,21 +12,29 @@ test('PlayerProfile initializes with sensible defaults', () => {
 });
 
 test('PlayerProfile uses student role titles instead of doctor', () => {
-  const profile = new PlayerProfile({ name: 'Valentina Rolón', gender: 'f' });
-  assert.equal(profile.getName(), 'Valentina Rolón');
+  const profile = new PlayerProfile({ name: 'Valentina', gender: 'f' });
+  assert.equal(profile.getName(), 'Valentina');
   assert.equal(profile.getTitle(), 'Alumna');
-  assert.equal(profile.getBadgeText(), 'ALUMNA: VALENTINA ROLÓN');
+  assert.equal(profile.getBadgeText(), 'ALUMNA: VALENTINA');
   assert.equal(profile.getBadgeText().includes('DRA.'), false);
 
-  profile.update({ name: 'Carlos Rolón', gender: 'm' });
-  assert.equal(profile.getName(), 'Carlos Rolón');
+  profile.update({ name: 'Carlos', gender: 'm' });
+  assert.equal(profile.getName(), 'Carlos');
   assert.equal(profile.getTitle(), 'Alumno');
-  assert.equal(profile.getBadgeText(), 'ALUMNO: CARLOS ROLÓN');
+  assert.equal(profile.getBadgeText(), 'ALUMNO: CARLOS');
   assert.equal(profile.getBadgeText().includes('DR.'), false);
 });
 
-test('PlayerProfile trims and cleans excess spaces while preserving internal space', () => {
+test('PlayerProfile allows deleting characters down to empty string', () => {
+  const profile = new PlayerProfile({ name: 'E' });
+  profile.update({ name: '' });
+  assert.equal(profile.getRawName(), '');
+  assert.equal(profile.getName(), 'Estudiante'); // Fallback when reading empty name
+});
+
+test('PlayerProfile restricts name to exactly 15 characters max', () => {
   const profile = new PlayerProfile();
-  profile.update({ name: '   Valentina    Rolon   ' });
-  assert.equal(profile.getName(), 'Valentina Rolon');
+  profile.update({ name: '12345678901234567890' });
+  assert.equal(profile.getRawName().length, 15);
+  assert.equal(profile.getRawName(), '123456789012345');
 });

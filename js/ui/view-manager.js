@@ -69,13 +69,14 @@
 
       // Update Card Labels
       if (this.customizer.previewName) {
-        this.customizer.previewName.textContent = profile.getName().toUpperCase();
+        const rawName = profile.getRawName();
+        this.customizer.previewName.textContent = (rawName.trim() || 'TU NOMBRE').toUpperCase();
       }
       if (this.customizer.previewTitle) {
         this.customizer.previewTitle.textContent = profile.getIdCardSub().toUpperCase();
       }
-      if (this.customizer.inputName && this.customizer.inputName.value !== profile.getName()) {
-        this.customizer.inputName.value = profile.getName();
+      if (this.customizer.inputName && document.activeElement !== this.customizer.inputName) {
+        this.customizer.inputName.value = profile.getRawName();
       }
 
       // Update active state on choice buttons

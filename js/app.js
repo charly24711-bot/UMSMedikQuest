@@ -209,9 +209,9 @@
       const role = this.profile.getTitle(); // "Alumno" o "Alumna"
 
       const welcomeText =
-        `¡Hola, ${studentName}! Muy buenos días. Como ${role.toLowerCase()} de 1° Semestre te doy la bienvenida oficial a la Universidad Privada María Serrana.\n\n` +
-        `Ya estás registrado/a para tu rotación inicial. Te hago entrega de tu carnet estudiantil personalizado y tu Libreta Oficial de Prácticas.\n\n` +
-        `En las salas y laboratorios ya te están esperando los jefes de cátedra: el Dr. René Amarilla en Anatomía, la Dra. Antonella Antico y la Lic. Patricia Gómez en Laboratorios, el Dr. Ángel Gómez y la Dra. Viviana Ruiz en Decanato. ¡Muchos éxitos en tu guardia!`;
+        `¡Hola, ${studentName}! Te doy la bienvenida a los Laboratorios de Práctica y Simulación Médica de la UPMS.\n\n` +
+        `Como encargada de laboratorios, ya te preparé tu carnet estudiantil y tu Libreta Oficial de Prácticas para este 1° Semestre.\n\n` +
+        `En las aulas y salas de disección ya te esperan los jefes de cátedra: el Dr. René Amarilla en Anatomía, la Dra. Antonella Antico en Bioquímica, el Dr. Ángel Gómez en Formación y la Dra. Viviana Ruiz en Coordinación Académica. ¡Muchos éxitos en tu rotación!`;
 
       this.typewriter.type('receptionSpeech', welcomeText, 14, {
         onCharSound: () => this.sound.play('blip')
