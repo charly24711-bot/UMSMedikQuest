@@ -32,12 +32,15 @@
       this.engine = new MedikQuest.GameEngine(MedikQuest.Data.getFlatCases());
 
       this.cinematicTimer = null;
+      this.entranceTimer = null;
       this.cinematicStep = 0;
       this.isAnswering = false;
+      this.exploredCases = new Set();
 
       this._setupEngineSubscribers();
       this._bindUserEvents();
       this._bindCustomizerEvents();
+      this._bindSemiologyEvents();
     }
 
     start() {
@@ -71,6 +74,12 @@
       const btnSkip = document.getElementById('btnSkipIntro');
       if (btnSkip) {
         btnSkip.addEventListener('click', () => this.skipToTitle());
+      }
+
+      // Skip Entrance Cinematic
+      const btnSkipEntrance = document.getElementById('btnSkipEntrance');
+      if (btnSkipEntrance) {
+        btnSkipEntrance.addEventListener('click', () => this.skipEntranceWalk());
       }
 
       // Start Customizer from Title
@@ -146,13 +155,13 @@
         });
       }
 
-      // Confirm Character & Enter Reception
+      // Confirm Character & Enter Campus (Trigger Animated Walk)
       const btnConfirm = document.getElementById('btnConfirmCharacter');
       if (btnConfirm) {
         btnConfirm.addEventListener('click', () => {
           this.sound.play('fanfare');
           this.view.applyPlayerVisuals(this.profile);
-          this.enterReception();
+          this.startEntranceWalk();
         });
       }
 
@@ -201,7 +210,108 @@
       this.engine.setScreen('customizer');
     }
 
+    startEntranceWalk() {
+      if (this.entranceTimer) {
+        clearTimeout(this.entranceTimer);
+        this.entranceTimer = null;
+      }
+      this.view.applyPlayerVisuals(this.profile);
+      this.engine.setScreen('entrance');
+
+      // Phase 1: Escalinatas Fachada
+      if (this.view.entrance.facade) {
+        this.view.entrance.facade.style.opacity = '1';
+        this.view.entrance.facade.style.pointerEvents = 'all';
+      }
+      if (this.view.entrance.reception) {
+        this.view.entrance.reception.style.opacity = '0';
+        this.view.entrance.reception.style.pointerEvents = 'none';
+      }
+
+      if (this.view.entrance.facadeWalker) {
+        this.view.entrance.facadeWalker.className = 'entrance-walker climb-stairs-anim';
+      }
+
+      if (this.view.entrance.stepLabel) {
+        this.view.entrance.stepLabel.textContent = 'ESCALINATAS CENTRALES • 07:45 AM';
+      }
+
+      const studentName = this.profile.getName();
+      const text1 = `07:45 AM • ${studentName}, subís las escalinatas principales de la Universidad Privada María Serrana con tu credencial y guardapolvo...`;
+
+      this.typewriter.type(this.view.entrance.subtitle, text1, 20, {
+        onCharSound: () => this.sound.play('blip')
+      });
+
+      // Rhythmic step sounds
+      let stepCount = 0;
+      const stepInterval = setInterval(() => {
+        if (this.engine.getState().screen !== 'entrance') {
+          clearInterval(stepInterval);
+          return;
+        }
+        this.sound.play('step');
+        stepCount++;
+        if (stepCount >= 7) clearInterval(stepInterval);
+      }, 550);
+
+      // Transition to Phase 2 (Recepción) at 4.2 seconds
+      this.entranceTimer = setTimeout(() => {
+        if (this.engine.getState().screen !== 'entrance') return;
+
+        if (this.view.entrance.facade) {
+          this.view.entrance.facade.style.opacity = '0';
+          this.view.entrance.facade.style.pointerEvents = 'none';
+        }
+        if (this.view.entrance.reception) {
+          this.view.entrance.reception.style.opacity = '1';
+          this.view.entrance.reception.style.pointerEvents = 'all';
+        }
+        if (this.view.entrance.receptionWalker) {
+          this.view.entrance.receptionWalker.className = 'entrance-walker reception-walk-anim';
+        }
+        if (this.view.entrance.stepLabel) {
+          this.view.entrance.stepLabel.textContent = 'HALL CENTRAL DE RECEPCIÓN • 07:46 AM';
+        }
+
+        const text2 = `Cruzás las puertas de vidrio hacia el hall central... La Lic. Patricia Gómez te espera en la mesa de entrada de Laboratorios.`;
+        this.typewriter.type(this.view.entrance.subtitle, text2, 20, {
+          onCharSound: () => this.sound.play('blip')
+        });
+
+        // Footsteps in reception
+        let recStepCount = 0;
+        const recStepInterval = setInterval(() => {
+          if (this.engine.getState().screen !== 'entrance') {
+            clearInterval(recStepInterval);
+            return;
+          }
+          this.sound.play('step');
+          recStepCount++;
+          if (recStepCount >= 6) clearInterval(recStepInterval);
+        }, 600);
+
+        // Transition to Reception dialogue after 4.2 seconds
+        this.entranceTimer = setTimeout(() => {
+          this.enterReception();
+        }, 4200);
+      }, 4300);
+    }
+
+    skipEntranceWalk() {
+      if (this.entranceTimer) {
+        clearTimeout(this.entranceTimer);
+        this.entranceTimer = null;
+      }
+      this.typewriter.stop();
+      this.enterReception();
+    }
+
     enterReception() {
+      if (this.entranceTimer) {
+        clearTimeout(this.entranceTimer);
+        this.entranceTimer = null;
+      }
       this.sound.play('fanfare');
       this.engine.setScreen('reception');
 
@@ -216,6 +326,133 @@
       this.typewriter.type('receptionSpeech', welcomeText, 14, {
         onCharSound: () => this.sound.play('blip')
       });
+    }
+
+    _bindSemiologyEvents() {
+      // Semiology Toolbar Buttons
+      const toolbar = document.getElementById('semiologyToolbar');
+      if (toolbar) {
+        toolbar.addEventListener('click', (e) => {
+          const btn = e.target.closest('.btn-semiology');
+          if (!btn) return;
+          const mode = btn.dataset.mode;
+          if (mode) {
+            this.handleSemiologyInspection(mode);
+          }
+        });
+      }
+
+      // Patient Bed Hotspots (Point & Click directly on body zones)
+      const bedContainer = document.getElementById('patientBedContainer');
+      if (bedContainer) {
+        bedContainer.addEventListener('click', (e) => {
+          const zoneEl = e.target.closest('.hotspot-zone');
+          if (!zoneEl) return;
+          const zone = zoneEl.dataset.zone;
+          if (zone) {
+            this.handlePatientZoneClick(zone);
+          }
+        });
+      }
+
+      // Close findings panel
+      const btnClose = document.getElementById('btnCloseSemiologyCard');
+      if (btnClose) {
+        btnClose.addEventListener('click', () => {
+          this.sound.play('blip');
+          this.view.hideSemiologyFinding();
+        });
+      }
+    }
+
+    handleSemiologyInspection(mode) {
+      const currentCase = this.engine.getCurrentCase();
+      if (!currentCase || !currentCase.semiologia) return;
+
+      this._awardExplorationBonus(currentCase.id);
+
+      const sem = currentCase.semiologia;
+      let title = '';
+      let text = '';
+
+      switch (mode) {
+        case 'auscultacion':
+          title = '🩺 AUSCULTACIÓN CARDIORRESPIRATORIA';
+          text = sem.auscultacion;
+          this.sound.play('blip');
+          break;
+        case 'maniobra':
+          title = '🔨 PALPACIÓN Y MANIOBRAS SEMIOLÓGICAS';
+          text = sem.maniobra;
+          this.sound.play('blip');
+          break;
+        case 'vitales':
+          title = '📊 MONITOR DE SIGNOS VITALES';
+          if (typeof sem.signosVitales === 'object') {
+            text = Object.entries(sem.signosVitales)
+              .map(([k, v]) => `• ${k.toUpperCase()}: ${v}`)
+              .join('\n');
+          } else {
+            text = String(sem.signosVitales);
+          }
+          this.sound.play('blip');
+          break;
+        case 'anamnesis':
+          title = '💬 INTERROGATORIO CLÍNICO (ANAMNESIS)';
+          text = sem.anamnesis;
+          this.sound.play('blip');
+          break;
+        default:
+          return;
+      }
+
+      this.view.showSemiologyFinding(
+        title,
+        text,
+        () => {},
+        () => this.sound.play('blip')
+      );
+    }
+
+    handlePatientZoneClick(zone) {
+      const currentCase = this.engine.getCurrentCase();
+      if (!currentCase || !currentCase.semiologia) return;
+
+      this._awardExplorationBonus(currentCase.id);
+
+      const zones = currentCase.semiologia.zonas || {};
+      const zoneFinding = zones[zone] || 'Zona examinada sin particularidades agudas.';
+
+      const titles = {
+        head: '🧠 INSPECCIÓN: CABEZA, FACIES Y CONCIENCIA',
+        chest: '🫁 INSPECCIÓN: TÓRAX Y RESPIRACIÓN',
+        arm: '💪 INSPECCIÓN: MIEMBRO SUPERIOR Y ACCESO VENOSO',
+        knee: '🦵 INSPECCIÓN: MIEMBRO INFERIOR Y ARTICULACIONES'
+      };
+
+      const title = titles[zone] || '🔍 INSPECCIÓN REGIONAL';
+      this.sound.play('blip');
+
+      this.view.showSemiologyFinding(
+        title,
+        zoneFinding,
+        () => {},
+        () => this.sound.play('blip')
+      );
+    }
+
+    _awardExplorationBonus(caseId) {
+      if (!this.exploredCases) {
+        this.exploredCases = new Set();
+      }
+      if (!this.exploredCases.has(caseId)) {
+        this.exploredCases.add(caseId);
+        const bonusXp = 20;
+        this.engine.state.xp += bonusXp;
+        this.view.updateHUD(this.engine.state.hp, this.engine.state.xp);
+        this.view.spawnFloatingXP(bonusXp);
+        this.sound.play('correct');
+      }
     }
 
     startRotation() {

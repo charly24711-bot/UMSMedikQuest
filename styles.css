@@ -369,14 +369,14 @@ body {
    ESCENARIO CLÍNICO (AULA / MORGUE / HOSPITAL)
    ======================================================== */
 .rpg-stage {
-  height: 180px;
+  min-height: 235px;
   background: linear-gradient(180deg, #0d1527 0%, #172554 60%, #0f172a 100%);
   border-bottom: 2px solid #1e293b;
   position: relative;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  padding: 16px 24px;
+  padding: 16px 20px 20px;
   overflow: hidden;
 }
 
@@ -425,6 +425,37 @@ body {
   z-index: 2;
 }
 
+.patient-stage-actor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.patient-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.patient-hint-tag {
+  font-family: var(--font-retro);
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid #38bdf8;
+  color: #7dd3fc;
+  padding: 3px 8px;
+  border-radius: 4px;
+  animation: pulse-glow 2s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 4px rgba(56, 189, 248, 0.3); }
+  100% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.7); }
+}
+
 .actor-tag {
   font-family: var(--font-retro);
   font-size: 0.78rem;
@@ -446,31 +477,38 @@ body {
   animation: bob 1.4s ease-in-out infinite alternate;
 }
 
-.patient-bed {
-  width: 80px;
-  height: 48px;
-  background: #334155;
-  border: 2px solid #64748b;
-  border-radius: 6px;
+/* Cama hospitalaria ampliada 16-bit con Point & Click */
+.patient-bed-wrapper {
+  width: 270px;
+  max-width: 85vw;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.85));
+  animation: patient-breathe 3.5s ease-in-out infinite alternate;
 }
 
-.bed-pillow {
-  position: absolute;
-  top: 4px;
-  left: 6px;
-  width: 18px;
-  height: 12px;
-  background: #e2e8f0;
-  border-radius: 2px;
+@keyframes patient-breathe {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-3px); }
 }
 
-.patient-sprite {
-  font-size: 26px;
-  margin-left: 8px;
+.patient-pixel-art-bed {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.hotspot-zone {
+  cursor: pointer;
+  pointer-events: all;
+  transition: all 0.15s ease;
+}
+
+.hotspot-zone:hover {
+  fill: rgba(56, 189, 248, 0.28) !important;
+  stroke: #38bdf8;
+  stroke-width: 0.6;
 }
 
 @keyframes bob {
@@ -852,4 +890,265 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========================================================
+   ESCENA 1.8: CINEMÁTICA DE INGRESO (ESCALINATAS Y RECEPCIÓN)
+   ======================================================== */
+.entrance-cinematic {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  background: #020617;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.95);
+}
+
+.entrance-viewport {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.entrance-stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center bottom;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.facade-stage {
+  background-image: url('fachada_upms_pixel.jpg');
+}
+
+.reception-stage {
+  background-image: url('recepcion_upms_pixel.jpg');
+}
+
+.entrance-walker {
+  position: absolute;
+  width: 80px;
+  height: 128px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.entrance-walker svg {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 10px 14px rgba(0,0,0,0.9));
+}
+
+/* Animación: Subida de escalinatas */
+.climb-stairs-anim {
+  left: 50%;
+  bottom: 4%;
+  transform: translateX(-50%) scale(1.35);
+  animation: climb-stairs-walk 4.2s linear forwards;
+}
+
+@keyframes climb-stairs-walk {
+  0% {
+    bottom: 4%;
+    transform: translateX(-50%) scale(1.35) translateY(0) rotate(-3deg);
+  }
+  15% {
+    bottom: 12%;
+    transform: translateX(-50%) scale(1.24) translateY(-6px) rotate(3deg);
+  }
+  30% {
+    bottom: 20%;
+    transform: translateX(-50%) scale(1.12) translateY(0) rotate(-3deg);
+  }
+  45% {
+    bottom: 28%;
+    transform: translateX(-50%) scale(1.0) translateY(-6px) rotate(3deg);
+  }
+  60% {
+    bottom: 36%;
+    transform: translateX(-50%) scale(0.88) translateY(0) rotate(-3deg);
+  }
+  75% {
+    bottom: 44%;
+    transform: translateX(-50%) scale(0.76) translateY(-6px) rotate(3deg);
+  }
+  90% {
+    bottom: 50%;
+    transform: translateX(-50%) scale(0.66) translateY(0) rotate(-3deg);
+  }
+  100% {
+    bottom: 54%;
+    transform: translateX(-50%) scale(0.58) translateY(-4px) rotate(0deg);
+    opacity: 0.85;
+  }
+}
+
+/* Animación: Caminata al mostrador de recepción */
+.reception-walk-anim {
+  left: 10%;
+  bottom: 8%;
+  transform: scale(1.2);
+  animation: walk-to-desk 4s linear forwards;
+}
+
+@keyframes walk-to-desk {
+  0% {
+    left: 10%;
+    bottom: 8%;
+    transform: scale(1.2) translateY(0) rotate(-2deg);
+  }
+  25% {
+    left: 22%;
+    bottom: 12%;
+    transform: scale(1.14) translateY(-6px) rotate(2deg);
+  }
+  50% {
+    left: 34%;
+    bottom: 16%;
+    transform: scale(1.08) translateY(0) rotate(-2deg);
+  }
+  75% {
+    left: 45%;
+    bottom: 20%;
+    transform: scale(1.02) translateY(-6px) rotate(2deg);
+  }
+  100% {
+    left: 54%;
+    bottom: 22%;
+    transform: scale(0.98) translateY(0) rotate(0deg);
+  }
+}
+
+/* ========================================================
+   BARRA DE SEMIOLOGÍA INTERACTIVA (POINT & CLICK)
+   ======================================================== */
+.semiology-toolbar {
+  background: #090e1a;
+  border-bottom: 2px solid #1e293b;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.semiology-label {
+  font-family: var(--font-retro);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.semiology-btns-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.btn-semiology {
+  background: #1e293b;
+  border: 1.5px solid #334155;
+  color: #e2e8f0;
+  font-family: var(--font-retro);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 10px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.btn-semiology:hover {
+  background: #0369a1;
+  border-color: #38bdf8;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-semiology:active, .btn-semiology.active {
+  background: #0284c7;
+  border-color: #7dd3fc;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Panel flotante de hallazgos semiológicos */
+.semiology-findings-panel {
+  background: #070d18;
+  border-bottom: 2px solid #38bdf8;
+  border-top: 1px solid #1e293b;
+  padding: 14px 18px;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.85);
+  animation: slide-down 0.2s ease-out;
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.semi-findings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: var(--font-retro);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.btn-close-semi {
+  background: #334155;
+  border: 1px solid #475569;
+  color: #f1f5f9;
+  font-family: var(--font-retro);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-close-semi:hover {
+  background: #ef4444;
+  border-color: #f87171;
+}
+
+.semi-findings-body {
+  font-family: var(--font-retro);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #f8fafc;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+@media (max-width: 600px) {
+  .semiology-btns-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 

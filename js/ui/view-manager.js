@@ -16,6 +16,7 @@
         intro: document.getElementById('screenIntro'),
         title: document.getElementById('screenTitle'),
         customizer: document.getElementById('screenCustomizer'),
+        entrance: document.getElementById('screenEntranceWalk'),
         reception: document.getElementById('screenReception'),
         game: document.getElementById('screenGame')
       };
@@ -44,6 +45,26 @@
         hairStyleChoices: document.getElementById('hairStyleChoices')
       };
 
+      this.entrance = {
+        viewport: document.getElementById('entranceViewport'),
+        facade: document.getElementById('entranceStageFacade'),
+        reception: document.getElementById('entranceStageReception'),
+        facadeWalker: document.getElementById('facadeStudentWalker'),
+        receptionWalker: document.getElementById('receptionStudentWalker'),
+        stepLabel: document.getElementById('entranceStepLabel'),
+        subtitle: document.getElementById('entranceSubtitle'),
+        btnSkip: document.getElementById('btnSkipEntrance')
+      };
+
+      this.semiology = {
+        toolbar: document.getElementById('semiologyToolbar'),
+        card: document.getElementById('semiologyFindingsCard'),
+        title: document.getElementById('semiologyFindingsTitle'),
+        body: document.getElementById('semiologyFindingsBody'),
+        closeBtn: document.getElementById('btnCloseSemiologyCard')
+      };
+
+      this.patientBedContainer = document.getElementById('patientBedContainer');
       this.cabinet = document.querySelector('.rpg-cabinet');
     }
 
@@ -127,9 +148,45 @@
         stageGraphic.innerHTML = svg;
       }
 
+      // Entrance Walk animated avatars
+      if (this.entrance.facadeWalker) {
+        this.entrance.facadeWalker.innerHTML = svg;
+      }
+      if (this.entrance.receptionWalker) {
+        this.entrance.receptionWalker.innerHTML = svg;
+      }
+
       // Student Tag in Clinical Room (ALUMNO: NOMBRE or ALUMNA: NOMBRE)
       if (this.stage.actorTag) {
         this.stage.actorTag.textContent = profile.getBadgeText();
+      }
+    }
+
+    renderPatientBed() {
+      if (!this.patientBedContainer) return;
+      if (MedikQuest.AvatarGenerator && MedikQuest.AvatarGenerator.generatePatientBedSVG) {
+        this.patientBedContainer.innerHTML = MedikQuest.AvatarGenerator.generatePatientBedSVG();
+      }
+    }
+
+    showSemiologyFinding(title, text, onComplete, onCharSound) {
+      if (!this.semiology.card) return;
+      if (this.semiology.title) {
+        this.semiology.title.textContent = title;
+      }
+      this.semiology.card.style.display = 'block';
+
+      if (this.semiology.body) {
+        this.typewriter.type(this.semiology.body, text, 12, {
+          onComplete,
+          onCharSound
+        });
+      }
+    }
+
+    hideSemiologyFinding() {
+      if (this.semiology.card) {
+        this.semiology.card.style.display = 'none';
       }
     }
 
@@ -160,6 +217,9 @@
 
     renderCase(currentCase, onTypingComplete, onCharSound) {
       if (!currentCase) return;
+
+      this.renderPatientBed();
+      this.hideSemiologyFinding();
 
       if (this.stage.profImg) this.stage.profImg.src = currentCase.docente.avatar;
       if (this.stage.profName) this.stage.profName.textContent = currentCase.docente.nombre.toUpperCase();

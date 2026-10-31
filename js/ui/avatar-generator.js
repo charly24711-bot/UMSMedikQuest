@@ -362,6 +362,131 @@
     return svg;
   }
 
+  function generatePatientBedSVG(options = {}) {
+    const rects = [];
+    function r(x, y, w, h, col, extra = '') {
+      rects.push(`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${col}" ${extra}/>`);
+    }
+    function p(x, y, col, extra = '') {
+      rects.push(`<rect x="${x}" y="${y}" width="1" height="1" fill="${col}" ${extra}/>`);
+    }
+
+    // Sombra proyectada en el suelo
+    r(10, 40, 52, 2, 'rgba(0,0,0,0.4)');
+    r(12, 41, 48, 1, 'rgba(0,0,0,0.25)');
+
+    // --- 1. ATRIL DE SUERO (IV DRIP STAND) ---
+    // Ruedas y base del atril
+    r(3, 39, 7, 2, '#334155');
+    p(4, 41, '#0f172a');
+    p(8, 41, '#0f172a');
+    // Varilla cromada vertical
+    r(6, 6, 2, 33, '#cbd5e1');
+    p(6, 6, '#94a3b8');
+    // Ganchos superiores
+    r(4, 5, 6, 1, '#94a3b8');
+    p(4, 6, '#94a3b8');
+    p(9, 6, '#94a3b8');
+    // Bolsa de suero fisiológico (IV Bag)
+    r(8, 7, 5, 8, '#38bdf8');
+    r(9, 8, 3, 6, '#e0f2fe');
+    r(10, 9, 1, 4, '#ffffff'); // Reflejo líquido
+    // Cámara de goteo y tubuladura transparente
+    r(10, 15, 1, 2, '#0284c7');
+    p(10, 17, '#38bdf8');
+    p(11, 18, '#38bdf8');
+    p(12, 19, '#38bdf8');
+    p(14, 20, '#38bdf8');
+    p(16, 21, '#38bdf8');
+    p(19, 22, '#38bdf8');
+    r(22, 23, 3, 1, '#38bdf8'); // Conecta al brazo del paciente
+
+    // --- 2. ESTRUCTURA DE LA CAMA CLÍNICA ---
+    // Ruedas de la cama (4 ruedas con freno)
+    r(15, 38, 4, 3, '#1e293b');
+    p(16, 41, '#020617');
+    r(53, 38, 4, 3, '#1e293b');
+    p(54, 41, '#020617');
+
+    // Chasis y larguero horizontal de acero
+    r(14, 35, 44, 3, '#475569');
+    r(14, 35, 44, 1, '#64748b'); // Borde iluminado superior
+    r(20, 37, 2, 3, '#334155'); // Refuerzo central
+
+    // Cabecera (Headboard) cromada
+    r(13, 12, 3, 26, '#94a3b8');
+    r(13, 12, 1, 26, '#cbd5e1'); // Brillo acero
+    r(13, 12, 4, 2, '#cbd5e1'); // Remate superior redondeado
+
+    // Piecera (Footboard) cromada
+    r(57, 20, 3, 18, '#94a3b8');
+    r(57, 20, 1, 18, '#cbd5e1');
+    r(56, 20, 4, 2, '#cbd5e1');
+
+    // Barandas de seguridad laterales (Bed rails)
+    r(28, 25, 20, 1, '#cbd5e1');
+    r(28, 29, 20, 1, '#cbd5e1');
+    r(32, 25, 1, 5, '#94a3b8');
+    r(38, 25, 1, 5, '#94a3b8');
+    r(44, 25, 1, 5, '#94a3b8');
+
+    // Colchón médico articulado (Mattress)
+    r(16, 28, 42, 7, '#1e293b');
+    r(16, 28, 42, 1, '#334155');
+
+    // Almohada clínica (Pillow)
+    r(17, 18, 12, 9, '#e2e8f0');
+    r(18, 17, 10, 2, '#ffffff'); // Luz superior almohada
+    r(17, 25, 12, 3, '#cbd5e1'); // Sombra bajo almohada
+
+    // --- 3. PACIENTE RECLINADO ---
+    // Cabeza apoyada en almohada
+    r(20, 17, 10, 9, '#c98959'); // Piel base
+    r(22, 16, 6, 2, '#e3ad81'); // Frente iluminada
+
+    // Cabello del paciente
+    r(18, 15, 8, 5, '#452b1b');
+    r(20, 14, 6, 2, '#664128');
+    r(17, 17, 3, 5, '#382213');
+
+    // Rostro de reposo
+    r(24, 20, 3, 1, '#1f130a'); // Ojo cerrado
+    p(23, 20, '#945b33');
+    r(23, 18, 3, 1, '#382213'); // Ceja
+    p(26, 21, '#945b33'); // Nariz
+    p(26, 22, '#945b33');
+    r(24, 23, 3, 1, '#994a3b'); // Labios
+
+    // Camisolín / Bata de hospital
+    r(25, 23, 5, 4, '#93c5fd');
+    r(26, 23, 1, 3, '#ffffff');
+
+    // Brazo extendido con vía periférica
+    r(22, 24, 6, 3, '#c98959');
+    r(25, 24, 2, 2, '#ffffff');
+    p(25, 24, '#38bdf8');
+
+    // --- 4. SÁBANA Y MANTA CLÍNICA (BLANKET) ---
+    r(28, 23, 29, 2, '#ffffff');
+    r(28, 24, 29, 1, '#e2e8f0');
+    r(28, 25, 29, 10, '#0284c7');
+    r(29, 25, 27, 2, '#38bdf8');
+    r(32, 27, 8, 2, '#0369a1');
+    r(43, 27, 10, 2, '#0369a1');
+    r(53, 26, 4, 7, '#0369a1');
+    r(53, 26, 3, 2, '#38bdf8');
+
+    // --- 5. HOTSPOTS INTERACTIVOS DE SEMIOLOGÍA (POINT & CLICK) ---
+    rects.push(`<rect class="hotspot-zone" data-zone="head" x="18" y="14" width="13" height="11" fill="transparent"/>`);
+    rects.push(`<rect class="hotspot-zone" data-zone="chest" x="27" y="21" width="12" height="9" fill="transparent"/>`);
+    rects.push(`<rect class="hotspot-zone" data-zone="arm" x="20" y="23" width="7" height="6" fill="transparent"/>`);
+    rects.push(`<rect class="hotspot-zone" data-zone="knee" x="39" y="24" width="18" height="11" fill="transparent"/>`);
+
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 42" shape-rendering="crispEdges" class="patient-pixel-art-bed" role="img" aria-label="Cama hospitalaria 16-bit con paciente">
+      ${rects.join('\n      ')}
+    </svg>`;
+  }
+
   function toDataUri(svgString) {
     if (typeof btoa !== 'undefined') {
       return `data:image/svg+xml;base64,${btoa(unescape(encodeURIComponent(svgString)))}`;
@@ -374,6 +499,7 @@
     HAIR_PALETTES,
     OUTFITS,
     generateSVG,
+    generatePatientBedSVG,
     toDataUri
   };
 });

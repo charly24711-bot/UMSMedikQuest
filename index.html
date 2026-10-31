@@ -161,11 +161,45 @@
           ◀ VOLVER
         </button>
         <button id="btnConfirmCharacter" class="btn-start" style="padding: 12px 24px; font-size: 0.8rem;">
-          <span>🩺</span> CONFIRMAR MATRÍCULA E INGRESAR A RECEPCIÓN ▶
+          <span>🩺</span> CONFIRMAR MATRÍCULA E INGRESAR AL CAMPUS ▶
         </button>
       </div>
     </div>
 
+    <!-- ========================================================
+         ESCENA 1.8: CINEMÁTICA DE INGRESO (ESCALINATAS Y RECEPCIÓN)
+         ======================================================== -->
+    <div id="screenEntranceWalk" class="entrance-cinematic" style="display: none;">
+      <div class="cinema-bar-top">
+        <span class="cinema-title">🏛️ INGRESO AL CAMPUS • UNIVERSIDAD PRIVADA MARÍA SERRANA</span>
+        <button id="btnSkipEntrance" class="btn-skip">SALTAR CINEMÁTICA ⏭</button>
+      </div>
+
+      <!-- Proyección cinemática con transición de fondos -->
+      <div class="entrance-viewport" id="entranceViewport">
+        <!-- Fachada con escalinatas -->
+        <div id="entranceStageFacade" class="entrance-stage facade-stage">
+          <div class="entrance-walker" id="facadeStudentWalker">
+            <!-- SVG del alumno personalizado -->
+          </div>
+        </div>
+
+        <!-- Recepción con mostrador -->
+        <div id="entranceStageReception" class="entrance-stage reception-stage" style="opacity: 0; pointer-events: none;">
+          <div class="entrance-walker" id="receptionStudentWalker">
+            <!-- SVG del alumno personalizado -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtítulos de avance cinemático -->
+      <div class="cinema-subtitle-box" style="margin-top: 12px;">
+        <span class="cinema-subtitle-label" id="entranceStepLabel">FACHADA CENTRAL • 07:45 AM</span>
+        <p id="entranceSubtitle" class="cinema-subtitle-text">
+          Subiendo las escalinatas principales de la Universidad Privada María Serrana...
+        </p>
+      </div>
+    </div>
 
     <!-- ========================================================
          ESCENA 2: LABORATORIOS DE CIENCIAS Y SIMULACIÓN (CHECK-IN)
@@ -229,15 +263,47 @@
           <div id="stageStudentGraphic" class="stage-student-pixel"></div>
         </div>
 
-        <!-- Cama de Paciente -->
-        <div class="actor">
-          <span class="actor-tag" style="border-color:#ef4444; color:#ef4444;">PACIENTE DE GUARDIA</span>
-          <div class="patient-bed">
-            <div class="bed-pillow"></div>
-            <div class="patient-sprite">🛌</div>
+        <!-- Cama de Paciente Ampliada con Point & Click -->
+        <div class="actor patient-stage-actor">
+          <div class="patient-tag-row">
+            <span class="actor-tag patient-status-tag" style="border-color:#ef4444; color:#ef4444;">PACIENTE DE GUARDIA</span>
+            <span class="patient-hint-tag">💡 POINT & CLICK EN EL CUERPO</span>
+          </div>
+          <div id="patientBedContainer" class="patient-bed-wrapper">
+            <!-- Renderizado dinámico del paciente ampliado 16-bit -->
           </div>
         </div>
       </main>
+
+      <!-- Barra de Semiología Interactiva (Point & Click) -->
+      <nav class="semiology-toolbar" id="semiologyToolbar" aria-label="Herramientas de semiología">
+        <span class="semiology-label">🩺 EXAMEN FÍSICO Y HERRAMIENTAS:</span>
+        <div class="semiology-btns-grid">
+          <button class="btn-semiology" id="btnSemiologyAuscultar" data-mode="auscultacion" title="Auscultar ruidos cardíacos y pulmonares">
+            <span class="semi-icon">🩺</span> AUSCULTAR
+          </button>
+          <button class="btn-semiology" id="btnSemiologyPalpar" data-mode="maniobra" title="Realizar maniobras y palpación">
+            <span class="semi-icon">🔨</span> PALPAR / MANIOBRA
+          </button>
+          <button class="btn-semiology" id="btnSemiologyVitales" data-mode="vitales" title="Ver monitores y signos vitales">
+            <span class="semi-icon">📊</span> SIGNOS VITALES
+          </button>
+          <button class="btn-semiology" id="btnSemiologyAnamnesis" data-mode="anamnesis" title="Interrogar al paciente">
+            <span class="semi-icon">💬</span> ANAMNESIS
+          </button>
+        </div>
+      </nav>
+
+      <!-- Panel Flotante / Tarjeta de Hallazgo Semiológico -->
+      <div id="semiologyFindingsCard" class="semiology-findings-panel" style="display: none;">
+        <div class="semi-findings-header">
+          <span id="semiologyFindingsTitle">🩺 AUSCULTACIÓN CARDIORRESPIRATORIA</span>
+          <button id="btnCloseSemiologyCard" class="btn-close-semi">✕ CERRAR</button>
+        </div>
+        <div class="semi-findings-body" id="semiologyFindingsBody">
+          <!-- Hallazgo semiológico cargado dinámicamente -->
+        </div>
+      </div>
 
       <!-- Cuadro de Diálogo del Profesor Mentor -->
       <section class="dialog-box">
