@@ -2,38 +2,32 @@
 (function () {
   'use strict';
 
-  const CINEMATIC_STORY = [
-    {
-      text: "Ciudad del Este, Paraguay... 07:30 AM.\nEl sol asoma sobre el predio de la universidad.",
-      posY: 60,
-      duration: 3800
-    },
-    {
-      text: "Llegás a la Universidad Privada María Serrana.\nHoy comienza tu camino en la Carrera de Medicina.",
-      posY: 110,
-      duration: 4200
-    },
-    {
-      text: "Mochila al hombro y muchas expectativas...\nCaminás por el estacionamiento hacia el Aula Magna.",
-      posY: 160,
-      duration: 4000
-    },
-    {
-      text: "Subís las escalinatas principales.\nIngresás por la puerta de acceso al Área de Recepción...",
-      posY: 220,
-      duration: 3500
-    }
-  ];
-
-  const RECEPTION_WELCOME =
-    "¡Hola! Muy buenos días, colega. Te doy la bienvenida a la Universidad Privada María Serrana.\n\n" +
-    "Ya estás registrado para la rotación de 1er Año. Te hago entrega de tu carnet estudiantil y tu Libreta de Prácticas.\n\n" +
-    "En las salas y laboratorios ya te están esperando los jefes de cátedra: el Dr. René Amarilla en Anatomía, la Dra. Antonella Antico y la Lic. Patricia Gómez en Laboratorios, el Dr. Ángel Gómez y la Dra. Viviana Ruiz en Decanato. ¡Muchos éxitos en tu rotación!";
+  function getCinematicStory(studentName) {
+    return [
+      {
+        text: `Ciudad del Este, Paraguay... 07:30 AM.\nEl sol asoma sobre el predio de la universidad.`,
+        duration: 3800
+      },
+      {
+        text: `Llegás a la Universidad Privada María Serrana.\nHoy comienza tu camino en la Carrera de Medicina.`,
+        duration: 4200
+      },
+      {
+        text: `Mochila al hombro y muchas expectativas...\n${studentName}, caminás por el estacionamiento hacia el Aula Magna.`,
+        duration: 4000
+      },
+      {
+        text: `Subís las escalinatas principales.\nIngresás por la puerta de acceso al Área de Recepción...`,
+        duration: 3500
+      }
+    ];
+  }
 
   class App {
     constructor() {
       this.sound = new MedikQuest.SoundSystem();
       this.typewriter = new MedikQuest.Typewriter();
+      this.profile = new MedikQuest.PlayerProfile();
       this.view = new MedikQuest.ViewManager(this.typewriter);
       this.engine = new MedikQuest.GameEngine(MedikQuest.Data.getFlatCases());
 
@@ -43,9 +37,11 @@
 
       this._setupEngineSubscribers();
       this._bindUserEvents();
+      this._bindCustomizerEvents();
     }
 
     start() {
+      this.view.applyPlayerVisuals(this.profile);
       this.runCinematicPrologue(0);
     }
 
@@ -57,6 +53,7 @@
             break;
           case 'rotationStarted':
             this.view.showScreen('game');
+            this.view.applyPlayerVisuals(this.profile);
             this.view.updateHUD(data.hp, data.xp);
             this.loadCurrentCase();
             break;
@@ -76,13 +73,13 @@
         btnSkip.addEventListener('click', () => this.skipToTitle());
       }
 
-      // Enter Reception
-      const btnEnter = document.getElementById('btnEnterReception');
-      if (btnEnter) {
-        btnEnter.addEventListener('click', () => this.enterReception());
+      // Start Customizer from Title
+      const btnStartCust = document.getElementById('btnStartCustomizer');
+      if (btnStartCust) {
+        btnStartCust.addEventListener('click', () => this.openCustomizer());
       }
 
-      // Start Rotation
+      // Start Rotation from Reception
       const btnStartRot = document.getElementById('btnStartRotation');
       if (btnStartRot) {
         btnStartRot.addEventListener('click', () => this.startRotation());
@@ -100,7 +97,7 @@
         btnMenu.addEventListener('click', () => this.skipToTitle());
       }
 
-      // Keyboard support (A, B, C, D or 1, 2, 3, 4, Space)
+      // Keyboard support (A, B, C, D or 1, 2, 3, 4)
       window.addEventListener('keydown', (e) => {
         if (this.engine.getState().screen !== 'game' || this.isAnswering || this.typewriter.isTyping) {
           return;
@@ -114,19 +111,68 @@
       });
     }
 
+    _bindCustomizerEvents() {
+      const inputName = document.getElementById('inputStudentName');
+      if (inputName) {
+        inputName.addEventListener('input', (e) => {
+          this.profile.update({ name: e.target.value });
+          this.view.renderCustomizer(this.profile);
+        });
+      }
+
+      // Option clicks inside customizer
+      const customizerScreen = document.getElementById('screenCustomizer');
+      if (customizerScreen) {
+        customizerScreen.addEventListener('click', (e) => {
+          const btn = e.target.closest('.choice-btn');
+          if (!btn) return;
+
+          const type = btn.dataset.type;
+          const val = btn.dataset.val;
+          if (!type || !val) return;
+
+          this.sound.play('blip');
+
+          if (type === 'gender') {
+            const newHairStyle = val === 'f' ? 'coleta' : 'corto';
+            this.profile.update({ gender: val, hairStyle: newHairStyle });
+            this.view.updateHairStyleOptions(val, newHairStyle);
+          } else {
+            this.profile.update({ [type]: val });
+          }
+
+          this.view.renderCustomizer(this.profile);
+          this.view.applyPlayerVisuals(this.profile);
+        });
+      }
+
+      // Confirm Character & Enter Reception
+      const btnConfirm = document.getElementById('btnConfirmCharacter');
+      if (btnConfirm) {
+        btnConfirm.addEventListener('click', () => {
+          this.sound.play('fanfare');
+          this.view.applyPlayerVisuals(this.profile);
+          this.enterReception();
+        });
+      }
+
+      // Back to Title
+      const btnBack = document.getElementById('btnBackToTitle');
+      if (btnBack) {
+        btnBack.addEventListener('click', () => this.skipToTitle());
+      }
+    }
+
     runCinematicPrologue(step = 0) {
-      if (step >= CINEMATIC_STORY.length) {
+      const story = getCinematicStory(this.profile.getName());
+      if (step >= story.length) {
         this.skipToTitle();
         return;
       }
 
       this.cinematicStep = step;
-      const s = CINEMATIC_STORY[step];
-      const sprite = this.view.stage.walkingStudent;
-      if (sprite) {
-        sprite.style.bottom = `${s.posY}px`;
-        this.sound.play('step');
-      }
+      const s = story[step];
+      this.sound.play('step');
 
       this.typewriter.type('cinemaSubtitle', s.text, 20, {
         onCharSound: () => this.sound.play('blip'),
@@ -148,10 +194,26 @@
       this.engine.setScreen('title');
     }
 
+    openCustomizer() {
+      this.sound.play('blip');
+      this.view.updateHairStyleOptions(this.profile.get().gender, this.profile.get().hairStyle);
+      this.view.renderCustomizer(this.profile);
+      this.engine.setScreen('customizer');
+    }
+
     enterReception() {
       this.sound.play('fanfare');
       this.engine.setScreen('reception');
-      this.typewriter.type('receptionSpeech', RECEPTION_WELCOME, 14, {
+
+      const studentName = this.profile.getName();
+      const role = this.profile.getTitle(); // "Alumno" o "Alumna"
+
+      const welcomeText =
+        `¡Hola, ${studentName}! Muy buenos días. Como ${role.toLowerCase()} de 1° Semestre te doy la bienvenida oficial a la Universidad Privada María Serrana.\n\n` +
+        `Ya estás registrado/a para tu rotación inicial. Te hago entrega de tu carnet estudiantil personalizado y tu Libreta Oficial de Prácticas.\n\n` +
+        `En las salas y laboratorios ya te están esperando los jefes de cátedra: el Dr. René Amarilla en Anatomía, la Dra. Antonella Antico y la Lic. Patricia Gómez en Laboratorios, el Dr. Ángel Gómez y la Dra. Viviana Ruiz en Decanato. ¡Muchos éxitos en tu guardia!`;
+
+      this.typewriter.type('receptionSpeech', welcomeText, 14, {
         onCharSound: () => this.sound.play('blip')
       });
     }
@@ -165,6 +227,7 @@
       const currentCase = this.engine.getCurrentCase();
       if (!currentCase) {
         this.view.renderVictory(
+          this.profile,
           this.engine.getState().xp,
           () => this.skipToTitle(),
           () => this.sound.play('blip')
@@ -204,6 +267,7 @@
               if (outcome.isVictory) {
                 this.sound.play('fanfare');
                 this.view.renderVictory(
+                  this.profile,
                   outcome.totalXp,
                   () => this.skipToTitle(),
                   () => this.sound.play('blip')
@@ -220,7 +284,7 @@
         this.sound.play('wrong');
 
         if (outcome.isGameOver) {
-          const gameOverMsg = `❌ ${outcome.feedback}\n\n¡Te quedaste sin energía! Repasá los contenidos de la cátedra e intentá nuevamente.`;
+          const gameOverMsg = `❌ ${outcome.feedback}\n\n¡Te quedaste sin energía, ${this.profile.getName()}! Repasá los contenidos de la cátedra e intentá nuevamente.`;
           this.view.renderFeedback(
             gameOverMsg,
             () => {

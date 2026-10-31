@@ -20,11 +20,6 @@
         <button id="btnSkipIntro" class="btn-skip">SALTAR INTRO ⏭</button>
       </div>
 
-      <!-- Sprite del estudiante real en pixel art -->
-      <div id="walkingStudent" class="walking-student-wrapper">
-        <img src="estudiante_pixel.png" alt="Estudiante" class="student-pixel-art-sprite">
-      </div>
-
       <!-- Subtítulos de narración y barra inferior -->
       <div>
         <div class="cinema-subtitle-box">
@@ -58,17 +53,119 @@
           Simulador de Criterio Clínico y Razonamiento Médico.<br>
           Rotación Integral de 1° Año de Medicina en el Campus Central.
         </p>
-        <button id="btnEnterReception" class="btn-start">
-          <span>▶</span> INGRESAR A RECEPCIÓN DE LA FACULTAD
+        <button id="btnStartCustomizer" class="btn-start">
+          <span>▶</span> MATRICULARSE E INGRESAR AL EDIFICIO
         </button>
       </div>
 
       <div style="text-align: center;">
         <span style="font-family: var(--font-retro); font-size: 0.55rem; color: #cbd5e1; text-shadow: 1px 1px 2px #000;">
-          PRESIONÁ EL BOTÓN PARA INGRESAR AL EDIFICIO
+          PRESIONÁ EL BOTÓN PARA IDENTIFICARTE E INGRESAR
         </span>
       </div>
     </div>
+
+    <!-- ========================================================
+         ESCENA 1.5: MATRÍCULA Y PERSONALIZACIÓN DEL PERSONAJE
+         ======================================================== -->
+    <div id="screenCustomizer" class="customizer-screen" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #334155; padding-bottom: 8px;">
+        <span class="reception-badge" style="margin: 0;">🎓 MATRÍCULA & IDENTIFICACIÓN ESTUDIANTIL</span>
+        <span style="font-family: var(--font-retro); font-size: 0.55rem; color: var(--gold);">1° SEMESTRE • UPMS CDE</span>
+      </div>
+
+      <div class="customizer-layout">
+        <!-- Credencial / Carnet Estudiantil en Vivo -->
+        <div class="id-card-wrap">
+          <div class="id-card-header">CARNET OFICIAL DE PRÁCTICAS</div>
+          <div class="id-card-avatar-box" id="avatarPreviewContainer">
+            <!-- Renderizado dinámico SVG -->
+          </div>
+          <div class="id-card-name" id="previewStudentName">CARLOS ROLÓN</div>
+          <div class="id-card-sub" id="previewStudentTitle">ESTUDIANTE DE MEDICINA</div>
+          <div style="margin-top: 10px; font-family: var(--font-retro); font-size: 0.48rem; color: #64748b;">
+            MATRÍCULA: UPMS-2026-MED
+          </div>
+        </div>
+
+        <!-- Opciones de Personalización y Pluralidad -->
+        <div class="customizer-form">
+          <!-- Nombre del alumno -->
+          <div class="custom-group">
+            <label class="custom-label" for="inputStudentName">NOMBRE Y APELLIDO:</label>
+            <input type="text" id="inputStudentName" class="pixel-input" placeholder="Tu nombre..." maxlength="24" value="Carlos">
+          </div>
+
+          <!-- Género -->
+          <div class="custom-group">
+            <span class="custom-label">GÉNERO / MODELO:</span>
+            <div class="choice-row" id="genderChoices">
+              <button class="choice-btn active" data-type="gender" data-val="m">👨 MASCULINO</button>
+              <button class="choice-btn" data-type="gender" data-val="f">👩 FEMENINO</button>
+            </div>
+          </div>
+
+          <!-- Tono de piel / Diversidad -->
+          <div class="custom-group">
+            <span class="custom-label">TONO DE PIEL & COMPLEXIÓN:</span>
+            <div class="choice-row" id="skinChoices">
+              <button class="choice-btn" data-type="skin" data-val="moreno"><span class="color-dot" style="background:#7c4826;"></span> Moreno</button>
+              <button class="choice-btn" data-type="skin" data-val="bronceado"><span class="color-dot" style="background:#ba7a48;"></span> Bronceado</button>
+              <button class="choice-btn active" data-type="skin" data-val="trigueno"><span class="color-dot" style="background:#dfa373;"></span> Trigueño</button>
+              <button class="choice-btn" data-type="skin" data-val="claro"><span class="color-dot" style="background:#fcd3b2;"></span> Claro</button>
+            </div>
+          </div>
+
+          <!-- Cabello (Color y Estilo) -->
+          <div class="custom-group">
+            <span class="custom-label">CABELLO (COLOR & CORTE):</span>
+            <div class="choice-row" id="hairColorChoices" style="margin-bottom: 8px;">
+              <button class="choice-btn" data-type="hairColor" data-val="negro"><span class="color-dot" style="background:#1c1917;"></span> Negro</button>
+              <button class="choice-btn active" data-type="hairColor" data-val="castano"><span class="color-dot" style="background:#452b1f;"></span> Castaño</button>
+              <button class="choice-btn" data-type="hairColor" data-val="rubio"><span class="color-dot" style="background:#d8ab50;"></span> Rubio</button>
+              <button class="choice-btn" data-type="hairColor" data-val="pelirrojo"><span class="color-dot" style="background:#a43d1d;"></span> Pelirrojo</button>
+            </div>
+            <div class="choice-row" id="hairStyleChoices">
+              <button class="choice-btn active" data-type="hairStyle" data-val="corto">Corto clásico</button>
+              <button class="choice-btn" data-type="hairStyle" data-val="fade">Fade moderno</button>
+            </div>
+          </div>
+
+          <!-- Contextura / Estatura -->
+          <div class="custom-group">
+            <span class="custom-label">ESTATURA Y CONTEXTURA:</span>
+            <div class="choice-row" id="buildChoices">
+              <button class="choice-btn active" data-type="build" data-val="standard">Estándar</button>
+              <button class="choice-btn" data-type="build" data-val="alto">Alto/a</button>
+              <button class="choice-btn" data-type="build" data-val="flaco">Delgado/a</button>
+              <button class="choice-btn" data-type="build" data-val="atletico">Atlético/a</button>
+            </div>
+          </div>
+
+          <!-- Atuendo Clínico -->
+          <div class="custom-group">
+            <span class="custom-label">ATUENDO CLÍNICO / UNIFORME:</span>
+            <div class="choice-row" id="outfitChoices">
+              <button class="choice-btn active" data-type="outfit" data-val="guardapolvo">🥼 Guardapolvo Blanco</button>
+              <button class="choice-btn" data-type="outfit" data-val="ambo_celeste">👕 Ambo Celeste</button>
+              <button class="choice-btn" data-type="outfit" data-val="ambo_verde">👕 Ambo Verde Quirúrgico</button>
+              <button class="choice-btn" data-type="outfit" data-val="ambo_upms">🟢 Ambo Verde UPMS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra de confirmación -->
+      <div style="display: flex; justify-content: space-between; align-items: center; border-top: 2px solid #334155; padding-top: 14px;">
+        <button id="btnBackToTitle" class="btn-tool" style="padding: 10px 16px;">
+          ◀ VOLVER
+        </button>
+        <button id="btnConfirmCharacter" class="btn-start" style="padding: 12px 24px; font-size: 0.8rem;">
+          <span>🩺</span> CONFIRMAR MATRÍCULA E INGRESAR A RECEPCIÓN ▶
+        </button>
+      </div>
+    </div>
+
 
     <!-- ========================================================
          ESCENA 2: HALL DE RECEPCIÓN (CHECK-IN DEL ALUMNO)
@@ -129,7 +226,7 @@
         <!-- Estudiante de Medicina (Jugador) -->
         <div class="actor">
           <span class="actor-tag">ESTUDIANTE</span>
-          <img src="estudiante_pixel.png" alt="Estudiante" class="stage-student-pixel">
+          <div id="stageStudentGraphic" class="stage-student-pixel"></div>
         </div>
 
         <!-- Cama de Paciente -->
@@ -175,7 +272,9 @@
   <!-- Arquitectura Modular MedikQuest -->
   <script src="js/data/questions.js"></script>
   <script src="js/audio/sound-system.js"></script>
+  <script src="js/core/player-profile.js"></script>
   <script src="js/core/game-engine.js"></script>
+  <script src="js/ui/avatar-generator.js"></script>
   <script src="js/ui/typewriter.js"></script>
   <script src="js/ui/view-manager.js"></script>
   <script src="js/app.js"></script>

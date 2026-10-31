@@ -15,6 +15,7 @@
       this.screens = {
         intro: document.getElementById('screenIntro'),
         title: document.getElementById('screenTitle'),
+        customizer: document.getElementById('screenCustomizer'),
         reception: document.getElementById('screenReception'),
         game: document.getElementById('screenGame')
       };
@@ -30,9 +31,17 @@
         subjectBadge: document.getElementById('subjectBadge'),
         profSpeech: document.getElementById('profSpeech'),
         optionsContainer: document.getElementById('optionsContainer'),
-        walkingStudent: document.getElementById('walkingStudent'),
         cinemaSubtitle: document.getElementById('cinemaSubtitle'),
-        receptionSpeech: document.getElementById('receptionSpeech')
+        receptionSpeech: document.getElementById('receptionSpeech'),
+        actorTag: document.querySelector('.actor-tag')
+      };
+
+      this.customizer = {
+        previewContainer: document.getElementById('avatarPreviewContainer'),
+        previewName: document.getElementById('previewStudentName'),
+        previewTitle: document.getElementById('previewStudentTitle'),
+        inputName: document.getElementById('inputStudentName'),
+        hairStyleChoices: document.getElementById('hairStyleChoices')
       };
 
       this.cabinet = document.querySelector('.rpg-cabinet');
@@ -48,6 +57,79 @@
           el.style.display = 'none';
         }
       });
+    }
+
+    renderCustomizer(profile) {
+      if (!profile || !this.customizer.previewContainer) return;
+      const data = profile.get();
+
+      // Render Avatar SVG
+      const svg = MedikQuest.AvatarGenerator.generateSVG(data);
+      this.customizer.previewContainer.innerHTML = svg;
+
+      // Update Card Labels
+      if (this.customizer.previewName) {
+        this.customizer.previewName.textContent = profile.getName().toUpperCase();
+      }
+      if (this.customizer.previewTitle) {
+        this.customizer.previewTitle.textContent = profile.getIdCardSub().toUpperCase();
+      }
+      if (this.customizer.inputName && this.customizer.inputName.value !== profile.getName()) {
+        this.customizer.inputName.value = profile.getName();
+      }
+
+      // Update active state on choice buttons
+      this._updateActiveButtons(data);
+    }
+
+    _updateActiveButtons(data) {
+      document.querySelectorAll('.choice-btn').forEach(btn => {
+        const type = btn.dataset.type;
+        const val = btn.dataset.val;
+        if (type && val && data[type] !== undefined) {
+          if (data[type] === val) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        }
+      });
+    }
+
+    updateHairStyleOptions(gender, currentStyle) {
+      if (!this.customizer.hairStyleChoices) return;
+      const styles = gender === 'f'
+        ? [
+            { id: 'coleta', label: 'Coleta' },
+            { id: 'suelto', label: 'Pelo largo' }
+          ]
+        : [
+            { id: 'corto', label: 'Corto' },
+            { id: 'fade', label: 'Fade' }
+          ];
+
+      this.customizer.hairStyleChoices.innerHTML = styles.map(s => `
+        <button class="choice-btn ${currentStyle === s.id ? 'active' : ''}" data-type="hairStyle" data-val="${s.id}">
+          ${s.label}
+        </button>
+      `).join('');
+    }
+
+    applyPlayerVisuals(profile) {
+      if (!profile) return;
+      const data = profile.get();
+      const svg = MedikQuest.AvatarGenerator.generateSVG(data);
+
+      // Bedside student in clinical rotation
+      const stageGraphic = document.getElementById('stageStudentGraphic') || document.querySelector('.stage-student-pixel');
+      if (stageGraphic) {
+        stageGraphic.innerHTML = svg;
+      }
+
+      // Student Tag in Clinical Room (ALUMNO: NOMBRE or ALUMNA: NOMBRE)
+      if (this.stage.actorTag) {
+        this.stage.actorTag.textContent = profile.getBadgeText();
+      }
     }
 
     updateHUD(hp, xp) {
@@ -141,12 +223,14 @@
       if (btn) btn.addEventListener('click', onRetry);
     }
 
-    renderVictory(totalXp, onReturnHome, onCharSound) {
+    renderVictory(playerProfile, totalXp, onReturnHome, onCharSound) {
       if (this.stage.profImg) this.stage.profImg.src = 'dra_viviana_ruiz_fiel.jpg';
       if (this.stage.profName) this.stage.profName.textContent = 'TRIBUNAL ACADÉMICO UPMS';
-      if (this.stage.subjectBadge) this.stage.subjectBadge.textContent = '¡ROTACIÓN DE 1ER AÑO COMPLETADA!';
+      if (this.stage.subjectBadge) this.stage.subjectBadge.textContent = '¡ROTACIÓN DE 1ER SEMESTRE COMPLETADA!';
 
-      const message = `🎓 ¡FELICITACIONES, FUTURO MÉDICO!\n\nHas resuelto con éxito todos los casos clínicos de Anatomía Humana I, Bioquímica Clínica I, Laboratorios y Antropología Médica con un puntaje final de ${totalXp} XP.\n\nEl Dr. René Amarilla, la Dra. Antonella Antico, la Lic. Patricia Gómez, el Dr. Ángel Gómez y la Dra. Viviana Ruiz han firmado y sellado tu libreta oficial de prácticas.`;
+      const studentName = playerProfile ? playerProfile.getName() : 'Estudiante';
+
+      const message = `🎓 ¡FELICITACIONES, ESTUDIANTE ${studentName.toUpperCase()}!\n\nHas resuelto con éxito todos los casos clínicos de Anatomía Humana I, Bioquímica Clínica I, Laboratorios y Antropología Médica con un puntaje final de ${totalXp} XP.\n\nEl Dr. René Amarilla, la Dra. Antonella Antico, la Lic. Patricia Gómez, el Dr. Ángel Gómez y la Dra. Viviana Ruiz han firmado y sellado tu libreta oficial de prácticas del 1° Semestre.`;
 
       this.clearOptions();
       this.typewriter.type(this.stage.profSpeech, message, 15, {
