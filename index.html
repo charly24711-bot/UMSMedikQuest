@@ -17,7 +17,7 @@
       <!-- Barra superior cinemática -->
       <div class="cinema-bar-top">
         <span class="cinema-title">UPMS FILIAL CDE • PRÓLOGO</span>
-        <button class="btn-skip" onclick="skipToTitle()">SALTAR INTRO ⏭</button>
+        <button id="btnSkipIntro" class="btn-skip">SALTAR INTRO ⏭</button>
       </div>
 
       <!-- Sprite del estudiante real en pixel art -->
@@ -58,7 +58,7 @@
           Simulador de Criterio Clínico y Razonamiento Médico.<br>
           Rotación Integral de 1° Año de Medicina en el Campus Central.
         </p>
-        <button class="btn-start" onclick="enterReception()">
+        <button id="btnEnterReception" class="btn-start">
           <span>▶</span> INGRESAR A RECEPCIÓN DE LA FACULTAD
         </button>
       </div>
@@ -92,7 +92,7 @@
       </section>
 
       <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
-        <button class="btn-start" style="padding: 12px 20px; font-size: 0.75rem;" onclick="startClinicalRotation()">
+        <button id="btnStartRotation" class="btn-start" style="padding: 12px 20px; font-size: 0.75rem;">
           <span>🩺</span> PASAR A LAS AULAS Y PRÁCTICAS CLÍNICAS ▶
         </button>
       </div>
@@ -165,14 +165,19 @@
 
       <!-- Barra de herramientas inferior -->
       <footer class="stage-footer">
-        <button class="btn-tool" onclick="showHint()">💡 PISTA DEL PROFESOR</button>
-        <button class="btn-tool" onclick="goToTitleMenu()">🏛️ MENÚ DE LA FACHADA</button>
+        <button id="btnHint" class="btn-tool">💡 PISTA DEL PROFESOR</button>
+        <button id="btnReturnToMenu" class="btn-tool">🏛️ MENÚ DE LA FACHADA</button>
       </footer>
     </div>
 
   </div>
 
-  <script src="preguntas.js"></script>
-  <script src="game.js"></script>
+  <!-- Arquitectura Modular MedikQuest -->
+  <script src="js/data/questions.js"></script>
+  <script src="js/audio/sound-system.js"></script>
+  <script src="js/core/game-engine.js"></script>
+  <script src="js/ui/typewriter.js"></script>
+  <script src="js/ui/view-manager.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,128 @@
+// Audio Service: Web Audio API sound synthesis and playback management
+(function (root, factory) {
+  if (typeof module === 'object' && module.exports) {
+    module.exports = factory();
+  } else {
+    root.MedikQuest = root.MedikQuest || {};
+    root.MedikQuest.SoundSystem = factory();
+  }
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+
+  class SoundSystem {
+    constructor() {
+      this.audioCtx = null;
+      this.isMuted = false;
+      this.volume = 1.0;
+    }
+
+    _getContext() {
+      if (typeof window === 'undefined') return null;
+      if (!this.audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (AudioContext) {
+          this.audioCtx = new AudioContext();
+        }
+      }
+      if (this.audioCtx && this.audioCtx.state === 'suspended') {
+        this.audioCtx.resume();
+      }
+      return this.audioCtx;
+    }
+
+    setMuted(muted) {
+      this.isMuted = Boolean(muted);
+    }
+
+    toggleMute() {
+      this.isMuted = !this.isMuted;
+      return this.isMuted;
+    }
+
+    setVolume(vol) {
+      this.volume = Math.max(0, Math.min(1, vol));
+    }
+
+    play(type) {
+      if (this.isMuted) return;
+      const ctx = this._getContext();
+      if (!ctx) return;
+
+      const now = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      const baseVolume = this.volume;
+
+      switch (type) {
+        case 'fanfare': {
+          const notes = [261.63, 329.63, 392.00, 523.25, 659.25]; // C, E, G, C, E
+          notes.forEach((freq, idx) => {
+            const o = ctx.createOscillator();
+            const g = ctx.createGain();
+            o.type = 'triangle';
+            o.frequency.setValueAtTime(freq, now + idx * 0.09);
+            g.gain.setValueAtTime(0.18 * baseVolume, now + idx * 0.09);
+            g.gain.linearRampToValueAtTime(0.01 * baseVolume, now + idx * 0.09 + 0.22);
+            o.connect(g);
+            g.connect(ctx.destination);
+            o.start(now + idx * 0.09);
+            o.stop(now + idx * 0.09 + 0.22);
+          });
+          break;
+        }
+
+        case 'step': {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(140, now);
+          osc.frequency.exponentialRampToValueAtTime(60, now + 0.06);
+          gain.gain.setValueAtTime(0.08 * baseVolume, now);
+          gain.gain.linearRampToValueAtTime(0.001 * baseVolume, now + 0.06);
+          osc.start(now);
+          osc.stop(now + 0.06);
+          break;
+        }
+
+        case 'correct': {
+          osc.type = 'square';
+          osc.frequency.setValueAtTime(523.25, now); // C5
+          osc.frequency.setValueAtTime(659.25, now + 0.1); // E5
+          osc.frequency.setValueAtTime(783.99, now + 0.2); // G5
+          gain.gain.setValueAtTime(0.2 * baseVolume, now);
+          gain.gain.linearRampToValueAtTime(0.01 * baseVolume, now + 0.45);
+          osc.start(now);
+          osc.stop(now + 0.45);
+          break;
+        }
+
+        case 'wrong': {
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(164.81, now);
+          osc.frequency.linearRampToValueAtTime(110.00, now + 0.3);
+          gain.gain.setValueAtTime(0.25 * baseVolume, now);
+          gain.gain.linearRampToValueAtTime(0.01 * baseVolume, now + 0.35);
+          osc.start(now);
+          osc.stop(now + 0.35);
+          break;
+        }
+
+        case 'blip': {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(650 + Math.random() * 120, now);
+          gain.gain.setValueAtTime(0.025 * baseVolume, now);
+          gain.gain.linearRampToValueAtTime(0.001 * baseVolume, now + 0.035);
+          osc.start(now);
+          osc.stop(now + 0.035);
+          break;
+        }
+
+        default:
+          break;
+      }
+    }
+  }
+
+  return SoundSystem;
+});

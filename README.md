@@ -10,16 +10,26 @@ El alumno asume el rol de un estudiante en su primera guardia médica. Para reso
 ---
 
 ## 📁 Estructura del Proyecto
-- `index.html`: Gabinete retro interactivo y pantalla RPG.
+- `index.html`: Gabinete retro interactivo y pantalla RPG (sin eventos inline).
 - `styles.css`: Estilo visual 16-bit (fuentes retro, bordes de diálogo, barras de HP/MP).
-- `preguntas.js`: Banco modular de contenidos por materia de 1er Año:
-  - **Anatomía Humana** (*Dr. Rivas*)
-  - **Histología y Embriología** (*Dra. Valenzuela*)
-  - **Bioquímica Médica**
-  - **Biología Celular y Genética**
-- `game.js`: Motor RPG con sistema de niveles, puntos de experiencia (XP), vidas y diálogos.
+- `js/`: Arquitectura modular desacoplada:
+  - `data/questions.js`: Banco de casos clínicos y cátedras de 1er Año.
+  - `audio/sound-system.js`: Síntesis de sonido retro desacoplada (Web Audio API).
+  - `core/game-engine.js`: Dominio puro (máquina de estados, XP, HP, lógica sin dependencias de DOM).
+  - `ui/typewriter.js`: Controlador de efecto de texto retro con soporte de cancelación y skip.
+  - `ui/view-manager.js`: Renderizado de escenarios, HUD y diálogos.
+  - `app.js`: Orquestador principal e inyección de dependencias.
+- `tests/`: Batería de pruebas automatizadas unitarias (`tests/game-engine.test.js`).
 
 ---
 
 ## 🚀 Cómo jugar localmente
-Hacer doble clic en `index.html` en cualquier navegador web. No requiere servidor ni conexión a internet.
+Hacer doble clic en `index.html` o ejecutar `JUGAR_MEDIKQUEST.bat` en cualquier navegador web. No requiere servidor ni conexión a internet.
+
+---
+
+## 🧪 Pruebas Automatizadas
+Ejecutar el runner nativo de Node.js:
+```bash
+node --test tests/game-engine.test.js
+```
