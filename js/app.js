@@ -373,6 +373,7 @@
       if (!currentCase || !currentCase.semiologia) return;
 
       this._awardExplorationBonus(currentCase.id);
+      this.view.setActiveSemiologyBtn(mode);
 
       const sem = currentCase.semiologia;
       let title = '';
@@ -382,12 +383,14 @@
         case 'auscultacion':
           title = '🩺 AUSCULTACIÓN CARDIORRESPIRATORIA';
           text = sem.auscultacion;
-          this.sound.play('blip');
+          this.sound.play('heartbeat');
+          this.view.triggerPatientReaction('💓 Auscultando ruidos...');
           break;
         case 'maniobra':
           title = '🔨 PALPACIÓN Y MANIOBRAS SEMIOLÓGICAS';
           text = sem.maniobra;
-          this.sound.play('blip');
+          this.sound.play('exam_touch');
+          this.view.triggerPatientReaction('⚡ Palpación semiológica...');
           break;
         case 'vitales':
           title = '📊 MONITOR DE SIGNOS VITALES';
@@ -398,12 +401,14 @@
           } else {
             text = String(sem.signosVitales);
           }
-          this.sound.play('blip');
+          this.sound.play('vital_beep');
+          this.view.triggerPatientReaction('📊 Monitor telemetría...');
           break;
         case 'anamnesis':
           title = '💬 INTERROGATORIO CLÍNICO (ANAMNESIS)';
           text = sem.anamnesis;
           this.sound.play('blip');
+          this.view.triggerPatientReaction('💬 Interrogando al paciente...');
           break;
         default:
           return;
@@ -434,7 +439,28 @@
       };
 
       const title = titles[zone] || '🔍 INSPECCIÓN REGIONAL';
-      this.sound.play('blip');
+
+      switch (zone) {
+        case 'chest':
+          this.sound.play('heartbeat');
+          this.view.triggerPatientReaction('💓 Auscultando tórax...');
+          this.view.setActiveSemiologyBtn('auscultacion');
+          break;
+        case 'arm':
+          this.sound.play('vital_beep');
+          this.view.triggerPatientReaction('💉 Pulsos periféricos...');
+          this.view.setActiveSemiologyBtn('vitales');
+          break;
+        case 'knee':
+          this.sound.play('exam_touch');
+          this.view.triggerPatientReaction('🦵 Evaluando reflejos...');
+          this.view.setActiveSemiologyBtn('maniobra');
+          break;
+        default:
+          this.sound.play('blip');
+          this.view.triggerPatientReaction('👁️ Examinando facies...');
+          break;
+      }
 
       this.view.showSemiologyFinding(
         title,

@@ -118,6 +118,47 @@
           break;
         }
 
+        case 'heartbeat': {
+          // Lub-dub: dos pulsos cardíacos acústicos bajos
+          [0, 0.12].forEach((offset, idx) => {
+            const o = ctx.createOscillator();
+            const g = ctx.createGain();
+            o.type = 'sine';
+            o.frequency.setValueAtTime(idx === 0 ? 82 : 70, now + offset);
+            o.frequency.exponentialRampToValueAtTime(45, now + offset + 0.09);
+            g.gain.setValueAtTime((idx === 0 ? 0.35 : 0.28) * baseVolume, now + offset);
+            g.gain.exponentialRampToValueAtTime(0.001 * baseVolume, now + offset + 0.11);
+            o.connect(g);
+            g.connect(ctx.destination);
+            o.start(now + offset);
+            o.stop(now + offset + 0.12);
+          });
+          break;
+        }
+
+        case 'vital_beep': {
+          // Bip digital de monitor multiparamétrico
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(960, now);
+          gain.gain.setValueAtTime(0.18 * baseVolume, now);
+          gain.gain.exponentialRampToValueAtTime(0.001 * baseVolume, now + 0.08);
+          osc.start(now);
+          osc.stop(now + 0.08);
+          break;
+        }
+
+        case 'exam_touch': {
+          // Percusión/palpación semiológica sorda
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(220, now);
+          osc.frequency.exponentialRampToValueAtTime(75, now + 0.1);
+          gain.gain.setValueAtTime(0.22 * baseVolume, now);
+          gain.gain.exponentialRampToValueAtTime(0.001 * baseVolume, now + 0.12);
+          osc.start(now);
+          osc.stop(now + 0.12);
+          break;
+        }
+
         default:
           break;
       }

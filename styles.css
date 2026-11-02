@@ -1059,6 +1059,63 @@ body {
   gap: 8px;
 }
 
+/* Pin y targets de examen semiológico */
+.semi-pin {
+  animation: semi-pin-pulse 2.2s infinite ease-in-out;
+  transform-origin: center;
+}
+
+.semi-pin.head-pin { animation-delay: 0s; }
+.semi-pin.chest-pin { animation-delay: 0.5s; }
+.semi-pin.arm-pin { animation-delay: 1.0s; }
+.semi-pin.knee-pin { animation-delay: 1.5s; }
+
+@keyframes semi-pin-pulse {
+  0%, 100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 3px currentColor);
+  }
+}
+
+.patient-bed-wrapper.reacting {
+  animation: patient-twitch 0.45s ease-in-out !important;
+}
+
+@keyframes patient-twitch {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-5px) rotate(-1.2deg); }
+  50% { transform: translateY(2px) rotate(1.2deg); }
+  75% { transform: translateY(-2px); }
+}
+
+.patient-exam-bubble {
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.95);
+  border: 1.5px solid #38bdf8;
+  color: #7dd3fc;
+  font-family: var(--font-retro);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9), 0 0 12px rgba(56, 189, 248, 0.4);
+  pointer-events: none;
+  z-index: 30;
+  white-space: nowrap;
+  animation: bubble-pop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes bubble-pop {
+  0% { opacity: 0; transform: translateX(-50%) translateY(8px) scale(0.8); }
+  100% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+}
+
 .btn-semiology {
   background: #1e293b;
   border: 1.5px solid #334155;
@@ -1088,17 +1145,19 @@ body {
 .btn-semiology:active, .btn-semiology.active {
   background: #0284c7;
   border-color: #7dd3fc;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.6), inset 0 2px 4px rgba(0,0,0,0.5);
+  transform: translateY(0);
 }
 
 /* Panel flotante de hallazgos semiológicos */
 .semiology-findings-panel {
-  background: #070d18;
+  background: radial-gradient(circle at 50% 0%, #0d1a33 0%, #060b14 100%);
   border-bottom: 2px solid #38bdf8;
-  border-top: 1px solid #1e293b;
+  border-top: 2px solid rgba(56, 189, 248, 0.4);
   padding: 14px 18px;
   position: relative;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.85);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.85), inset 0 0 15px rgba(56, 189, 248, 0.15);
   animation: slide-down 0.2s ease-out;
 }
 
@@ -1125,7 +1184,7 @@ body {
   font-family: var(--font-retro);
   font-size: 0.72rem;
   font-weight: 700;
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.15s;
@@ -1134,6 +1193,8 @@ body {
 .btn-close-semi:hover {
   background: #ef4444;
   border-color: #f87171;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
 }
 
 .semi-findings-body {
@@ -1141,10 +1202,11 @@ body {
   font-size: 1.15rem;
   line-height: 1.6;
   color: #f8fafc;
-  background: rgba(15, 23, 42, 0.75);
+  background: rgba(15, 23, 42, 0.85);
   border: 1px solid #1e293b;
   border-radius: 8px;
   padding: 12px 14px;
+  white-space: pre-line;
 }
 
 @media (max-width: 600px) {

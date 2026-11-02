@@ -169,6 +169,49 @@
       }
     }
 
+    triggerPatientReaction(text) {
+      const container = this.patientBedContainer || document.getElementById('patientBedContainer');
+      if (!container) return;
+      const bedWrapper = container.closest('.patient-bed-wrapper') || container;
+
+      bedWrapper.classList.remove('reacting');
+      void bedWrapper.offsetWidth;
+      bedWrapper.classList.add('reacting');
+      setTimeout(() => bedWrapper.classList.remove('reacting'), 600);
+
+      let bubble = document.getElementById('patientReactionBubble');
+      if (!bubble) {
+        bubble = document.createElement('div');
+        bubble.id = 'patientReactionBubble';
+        bubble.className = 'patient-exam-bubble';
+        bedWrapper.appendChild(bubble);
+      }
+      bubble.textContent = text;
+      bubble.style.display = 'block';
+      clearTimeout(this._bubbleTimer);
+      this._bubbleTimer = setTimeout(() => {
+        if (bubble) bubble.style.display = 'none';
+      }, 2200);
+    }
+
+    setActiveSemiologyBtn(mode) {
+      if (!this.semiology || !this.semiology.toolbar) return;
+      const btns = this.semiology.toolbar.querySelectorAll('.btn-semiology');
+      btns.forEach(b => {
+        if (b.dataset.mode === mode) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+    }
+
+    clearActiveSemiologyBtns() {
+      if (!this.semiology || !this.semiology.toolbar) return;
+      const btns = this.semiology.toolbar.querySelectorAll('.btn-semiology');
+      btns.forEach(b => b.classList.remove('active'));
+    }
+
     showSemiologyFinding(title, text, onComplete, onCharSound) {
       if (!this.semiology.card) return;
       if (this.semiology.title) {
@@ -188,6 +231,7 @@
       if (this.semiology.card) {
         this.semiology.card.style.display = 'none';
       }
+      this.clearActiveSemiologyBtns();
     }
 
     updateHUD(hp, xp) {

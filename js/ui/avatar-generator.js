@@ -476,11 +476,29 @@
     r(53, 26, 4, 7, '#0369a1');
     r(53, 26, 3, 2, '#38bdf8');
 
-    // --- 5. HOTSPOTS INTERACTIVOS DE SEMIOLOGÍA (POINT & CLICK) ---
-    rects.push(`<rect class="hotspot-zone" data-zone="head" x="18" y="14" width="13" height="11" fill="transparent"/>`);
-    rects.push(`<rect class="hotspot-zone" data-zone="chest" x="27" y="21" width="12" height="9" fill="transparent"/>`);
-    rects.push(`<rect class="hotspot-zone" data-zone="arm" x="20" y="23" width="7" height="6" fill="transparent"/>`);
-    rects.push(`<rect class="hotspot-zone" data-zone="knee" x="39" y="24" width="18" height="11" fill="transparent"/>`);
+    // --- 5. HOTSPOTS INTERACTIVOS DE SEMIOLOGÍA (POINT & CLICK CON RETRO PINS) ---
+    // Indicadores visuales de examen clínico interactivo
+    rects.push(`
+      <g class="semi-targets-layer" pointer-events="none">
+        <!-- Pin Cabeza/Facies -->
+        <circle class="semi-pin head-pin" cx="24" cy="18" r="2.6" fill="#38bdf8" fill-opacity="0.25" stroke="#38bdf8" stroke-width="0.7"/>
+        <circle class="semi-pin-core" cx="24" cy="18" r="0.9" fill="#ffffff"/>
+        <!-- Pin Tórax/Cardiopulmonar -->
+        <circle class="semi-pin chest-pin" cx="33" cy="24" r="2.8" fill="#10b981" fill-opacity="0.25" stroke="#10b981" stroke-width="0.7"/>
+        <circle class="semi-pin-core" cx="33" cy="24" r="0.9" fill="#ffffff"/>
+        <!-- Pin Brazo/Vía Venosa/Pulsos -->
+        <circle class="semi-pin arm-pin" cx="23" cy="25" r="2.2" fill="#fbbf24" fill-opacity="0.25" stroke="#fbbf24" stroke-width="0.7"/>
+        <circle class="semi-pin-core" cx="23" cy="25" r="0.9" fill="#ffffff"/>
+        <!-- Pin Abdomen/Miembros Inferiores -->
+        <circle class="semi-pin knee-pin" cx="45" cy="28" r="2.8" fill="#f43f5e" fill-opacity="0.25" stroke="#f43f5e" stroke-width="0.7"/>
+        <circle class="semi-pin-core" cx="45" cy="28" r="0.9" fill="#ffffff"/>
+      </g>
+      <!-- Hitboxes de click -->
+      <rect class="hotspot-zone" data-zone="head" x="17" y="13" width="14" height="12" fill="transparent" style="cursor: pointer;"/>
+      <rect class="hotspot-zone" data-zone="chest" x="27" y="20" width="12" height="10" fill="transparent" style="cursor: pointer;"/>
+      <rect class="hotspot-zone" data-zone="arm" x="19" y="22" width="8" height="8" fill="transparent" style="cursor: pointer;"/>
+      <rect class="hotspot-zone" data-zone="knee" x="38" y="23" width="20" height="13" fill="transparent" style="cursor: pointer;"/>
+    `);
 
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 42" shape-rendering="crispEdges" class="patient-pixel-art-bed" role="img" aria-label="Cama hospitalaria 16-bit con paciente">
       ${rects.join('\n      ')}
