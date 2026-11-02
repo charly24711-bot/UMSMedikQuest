@@ -948,67 +948,67 @@ body {
   filter: drop-shadow(0 10px 14px rgba(0,0,0,0.9));
 }
 
-/* Animación: Subida de escalinatas hacia la puerta de acceso */
+/* Animación: Subida de escalinatas hacia la puerta de acceso de vidrio (recuadro rojo) */
 .climb-stairs-anim {
-  left: 47.5%;
+  left: 52%;
   bottom: 4%;
-  transform: translateX(-50%) scale(1.35);
+  transform: translateX(-50%) scale(1.30);
   animation: climb-stairs-walk 4.2s linear forwards;
 }
 
 @keyframes climb-stairs-walk {
   0% {
-    left: 47.5%;
+    left: 52%;
     bottom: 4%;
-    transform: translateX(-50%) scale(1.35) translateY(0) rotate(-3deg);
+    transform: translateX(-50%) scale(1.30) translateY(0) rotate(-3deg);
     opacity: 1;
   }
   15% {
-    left: 46.5%;
-    bottom: 12%;
-    transform: translateX(-50%) scale(1.20) translateY(-6px) rotate(3deg);
+    left: 50.5%;
+    bottom: 10%;
+    transform: translateX(-50%) scale(1.16) translateY(-6px) rotate(3deg);
     opacity: 1;
   }
   30% {
-    left: 45.5%;
-    bottom: 20%;
-    transform: translateX(-50%) scale(1.06) translateY(0) rotate(-3deg);
+    left: 49.0%;
+    bottom: 16%;
+    transform: translateX(-50%) scale(1.02) translateY(0) rotate(-3deg);
     opacity: 1;
   }
   45% {
-    left: 44.6%;
-    bottom: 28%;
-    transform: translateX(-50%) scale(0.92) translateY(-6px) rotate(3deg);
+    left: 47.8%;
+    bottom: 22%;
+    transform: translateX(-50%) scale(0.90) translateY(-6px) rotate(3deg);
     opacity: 1;
   }
   60% {
-    left: 43.8%;
-    bottom: 35%;
+    left: 46.8%;
+    bottom: 27%;
     transform: translateX(-50%) scale(0.78) translateY(0) rotate(-3deg);
     opacity: 1;
   }
   75% {
-    left: 43.2%;
-    bottom: 42%;
-    transform: translateX(-50%) scale(0.64) translateY(-5px) rotate(3deg);
+    left: 45.8%;
+    bottom: 31%;
+    transform: translateX(-50%) scale(0.66) translateY(-5px) rotate(3deg);
     opacity: 1;
   }
-  88% {
-    left: 42.8%;
-    bottom: 47%;
-    transform: translateX(-50%) scale(0.52) translateY(0) rotate(-2deg);
+  86% {
+    left: 45.2%;
+    bottom: 34%;
+    transform: translateX(-50%) scale(0.56) translateY(0) rotate(-2deg);
     opacity: 0.9;
   }
-  94% {
-    left: 42.7%;
-    bottom: 49%;
-    transform: translateX(-50%) scale(0.44) translateY(-2px) rotate(1deg);
-    opacity: 0.4;
+  93% {
+    left: 45.0%;
+    bottom: 35.5%;
+    transform: translateX(-50%) scale(0.48) translateY(-2px) rotate(1deg);
+    opacity: 0.35;
   }
   100% {
-    left: 42.6%;
-    bottom: 50.5%;
-    transform: translateX(-50%) scale(0.36) translateY(0) rotate(0deg);
+    left: 45.0%;
+    bottom: 36.5%;
+    transform: translateX(-50%) scale(0.42) translateY(0) rotate(0deg);
     opacity: 0;
   }
 }
