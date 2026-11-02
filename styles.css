@@ -1027,38 +1027,38 @@ body {
   }
 }
 
-/* Animación: Caminata al mostrador de recepción (ala izquierda - recuadro rojo) */
+/* Animación: Caminata al mostrador de recepción (hasta el recuadro rojo frente al escritorio) */
 .reception-walk-anim {
-  left: 2%;
-  bottom: 10%;
-  transform: scale(1.25);
+  left: 4%;
+  bottom: 11%;
+  transform: scale(1.22);
   animation: walk-to-desk 4s ease-out forwards;
 }
 
 @keyframes walk-to-desk {
   0% {
-    left: 2%;
-    bottom: 10%;
-    transform: scale(1.25) translateY(0) rotate(-2deg);
+    left: 4%;
+    bottom: 11%;
+    transform: scale(1.22) translateY(0) rotate(-2deg);
   }
   25% {
-    left: 5.5%;
-    bottom: 11.5%;
-    transform: scale(1.22) translateY(-6px) rotate(2deg);
+    left: 10.5%;
+    bottom: 12.5%;
+    transform: scale(1.20) translateY(-6px) rotate(2deg);
   }
   50% {
-    left: 8.5%;
-    bottom: 13%;
-    transform: scale(1.19) translateY(0) rotate(-2deg);
+    left: 17%;
+    bottom: 14%;
+    transform: scale(1.18) translateY(0) rotate(-2deg);
   }
   75% {
-    left: 11.5%;
-    bottom: 14.5%;
-    transform: scale(1.17) translateY(-5px) rotate(2deg);
+    left: 23.5%;
+    bottom: 15%;
+    transform: scale(1.16) translateY(-5px) rotate(2deg);
   }
   100% {
-    left: 13.5%;
-    bottom: 15.5%;
+    left: 29%;
+    bottom: 16%;
     transform: scale(1.15) translateY(0) rotate(0deg);
   }
 }

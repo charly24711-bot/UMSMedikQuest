@@ -2,8 +2,8 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const QuestionsData = require('../js/data/questions.js');
 
-test('Questions Data contains 100 official cases and version v1.1.1', () => {
-  assert.equal(QuestionsData.version, 'v1.1.1');
+test('Questions Data contains 100 official cases and version v1.1.2', () => {
+  assert.equal(QuestionsData.version, 'v1.1.2');
   assert.equal(QuestionsData.totalQuestions, 100);
 
   const flat = QuestionsData.getFlatCases();
