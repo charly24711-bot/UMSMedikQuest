@@ -307,7 +307,7 @@
           this.view.entrance.stepLabel.textContent = 'HALL CENTRAL DE RECEPCIÓN • 07:46 AM';
         }
 
-        const text2 = `Cruzás las puertas de vidrio hacia el hall central... La Lic. Patricia Gómez te espera en la mesa de entrada de Laboratorios.`;
+        const text2 = `Cruzás las puertas de vidrio hacia el hall central... La Dra. Viviana Ruiz te espera en la recepción y coordinación académica.`;
         this.typewriter.type(this.view.entrance.subtitle, text2, 20, {
           onCharSound: () => this.sound.play('blip')
         });
@@ -352,9 +352,9 @@
       const role = this.profile.getTitle(); // "Alumno" o "Alumna"
 
       const welcomeText =
-        `¡Hola, ${studentName}! Te doy la bienvenida a los Laboratorios de Práctica y Simulación Médica de la UPMS.\n\n` +
-        `Como encargada de laboratorios, ya te preparé tu carnet estudiantil y tu Libreta Oficial de Prácticas para este 1° Semestre.\n\n` +
-        `En las aulas y salas de disección ya te esperan los jefes de cátedra: el Dr. René Amarilla en Anatomía, la Dra. Antonella Antico en Bioquímica, el Dr. Ángel Gómez en Formación y la Dra. Viviana Ruiz en Coordinación Académica. ¡Muchos éxitos en tu rotación!`;
+        `¡Hola, ${studentName}! Te doy la bienvenida a la Universidad Privada María Serrana.\n\n` +
+        `Como Coordinadora Académica, ya te preparé tu carnet estudiantil y tu Libreta Oficial de Prácticas para este 1° Semestre de Medicina.\n\n` +
+        `En las aulas, laboratorios y salas de simulación ya te esperan los docentes de las cátedras: el Dr. René Amarilla en Anatomía, la Dra. Antonella Antico en Bioquímica, el Dr. Ángel Gómez en Triaje y la Lic. Patricia Gómez en Bioseguridad. ¡Muchos éxitos en tu rotación clínica!`;
 
       this.typewriter.type('receptionSpeech', welcomeText, 14, {
         onCharSound: () => this.sound.play('blip')
