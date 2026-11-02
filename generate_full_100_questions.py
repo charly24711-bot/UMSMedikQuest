@@ -144,9 +144,9 @@ ciclo = [
 def build_case_obj(item, docente_info):
     cid, unidad, paciente, pregunta, correcta, distractores, pista = item
     
-    opciones = [{"texto": correcta, "correcta": True, "feedback": f"¡Correcto! {pista}"}]
+    opciones = [{"texto": correcta, "correcta": True, "feedback": f"¡Criterio clínico correcto! {pista}"}]
     for d in distractores:
-        opciones.append({"texto": d, "correcta": False, "feedback": f"Incorrecto. La respuesta clínica correcta es {correcta}."})
+        opciones.append({"texto": d, "correcta": False, "feedback": f"Conducta no indicada. Orientación del docente: '{pista}'"})
     
     return {
         "id": cid,
@@ -289,7 +289,7 @@ js_content = f"""// Data layer: UPMS 1st Year Clinical Cases (BANCO OFICIAL 100 
   }}
 
   return {{
-    version: "v1.1.0",
+    version: "v1.4.1",
     raw: BANCO_UPMS_PRIMER_ANHO,
     getFlatCases,
     getRandomRotation,

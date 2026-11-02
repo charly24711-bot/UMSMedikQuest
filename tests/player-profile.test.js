@@ -38,3 +38,35 @@ test('PlayerProfile restricts name to exactly 15 characters max', () => {
   assert.equal(profile.getRawName().length, 15);
   assert.equal(profile.getRawName(), '123456789012345');
 });
+
+test('PlayerProfile records professor endorsement stamps and detects completion', () => {
+  const profile = new PlayerProfile();
+  profile.resetStamps();
+  assert.equal(profile.getTotalStamps(), 0);
+  assert.equal(profile.hasAllStamps(), false);
+
+  // Add 1st stamp
+  const isNew1 = profile.addStamp('anatomia');
+  assert.equal(isNew1, true);
+  assert.equal(profile.getTotalStamps(), 1);
+  assert.equal(profile.getStamps().anatomia, true);
+
+  // Re-adding existing stamp returns false
+  const isNewAgain = profile.addStamp('anatomia');
+  assert.equal(isNewAgain, false);
+  assert.equal(profile.getTotalStamps(), 1);
+
+  // Add remaining 4 stamps
+  profile.addStamp('bioquimica');
+  profile.addStamp('laboratorios');
+  profile.addStamp('ciclos');
+  profile.addStamp('antropologia');
+
+  assert.equal(profile.getTotalStamps(), 5);
+  assert.equal(profile.hasAllStamps(), true);
+
+  // Reset stamps
+  profile.resetStamps();
+  assert.equal(profile.getTotalStamps(), 0);
+  assert.equal(profile.hasAllStamps(), false);
+});

@@ -49,22 +49,22 @@
             {
               "texto": "Nervio Radial",
               "correcta": true,
-              "feedback": "¡Correcto! Pasa por el canal de torsión humeral."
+              "feedback": "¡Criterio clínico correcto! Pasa por el canal de torsión humeral."
             },
             {
               "texto": "Nervio Mediano",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Radial."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Pasa por el canal de torsión humeral.'"
             },
             {
               "texto": "Nervio Cubital",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Radial."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Pasa por el canal de torsión humeral.'"
             },
             {
               "texto": "Nervio Musculocutáneo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Radial."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Pasa por el canal de torsión humeral.'"
             }
           ]
         },
@@ -96,22 +96,22 @@
             {
               "texto": "Hueso Escafoides",
               "correcta": true,
-              "feedback": "¡Correcto! Forma el piso de la tabaquera anatómica."
+              "feedback": "¡Criterio clínico correcto! Forma el piso de la tabaquera anatómica."
             },
             {
               "texto": "Hueso Semilunar",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Hueso Escafoides."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Forma el piso de la tabaquera anatómica.'"
             },
             {
               "texto": "Hueso Piramidal",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Hueso Escafoides."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Forma el piso de la tabaquera anatómica.'"
             },
             {
               "texto": "Hueso Trapecio",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Hueso Escafoides."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Forma el piso de la tabaquera anatómica.'"
             }
           ]
         },
@@ -143,22 +143,22 @@
             {
               "texto": "Nervio Mediano",
               "correcta": true,
-              "feedback": "¡Correcto! Inerva la eminencia tenar y cara palmar de los 3 primeros dedos."
+              "feedback": "¡Criterio clínico correcto! Inerva la eminencia tenar y cara palmar de los 3 primeros dedos."
             },
             {
               "texto": "Nervio Cubital",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Mediano."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Inerva la eminencia tenar y cara palmar de los 3 primeros dedos.'"
             },
             {
               "texto": "Nervio Radial",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Mediano."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Inerva la eminencia tenar y cara palmar de los 3 primeros dedos.'"
             },
             {
               "texto": "Nervio Axilar",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Mediano."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Inerva la eminencia tenar y cara palmar de los 3 primeros dedos.'"
             }
           ]
         },
@@ -190,22 +190,22 @@
             {
               "texto": "Nervio Axilar (Circunflejo)",
               "correcta": true,
-              "feedback": "¡Correcto! Inerva al músculo deltoides."
+              "feedback": "¡Criterio clínico correcto! Inerva al músculo deltoides."
             },
             {
               "texto": "Nervio Supraescapular",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Axilar (Circunflejo)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Inerva al músculo deltoides.'"
             },
             {
               "texto": "Nervio Torácico Largo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Axilar (Circunflejo)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Inerva al músculo deltoides.'"
             },
             {
               "texto": "Nervio Subescapular",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Axilar (Circunflejo)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Inerva al músculo deltoides.'"
             }
           ]
         },
@@ -237,22 +237,22 @@
             {
               "texto": "Tendón del Supraespinoso",
               "correcta": true,
-              "feedback": "¡Correcto! Pasa por el estrecho espacio subacromial."
+              "feedback": "¡Criterio clínico correcto! Pasa por el estrecho espacio subacromial."
             },
             {
               "texto": "Tendón del Subescapular",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tendón del Supraespinoso."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Pasa por el estrecho espacio subacromial.'"
             },
             {
               "texto": "Tendón del Infraespinoso",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tendón del Supraespinoso."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Pasa por el estrecho espacio subacromial.'"
             },
             {
               "texto": "Tendón del Redondo Menor",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tendón del Supraespinoso."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Pasa por el estrecho espacio subacromial.'"
             }
           ]
         },
@@ -284,22 +284,22 @@
             {
               "texto": "Ligamento Anular del Radio",
               "correcta": true,
-              "feedback": "¡Correcto! Rodea como anillo a la cabeza del radio."
+              "feedback": "¡Criterio clínico correcto! Rodea como anillo a la cabeza del radio."
             },
             {
               "texto": "Ligamento Colateral Cubital",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ligamento Anular del Radio."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Rodea como anillo a la cabeza del radio.'"
             },
             {
               "texto": "Membrana Interósea",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ligamento Anular del Radio."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Rodea como anillo a la cabeza del radio.'"
             },
             {
               "texto": "Ligamento Cuadrado",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ligamento Anular del Radio."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Rodea como anillo a la cabeza del radio.'"
             }
           ]
         },
@@ -331,22 +331,22 @@
             {
               "texto": "Nervio Cubital (Ulnar)",
               "correcta": true,
-              "feedback": "¡Correcto! Pasa por el canal de Guyón e inerva interóseos y aductor del pulgar."
+              "feedback": "¡Criterio clínico correcto! Pasa por el canal de Guyón e inerva interóseos y aductor del pulgar."
             },
             {
               "texto": "Nervio Mediano",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Cubital (Ulnar)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Pasa por el canal de Guyón e inerva interóseos y aductor del pulgar.'"
             },
             {
               "texto": "Nervio Radial",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Cubital (Ulnar)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Pasa por el canal de Guyón e inerva interóseos y aductor del pulgar.'"
             },
             {
               "texto": "Nervio Músculocutáneo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Cubital (Ulnar)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Pasa por el canal de Guyón e inerva interóseos y aductor del pulgar.'"
             }
           ]
         },
@@ -378,22 +378,22 @@
             {
               "texto": "Nervio Torácico Largo (de Bell)",
               "correcta": true,
-              "feedback": "¡Correcto! Inerva al músculo serrato anterior."
+              "feedback": "¡Criterio clínico correcto! Inerva al músculo serrato anterior."
             },
             {
               "texto": "Nervio Toracodorsal",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Torácico Largo (de Bell)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Inerva al músculo serrato anterior.'"
             },
             {
               "texto": "Nervio Accesorio (XI)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Torácico Largo (de Bell)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Inerva al músculo serrato anterior.'"
             },
             {
               "texto": "Nervio Frénico",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Torácico Largo (de Bell)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Inerva al músculo serrato anterior.'"
             }
           ]
         },
@@ -425,22 +425,22 @@
             {
               "texto": "Arteria Braquial (Humeral)",
               "correcta": true,
-              "feedback": "¡Correcto! Continúa a la arteria axilar y da pulsos en el brazo."
+              "feedback": "¡Criterio clínico correcto! Continúa a la arteria axilar y da pulsos en el brazo."
             },
             {
               "texto": "Arteria Axilar",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Arteria Braquial (Humeral)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Continúa a la arteria axilar y da pulsos en el brazo.'"
             },
             {
               "texto": "Arteria Radial",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Arteria Braquial (Humeral)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Continúa a la arteria axilar y da pulsos en el brazo.'"
             },
             {
               "texto": "Arteria Interósea",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Arteria Braquial (Humeral)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Continúa a la arteria axilar y da pulsos en el brazo.'"
             }
           ]
         },
@@ -472,22 +472,22 @@
             {
               "texto": "Músculo Esternocleidomastoideo",
               "correcta": true,
-              "feedback": "¡Correcto! Se inserta en la cara superior del tercio medial de la clavícula."
+              "feedback": "¡Criterio clínico correcto! Se inserta en la cara superior del tercio medial de la clavícula."
             },
             {
               "texto": "Músculo Pectoral Menor",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Músculo Esternocleidomastoideo."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Se inserta en la cara superior del tercio medial de la clavícula.'"
             },
             {
               "texto": "Músculo Trapecio",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Músculo Esternocleidomastoideo."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Se inserta en la cara superior del tercio medial de la clavícula.'"
             },
             {
               "texto": "Músculo Subclavio",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Músculo Esternocleidomastoideo."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Se inserta en la cara superior del tercio medial de la clavícula.'"
             }
           ]
         },
@@ -519,22 +519,22 @@
             {
               "texto": "Ligamento Cruzado Anterior (LCA)",
               "correcta": true,
-              "feedback": "¡Correcto! Se inserta en el área intercondílea anterior de la tibia."
+              "feedback": "¡Criterio clínico correcto! Se inserta en el área intercondílea anterior de la tibia."
             },
             {
               "texto": "Ligamento Cruzado Posterior",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ligamento Cruzado Anterior (LCA)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Se inserta en el área intercondílea anterior de la tibia.'"
             },
             {
               "texto": "Ligamento Colateral Medial",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ligamento Cruzado Anterior (LCA)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Se inserta en el área intercondílea anterior de la tibia.'"
             },
             {
               "texto": "Menisco Lateral",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ligamento Cruzado Anterior (LCA)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Se inserta en el área intercondílea anterior de la tibia.'"
             }
           ]
         },
@@ -566,22 +566,22 @@
             {
               "texto": "Ligamento Cruzado Posterior (LCP)",
               "correcta": true,
-              "feedback": "¡Correcto! Evita el desplazamiento posterior de la tibia sobre el fémur."
+              "feedback": "¡Criterio clínico correcto! Evita el desplazamiento posterior de la tibia sobre el fémur."
             },
             {
               "texto": "Ligamento Cruzado Anterior",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ligamento Cruzado Posterior (LCP)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Evita el desplazamiento posterior de la tibia sobre el fémur.'"
             },
             {
               "texto": "Ligamento Rotuliano",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ligamento Cruzado Posterior (LCP)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Evita el desplazamiento posterior de la tibia sobre el fémur.'"
             },
             {
               "texto": "Pata de Ganso",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ligamento Cruzado Posterior (LCP)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Evita el desplazamiento posterior de la tibia sobre el fémur.'"
             }
           ]
         },
@@ -613,22 +613,22 @@
             {
               "texto": "Nervio Peroneo Común (Cíatico Poplíteo Externo)",
               "correcta": true,
-              "feedback": "¡Correcto! Rodea el cuello de la fíbula e inerva a los dorsiflexores del pie."
+              "feedback": "¡Criterio clínico correcto! Rodea el cuello de la fíbula e inerva a los dorsiflexores del pie."
             },
             {
               "texto": "Nervio Tibial Posterior",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Peroneo Común (Cíatico Poplíteo Externo)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Rodea el cuello de la fíbula e inerva a los dorsiflexores del pie.'"
             },
             {
               "texto": "Nervio Femoral",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Peroneo Común (Cíatico Poplíteo Externo)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Rodea el cuello de la fíbula e inerva a los dorsiflexores del pie.'"
             },
             {
               "texto": "Nervio Obturador",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Peroneo Común (Cíatico Poplíteo Externo)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Rodea el cuello de la fíbula e inerva a los dorsiflexores del pie.'"
             }
           ]
         },
@@ -660,22 +660,22 @@
             {
               "texto": "Nervio Ciático Mayor",
               "correcta": true,
-              "feedback": "¡Correcto! Las inyecciones deben aplicarse en cuadrante superoexterno."
+              "feedback": "¡Criterio clínico correcto! Las inyecciones deben aplicarse en cuadrante superoexterno."
             },
             {
               "texto": "Nervio Femoral",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Ciático Mayor."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Las inyecciones deben aplicarse en cuadrante superoexterno.'"
             },
             {
               "texto": "Nervio Pudendo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Ciático Mayor."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Las inyecciones deben aplicarse en cuadrante superoexterno.'"
             },
             {
               "texto": "Nervio Cutáneo Femoral Lateral",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Ciático Mayor."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Las inyecciones deben aplicarse en cuadrante superoexterno.'"
             }
           ]
         },
@@ -707,22 +707,22 @@
             {
               "texto": "Fractura del Cuello Femoral (Subcapsular)",
               "correcta": true,
-              "feedback": "¡Correcto! La rotación externa y acortamiento son signos patognomónicos."
+              "feedback": "¡Criterio clínico correcto! La rotación externa y acortamiento son signos patognomónicos."
             },
             {
               "texto": "Fractura de Diáfisis Tibial",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Fractura del Cuello Femoral (Subcapsular)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La rotación externa y acortamiento son signos patognomónicos.'"
             },
             {
               "texto": "Luxación Posterior de Cadera",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Fractura del Cuello Femoral (Subcapsular)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La rotación externa y acortamiento son signos patognomónicos.'"
             },
             {
               "texto": "Fractura de Rótula",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Fractura del Cuello Femoral (Subcapsular)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La rotación externa y acortamiento son signos patognomónicos.'"
             }
           ]
         },
@@ -754,22 +754,22 @@
             {
               "texto": "Sartorio, Grácil y Semitendinoso",
               "correcta": true,
-              "feedback": "¡Correcto! Mnemotecnia clásica UPMS: Sartorio, Grácil (Recto interno) y Semitendinoso."
+              "feedback": "¡Criterio clínico correcto! Mnemotecnia clásica UPMS: Sartorio, Grácil (Recto interno) y Semitendinoso."
             },
             {
               "texto": "Bíceps femoral, Semimembranoso y Grácil",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Sartorio, Grácil y Semitendinoso."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Mnemotecnia clásica UPMS: Sartorio, Grácil (Recto interno) y Semitendinoso.'"
             },
             {
               "texto": "Recto femoral, Vasto medial y Sartorio",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Sartorio, Grácil y Semitendinoso."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Mnemotecnia clásica UPMS: Sartorio, Grácil (Recto interno) y Semitendinoso.'"
             },
             {
               "texto": "Pectíneo, Aductor largo y Grácil",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Sartorio, Grácil y Semitendinoso."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Mnemotecnia clásica UPMS: Sartorio, Grácil (Recto interno) y Semitendinoso.'"
             }
           ]
         },
@@ -801,22 +801,22 @@
             {
               "texto": "Tendón de Aquiles (Calcáneo)",
               "correcta": true,
-              "feedback": "¡Correcto! Formado por la unión de los gastrocnemios y el sóleo."
+              "feedback": "¡Criterio clínico correcto! Formado por la unión de los gastrocnemios y el sóleo."
             },
             {
               "texto": "Tendón del Tibial Anterior",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tendón de Aquiles (Calcáneo)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Formado por la unión de los gastrocnemios y el sóleo.'"
             },
             {
               "texto": "Tendón Peroneo Lateral Largo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tendón de Aquiles (Calcáneo)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Formado por la unión de los gastrocnemios y el sóleo.'"
             },
             {
               "texto": "Tendón Plantar Delgado",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tendón de Aquiles (Calcáneo)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Formado por la unión de los gastrocnemios y el sóleo.'"
             }
           ]
         },
@@ -848,22 +848,22 @@
             {
               "texto": "Pulso Pedio (Dorsal del Pie)",
               "correcta": true,
-              "feedback": "¡Correcto! Arteria pedia, continuación de la arteria tibial anterior."
+              "feedback": "¡Criterio clínico correcto! Arteria pedia, continuación de la arteria tibial anterior."
             },
             {
               "texto": "Pulso Tibial Posterior",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Pulso Pedio (Dorsal del Pie)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Arteria pedia, continuación de la arteria tibial anterior.'"
             },
             {
               "texto": "Pulso Poplíteo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Pulso Pedio (Dorsal del Pie)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Arteria pedia, continuación de la arteria tibial anterior.'"
             },
             {
               "texto": "Pulso Femoral",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Pulso Pedio (Dorsal del Pie)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Arteria pedia, continuación de la arteria tibial anterior.'"
             }
           ]
         },
@@ -895,22 +895,22 @@
             {
               "texto": "Nervio Tibial (Ciático Poplíteo Interno)",
               "correcta": true,
-              "feedback": "¡Correcto! Pasa por el túnel del tarso detrás del maléolo tibial."
+              "feedback": "¡Criterio clínico correcto! Pasa por el túnel del tarso detrás del maléolo tibial."
             },
             {
               "texto": "Nervio Peroneo Superficial",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Tibial (Ciático Poplíteo Interno)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Pasa por el túnel del tarso detrás del maléolo tibial.'"
             },
             {
               "texto": "Nervio Safeno",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Tibial (Ciático Poplíteo Interno)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Pasa por el túnel del tarso detrás del maléolo tibial.'"
             },
             {
               "texto": "Nervio Sural",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Tibial (Ciático Poplíteo Interno)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Pasa por el túnel del tarso detrás del maléolo tibial.'"
             }
           ]
         },
@@ -942,22 +942,22 @@
             {
               "texto": "Ligamento Lacunar (de Gimbernat)",
               "correcta": true,
-              "feedback": "¡Correcto! El límite medial es el ligamento lacunar de Gimbernat."
+              "feedback": "¡Criterio clínico correcto! El límite medial es el ligamento lacunar de Gimbernat."
             },
             {
               "texto": "Vena Femoral",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ligamento Lacunar (de Gimbernat)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El límite medial es el ligamento lacunar de Gimbernat.'"
             },
             {
               "texto": "Ligamento Inguinal",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ligamento Lacunar (de Gimbernat)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El límite medial es el ligamento lacunar de Gimbernat.'"
             },
             {
               "texto": "Músculo Pectíneo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ligamento Lacunar (de Gimbernat)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El límite medial es el ligamento lacunar de Gimbernat.'"
             }
           ]
         },
@@ -989,22 +989,22 @@
             {
               "texto": "Borde Superior de la costilla inferior",
               "correcta": true,
-              "feedback": "¡Correcto! El paquete vasculonervioso intercostal (VAN) corre por el borde inferior costal."
+              "feedback": "¡Criterio clínico correcto! El paquete vasculonervioso intercostal (VAN) corre por el borde inferior costal."
             },
             {
               "texto": "Borde Inferior de la costilla superior",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Borde Superior de la costilla inferior."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El paquete vasculonervioso intercostal (VAN) corre por el borde inferior costal.'"
             },
             {
               "texto": "Centro del espacio intercostal",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Borde Superior de la costilla inferior."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El paquete vasculonervioso intercostal (VAN) corre por el borde inferior costal.'"
             },
             {
               "texto": "Cara profunda del cartílago",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Borde Superior de la costilla inferior."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El paquete vasculonervioso intercostal (VAN) corre por el borde inferior costal.'"
             }
           ]
         },
@@ -1036,22 +1036,22 @@
             {
               "texto": "Arteria Descendente Anterior (Interventricular Anterior)",
               "correcta": true,
-              "feedback": "¡Correcto! Irriga los dos tercios anteriores del tabique y cara anterior del ventrículo izquierdo."
+              "feedback": "¡Criterio clínico correcto! Irriga los dos tercios anteriores del tabique y cara anterior del ventrículo izquierdo."
             },
             {
               "texto": "Arteria Coronaria Derecha",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Arteria Descendente Anterior (Interventricular Anterior)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Irriga los dos tercios anteriores del tabique y cara anterior del ventrículo izquierdo.'"
             },
             {
               "texto": "Arteria Circunfleja",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Arteria Descendente Anterior (Interventricular Anterior)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Irriga los dos tercios anteriores del tabique y cara anterior del ventrículo izquierdo.'"
             },
             {
               "texto": "Arteria Marginal Derecha",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Arteria Descendente Anterior (Interventricular Anterior)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Irriga los dos tercios anteriores del tabique y cara anterior del ventrículo izquierdo.'"
             }
           ]
         },
@@ -1083,22 +1083,22 @@
             {
               "texto": "Foco Aórtico",
               "correcta": true,
-              "feedback": "¡Correcto! 2° espacio intercostal derecho, línea paraesternal."
+              "feedback": "¡Criterio clínico correcto! 2° espacio intercostal derecho, línea paraesternal."
             },
             {
               "texto": "Foco Pulmonar",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Foco Aórtico."
+              "feedback": "Conducta no indicada. Orientación del docente: '2° espacio intercostal derecho, línea paraesternal.'"
             },
             {
               "texto": "Foco Mitral",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Foco Aórtico."
+              "feedback": "Conducta no indicada. Orientación del docente: '2° espacio intercostal derecho, línea paraesternal.'"
             },
             {
               "texto": "Foco Tricuspídeo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Foco Aórtico."
+              "feedback": "Conducta no indicada. Orientación del docente: '2° espacio intercostal derecho, línea paraesternal.'"
             }
           ]
         },
@@ -1130,22 +1130,22 @@
             {
               "texto": "Válvula Mitral (Bicúspide)",
               "correcta": true,
-              "feedback": "¡Correcto! El ápex cardíaco corresponde al ventrículo izquierdo y válvula mitral."
+              "feedback": "¡Criterio clínico correcto! El ápex cardíaco corresponde al ventrículo izquierdo y válvula mitral."
             },
             {
               "texto": "Válvula Aórtica",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Válvula Mitral (Bicúspide)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El ápex cardíaco corresponde al ventrículo izquierdo y válvula mitral.'"
             },
             {
               "texto": "Válvula Pulmonar",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Válvula Mitral (Bicúspide)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El ápex cardíaco corresponde al ventrículo izquierdo y válvula mitral.'"
             },
             {
               "texto": "Válvula Tricúspide",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Válvula Mitral (Bicúspide)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El ápex cardíaco corresponde al ventrículo izquierdo y válvula mitral.'"
             }
           ]
         },
@@ -1177,22 +1177,22 @@
             {
               "texto": "Ganglio Estrellado (Cervicotorácico)",
               "correcta": true,
-              "feedback": "¡Correcto! Síndrome de Pancoast por invasión del ganglio cervicotorácico."
+              "feedback": "¡Criterio clínico correcto! Síndrome de Pancoast por invasión del ganglio cervicotorácico."
             },
             {
               "texto": "Ganglio Celíaco",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ganglio Estrellado (Cervicotorácico)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Síndrome de Pancoast por invasión del ganglio cervicotorácico.'"
             },
             {
               "texto": "Nervio Vago",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ganglio Estrellado (Cervicotorácico)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Síndrome de Pancoast por invasión del ganglio cervicotorácico.'"
             },
             {
               "texto": "Nervio Frénico",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ganglio Estrellado (Cervicotorácico)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Síndrome de Pancoast por invasión del ganglio cervicotorácico.'"
             }
           ]
         },
@@ -1224,22 +1224,22 @@
             {
               "texto": "Nervio Frénico",
               "correcta": true,
-              "feedback": "¡Correcto! El nervio frénico nace de las raíces cervicales C3, C4 y C5."
+              "feedback": "¡Criterio clínico correcto! El nervio frénico nace de las raíces cervicales C3, C4 y C5."
             },
             {
               "texto": "Nervio Vago",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Frénico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El nervio frénico nace de las raíces cervicales C3, C4 y C5.'"
             },
             {
               "texto": "Nervio Recurrente Laríngeo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Frénico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El nervio frénico nace de las raíces cervicales C3, C4 y C5.'"
             },
             {
               "texto": "Nervio Intercostal 5°",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Frénico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El nervio frénico nace de las raíces cervicales C3, C4 y C5.'"
             }
           ]
         },
@@ -1271,22 +1271,22 @@
             {
               "texto": "Tronco Braquiocefálico",
               "correcta": true,
-              "feedback": "¡Correcto! El tronco braquiocefálico es la 1° rama, luego carótida común izq y subclavia izq."
+              "feedback": "¡Criterio clínico correcto! El tronco braquiocefálico es la 1° rama, luego carótida común izq y subclavia izq."
             },
             {
               "texto": "Arteria Carótida Común Izquierda",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tronco Braquiocefálico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El tronco braquiocefálico es la 1° rama, luego carótida común izq y subclavia izq.'"
             },
             {
               "texto": "Arteria Subclavia Izquierda",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tronco Braquiocefálico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El tronco braquiocefálico es la 1° rama, luego carótida común izq y subclavia izq.'"
             },
             {
               "texto": "Arteria Coronaria Derecha",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tronco Braquiocefálico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El tronco braquiocefálico es la 1° rama, luego carótida común izq y subclavia izq.'"
             }
           ]
         },
@@ -1318,22 +1318,22 @@
             {
               "texto": "Es más vertical, más corto y de mayor calibre",
               "correcta": true,
-              "feedback": "¡Correcto! La anatomía vertical y ancha del bronquio derecho favorece la aspiración."
+              "feedback": "¡Criterio clínico correcto! La anatomía vertical y ancha del bronquio derecho favorece la aspiración."
             },
             {
               "texto": "Es más horizontal y largo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Es más vertical, más corto y de mayor calibre."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La anatomía vertical y ancha del bronquio derecho favorece la aspiración.'"
             },
             {
               "texto": "Tiene menor diámetro",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Es más vertical, más corto y de mayor calibre."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La anatomía vertical y ancha del bronquio derecho favorece la aspiración.'"
             },
             {
               "texto": "Cruza por delante del esófago",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Es más vertical, más corto y de mayor calibre."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La anatomía vertical y ancha del bronquio derecho favorece la aspiración.'"
             }
           ]
         },
@@ -1365,22 +1365,22 @@
             {
               "texto": "Vena Cava Superior",
               "correcta": true,
-              "feedback": "¡Correcto! La vena ácigos forma un cayado sobre el pedículo pulmonar derecho y drena en la VCS."
+              "feedback": "¡Criterio clínico correcto! La vena ácigos forma un cayado sobre el pedículo pulmonar derecho y drena en la VCS."
             },
             {
               "texto": "Aurícula Izquierda",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vena Cava Superior."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La vena ácigos forma un cayado sobre el pedículo pulmonar derecho y drena en la VCS.'"
             },
             {
               "texto": "Vena Braquiocefálica Izquierda",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vena Cava Superior."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La vena ácigos forma un cayado sobre el pedículo pulmonar derecho y drena en la VCS.'"
             },
             {
               "texto": "Vena Porta",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vena Cava Superior."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La vena ácigos forma un cayado sobre el pedículo pulmonar derecho y drena en la VCS.'"
             }
           ]
         },
@@ -1412,22 +1412,22 @@
             {
               "texto": "Nodo Sinoauricular (de Keith y Flack)",
               "correcta": true,
-              "feedback": "¡Correcto! El nodo sinusal es el marcapasos primario con frecuencia de 60-100 lpm."
+              "feedback": "¡Criterio clínico correcto! El nodo sinusal es el marcapasos primario con frecuencia de 60-100 lpm."
             },
             {
               "texto": "Nodo Auriculoventricular (de Aschoff-Tawara)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nodo Sinoauricular (de Keith y Flack)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El nodo sinusal es el marcapasos primario con frecuencia de 60-100 lpm.'"
             },
             {
               "texto": "Haz de His",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nodo Sinoauricular (de Keith y Flack)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El nodo sinusal es el marcapasos primario con frecuencia de 60-100 lpm.'"
             },
             {
               "texto": "Fibras de Purkinje",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nodo Sinoauricular (de Keith y Flack)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El nodo sinusal es el marcapasos primario con frecuencia de 60-100 lpm.'"
             }
           ]
         },
@@ -1459,22 +1459,22 @@
             {
               "texto": "Punto de McBurney",
               "correcta": true,
-              "feedback": "¡Correcto! El punto de McBurney corresponde a la base de implantación apendicular."
+              "feedback": "¡Criterio clínico correcto! El punto de McBurney corresponde a la base de implantación apendicular."
             },
             {
               "texto": "Punto de Murphy",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Punto de McBurney."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El punto de McBurney corresponde a la base de implantación apendicular.'"
             },
             {
               "texto": "Punto de Mayo-Robson",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Punto de McBurney."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El punto de McBurney corresponde a la base de implantación apendicular.'"
             },
             {
               "texto": "Signo de Courvoisier",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Punto de McBurney."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El punto de McBurney corresponde a la base de implantación apendicular.'"
             }
           ]
         },
@@ -1506,22 +1506,22 @@
             {
               "texto": "Conducto Cístico, Conducto Hepático Común y Cara Inferior del Hígado",
               "correcta": true,
-              "feedback": "¡Correcto! El triángulo de Calot es reparo quirúrgico clave para no lesionar la vía biliar principal."
+              "feedback": "¡Criterio clínico correcto! El triángulo de Calot es reparo quirúrgico clave para no lesionar la vía biliar principal."
             },
             {
               "texto": "Colédoco, Vena Porta y Duodeno",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Conducto Cístico, Conducto Hepático Común y Cara Inferior del Hígado."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El triángulo de Calot es reparo quirúrgico clave para no lesionar la vía biliar principal.'"
             },
             {
               "texto": "Conducto Pancreático, Bazo e Hígado",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Conducto Cístico, Conducto Hepático Común y Cara Inferior del Hígado."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El triángulo de Calot es reparo quirúrgico clave para no lesionar la vía biliar principal.'"
             },
             {
               "texto": "Vena Cava, Cístico y Píloro",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Conducto Cístico, Conducto Hepático Común y Cara Inferior del Hígado."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El triángulo de Calot es reparo quirúrgico clave para no lesionar la vía biliar principal.'"
             }
           ]
         },
@@ -1553,22 +1553,22 @@
             {
               "texto": "Lateral a los vasos epigástricos inferiores",
               "correcta": true,
-              "feedback": "¡Correcto! Las hernias indirectas son laterales a los vasos epigástricos; las directas son mediales."
+              "feedback": "¡Criterio clínico correcto! Las hernias indirectas son laterales a los vasos epigástricos; las directas son mediales."
             },
             {
               "texto": "Medial a los vasos epigástricos inferiores",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Lateral a los vasos epigástricos inferiores."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Las hernias indirectas son laterales a los vasos epigástricos; las directas son mediales.'"
             },
             {
               "texto": "Posterior a la aorta",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Lateral a los vasos epigástricos inferiores."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Las hernias indirectas son laterales a los vasos epigástricos; las directas son mediales.'"
             },
             {
               "texto": "Anterior al músculo recto",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Lateral a los vasos epigástricos inferiores."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Las hernias indirectas son laterales a los vasos epigástricos; las directas son mediales.'"
             }
           ]
         },
@@ -1600,22 +1600,22 @@
             {
               "texto": "Vena Gástrica Izquierda (Porta) y Venas Esofágicas Inferiores (Ácigos/Cava)",
               "correcta": true,
-              "feedback": "¡Correcto! La anastomosis portocava esofágica se dilata formando várices sangrantes."
+              "feedback": "¡Criterio clínico correcto! La anastomosis portocava esofágica se dilata formando várices sangrantes."
             },
             {
               "texto": "Vena Renal y Esplénica",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vena Gástrica Izquierda (Porta) y Venas Esofágicas Inferiores (Ácigos/Cava)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La anastomosis portocava esofágica se dilata formando várices sangrantes.'"
             },
             {
               "texto": "Vena Cava y Femoral",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vena Gástrica Izquierda (Porta) y Venas Esofágicas Inferiores (Ácigos/Cava)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La anastomosis portocava esofágica se dilata formando várices sangrantes.'"
             },
             {
               "texto": "Vena Mesentérica Superior e Ilíaca",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vena Gástrica Izquierda (Porta) y Venas Esofágicas Inferiores (Ácigos/Cava)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La anastomosis portocava esofágica se dilata formando várices sangrantes.'"
             }
           ]
         },
@@ -1647,22 +1647,22 @@
             {
               "texto": "Vesícula Biliar (Colecistitis Aguda)",
               "correcta": true,
-              "feedback": "¡Correcto! Murphy positivo indica inflamación vesicular al descender el diafragma."
+              "feedback": "¡Criterio clínico correcto! Murphy positivo indica inflamación vesicular al descender el diafragma."
             },
             {
               "texto": "Bazo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vesícula Biliar (Colecistitis Aguda)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Murphy positivo indica inflamación vesicular al descender el diafragma.'"
             },
             {
               "texto": "Páncreas",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vesícula Biliar (Colecistitis Aguda)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Murphy positivo indica inflamación vesicular al descender el diafragma.'"
             },
             {
               "texto": "Riñón Izquierdo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vesícula Biliar (Colecistitis Aguda)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Murphy positivo indica inflamación vesicular al descender el diafragma.'"
             }
           ]
         },
@@ -1694,22 +1694,22 @@
             {
               "texto": "Nervio Facial (VII Par)",
               "correcta": true,
-              "feedback": "¡Correcto! El VII par inerva todos los músculos cutáneos de la mímica."
+              "feedback": "¡Criterio clínico correcto! El VII par inerva todos los músculos cutáneos de la mímica."
             },
             {
               "texto": "Nervio Trigémino (V Par)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Facial (VII Par)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El VII par inerva todos los músculos cutáneos de la mímica.'"
             },
             {
               "texto": "Nervio Oculomotor (III Par)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Facial (VII Par)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El VII par inerva todos los músculos cutáneos de la mímica.'"
             },
             {
               "texto": "Nervio Hipogloso (XII Par)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Facial (VII Par)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El VII par inerva todos los músculos cutáneos de la mímica.'"
             }
           ]
         },
@@ -1741,22 +1741,22 @@
             {
               "texto": "Nervio Trigémino (V Par)",
               "correcta": true,
-              "feedback": "¡Correcto! El V par (oftálmica V1, maxilar V2, mandibular V3) es el gran nervio sensitivo facial."
+              "feedback": "¡Criterio clínico correcto! El V par (oftálmica V1, maxilar V2, mandibular V3) es el gran nervio sensitivo facial."
             },
             {
               "texto": "Nervio Facial (VII Par)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Trigémino (V Par)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El V par (oftálmica V1, maxilar V2, mandibular V3) es el gran nervio sensitivo facial.'"
             },
             {
               "texto": "Nervio Glosofaríngeo (IX Par)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Trigémino (V Par)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El V par (oftálmica V1, maxilar V2, mandibular V3) es el gran nervio sensitivo facial.'"
             },
             {
               "texto": "Nervio Vago (X Par)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Trigémino (V Par)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El V par (oftálmica V1, maxilar V2, mandibular V3) es el gran nervio sensitivo facial.'"
             }
           ]
         },
@@ -1788,22 +1788,22 @@
             {
               "texto": "Nervio Laríngeo Recurrente",
               "correcta": true,
-              "feedback": "¡Correcto! El recurrente inerva todos los músculos laríngeos excepto el cricotiroideo."
+              "feedback": "¡Criterio clínico correcto! El recurrente inerva todos los músculos laríngeos excepto el cricotiroideo."
             },
             {
               "texto": "Nervio Laríngeo Superior",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Laríngeo Recurrente."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El recurrente inerva todos los músculos laríngeos excepto el cricotiroideo.'"
             },
             {
               "texto": "Nervio Frénico",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Laríngeo Recurrente."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El recurrente inerva todos los músculos laríngeos excepto el cricotiroideo.'"
             },
             {
               "texto": "Tronco Simpático",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Laríngeo Recurrente."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El recurrente inerva todos los músculos laríngeos excepto el cricotiroideo.'"
             }
           ]
         },
@@ -1835,22 +1835,22 @@
             {
               "texto": "Nervio Oculomotor (III Par Craneal)",
               "correcta": true,
-              "feedback": "¡Correcto! El III par inerva recto medial, superior, inferior, oblicuo menor y constrictor pupilar."
+              "feedback": "¡Criterio clínico correcto! El III par inerva recto medial, superior, inferior, oblicuo menor y constrictor pupilar."
             },
             {
               "texto": "Nervio Troclear (IV Par)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Oculomotor (III Par Craneal)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El III par inerva recto medial, superior, inferior, oblicuo menor y constrictor pupilar.'"
             },
             {
               "texto": "Nervio Abducens (VI Par)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Oculomotor (III Par Craneal)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El III par inerva recto medial, superior, inferior, oblicuo menor y constrictor pupilar.'"
             },
             {
               "texto": "Nervio Óptico (II Par)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Oculomotor (III Par Craneal)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El III par inerva recto medial, superior, inferior, oblicuo menor y constrictor pupilar.'"
             }
           ]
         },
@@ -1882,22 +1882,22 @@
             {
               "texto": "Nervio Olfatorio (I Par Craneal)",
               "correcta": true,
-              "feedback": "¡Correcto! Los filetes del nervio olfatorio atraviesan la lámina cribosa del etmoides hacia el bulbo olfatorio."
+              "feedback": "¡Criterio clínico correcto! Los filetes del nervio olfatorio atraviesan la lámina cribosa del etmoides hacia el bulbo olfatorio."
             },
             {
               "texto": "Nervio Óptico (II Par)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Olfatorio (I Par Craneal)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Los filetes del nervio olfatorio atraviesan la lámina cribosa del etmoides hacia el bulbo olfatorio.'"
             },
             {
               "texto": "Nervio Oftálmico (V1)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Olfatorio (I Par Craneal)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Los filetes del nervio olfatorio atraviesan la lámina cribosa del etmoides hacia el bulbo olfatorio.'"
             },
             {
               "texto": "Nervio Maxilar (V2)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Nervio Olfatorio (I Par Craneal)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Los filetes del nervio olfatorio atraviesan la lámina cribosa del etmoides hacia el bulbo olfatorio.'"
             }
           ]
         }
@@ -1940,22 +1940,22 @@
             {
               "texto": "Acidosis Metabólica con compensación respiratoria (hiperventilación)",
               "correcta": true,
-              "feedback": "¡Correcto! pH bajo por consumo de HCO3- compensado con caída de pCO2 por hiperventilación."
+              "feedback": "¡Criterio clínico correcto! pH bajo por consumo de HCO3- compensado con caída de pCO2 por hiperventilación."
             },
             {
               "texto": "Alcalosis Respiratoria pura",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Acidosis Metabólica con compensación respiratoria (hiperventilación)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'pH bajo por consumo de HCO3- compensado con caída de pCO2 por hiperventilación.'"
             },
             {
               "texto": "Acidosis Respiratoria descompensada",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Acidosis Metabólica con compensación respiratoria (hiperventilación)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'pH bajo por consumo de HCO3- compensado con caída de pCO2 por hiperventilación.'"
             },
             {
               "texto": "Alcalosis Metabólica pura",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Acidosis Metabólica con compensación respiratoria (hiperventilación)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'pH bajo por consumo de HCO3- compensado con caída de pCO2 por hiperventilación.'"
             }
           ]
         },
@@ -1987,22 +1987,22 @@
             {
               "texto": "Alcalosis Metabólica hipoclorémica",
               "correcta": true,
-              "feedback": "¡Correcto! La pérdida de H+ y Cl- en el jugo gástrico genera alcalosis metabólica."
+              "feedback": "¡Criterio clínico correcto! La pérdida de H+ y Cl- en el jugo gástrico genera alcalosis metabólica."
             },
             {
               "texto": "Acidosis Metabólica con anion gap elevado",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Alcalosis Metabólica hipoclorémica."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La pérdida de H+ y Cl- en el jugo gástrico genera alcalosis metabólica.'"
             },
             {
               "texto": "Acidosis Respiratoria aguda",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Alcalosis Metabólica hipoclorémica."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La pérdida de H+ y Cl- en el jugo gástrico genera alcalosis metabólica.'"
             },
             {
               "texto": "Alcalosis Respiratoria primaria",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Alcalosis Metabólica hipoclorémica."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La pérdida de H+ y Cl- en el jugo gástrico genera alcalosis metabólica.'"
             }
           ]
         },
@@ -2034,22 +2034,22 @@
             {
               "texto": "Acidosis Respiratoria con compensación renal de bicarbonato",
               "correcta": true,
-              "feedback": "¡Correcto! La retención de CO2 (ácido volátil) baja el pH; el riñón retiene HCO3- lentamente."
+              "feedback": "¡Criterio clínico correcto! La retención de CO2 (ácido volátil) baja el pH; el riñón retiene HCO3- lentamente."
             },
             {
               "texto": "Alcalosis Respiratoria",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Acidosis Respiratoria con compensación renal de bicarbonato."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La retención de CO2 (ácido volátil) baja el pH; el riñón retiene HCO3- lentamente.'"
             },
             {
               "texto": "Acidosis Metabólica láctica",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Acidosis Respiratoria con compensación renal de bicarbonato."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La retención de CO2 (ácido volátil) baja el pH; el riñón retiene HCO3- lentamente.'"
             },
             {
               "texto": "Alcalosis Metabólica aguda",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Acidosis Respiratoria con compensación renal de bicarbonato."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La retención de CO2 (ácido volátil) baja el pH; el riñón retiene HCO3- lentamente.'"
             }
           ]
         },
@@ -2081,22 +2081,22 @@
             {
               "texto": "Sistema Bicarbonato / Ácido Carbónico (HCO3- / H2CO3)",
               "correcta": true,
-              "feedback": "¡Correcto! El buffer bicarbonato es el más abundante en el líquido extracelular y es regulado por pulmón y riñón."
+              "feedback": "¡Criterio clínico correcto! El buffer bicarbonato es el más abundante en el líquido extracelular y es regulado por pulmón y riñón."
             },
             {
               "texto": "Sistema Hemoglobina / Oxihemoglobina",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Sistema Bicarbonato / Ácido Carbónico (HCO3- / H2CO3)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El buffer bicarbonato es el más abundante en el líquido extracelular y es regulado por pulmón y riñón.'"
             },
             {
               "texto": "Sistema Fosfato Monocálcico",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Sistema Bicarbonato / Ácido Carbónico (HCO3- / H2CO3)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El buffer bicarbonato es el más abundante en el líquido extracelular y es regulado por pulmón y riñón.'"
             },
             {
               "texto": "Proteínas intracelulares",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Sistema Bicarbonato / Ácido Carbónico (HCO3- / H2CO3)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El buffer bicarbonato es el más abundante en el líquido extracelular y es regulado por pulmón y riñón.'"
             }
           ]
         },
@@ -2128,22 +2128,22 @@
             {
               "texto": "Glicerol (derivado de triacilgliceroles)",
               "correcta": true,
-              "feedback": "¡Correcto! El glicerol se fosforila a glicerol-3-fosfato y entra a la vía gluconeogénica."
+              "feedback": "¡Criterio clínico correcto! El glicerol se fosforila a glicerol-3-fosfato y entra a la vía gluconeogénica."
             },
             {
               "texto": "Ácidos grasos libres de cadena par",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Glicerol (derivado de triacilgliceroles)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El glicerol se fosforila a glicerol-3-fosfato y entra a la vía gluconeogénica.'"
             },
             {
               "texto": "Acetil-CoA",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Glicerol (derivado de triacilgliceroles)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El glicerol se fosforila a glicerol-3-fosfato y entra a la vía gluconeogénica.'"
             },
             {
               "texto": "Colesterol libre",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Glicerol (derivado de triacilgliceroles)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El glicerol se fosforila a glicerol-3-fosfato y entra a la vía gluconeogénica.'"
             }
           ]
         },
@@ -2175,22 +2175,22 @@
             {
               "texto": "Galactosemia Clásica",
               "correcta": true,
-              "feedback": "¡Correcto! La acumulación de galactitol por vía alterna genera catarata bilateral temprana."
+              "feedback": "¡Criterio clínico correcto! La acumulación de galactitol por vía alterna genera catarata bilateral temprana."
             },
             {
               "texto": "Intolerancia a la Lactosa",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Galactosemia Clásica."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La acumulación de galactitol por vía alterna genera catarata bilateral temprana.'"
             },
             {
               "texto": "Fructosuria Esencial",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Galactosemia Clásica."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La acumulación de galactitol por vía alterna genera catarata bilateral temprana.'"
             },
             {
               "texto": "Glucogenosis Tipo I",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Galactosemia Clásica."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La acumulación de galactitol por vía alterna genera catarata bilateral temprana.'"
             }
           ]
         },
@@ -2222,22 +2222,22 @@
             {
               "texto": "Gluconeogénesis Hepática",
               "correcta": true,
-              "feedback": "¡Correcto! La metformina activa AMPK e inhibe la gluconeogénesis hepática."
+              "feedback": "¡Criterio clínico correcto! La metformina activa AMPK e inhibe la gluconeogénesis hepática."
             },
             {
               "texto": "Glucólisis Anaeróbica",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Gluconeogénesis Hepática."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La metformina activa AMPK e inhibe la gluconeogénesis hepática.'"
             },
             {
               "texto": "Glucogenogénesis",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Gluconeogénesis Hepática."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La metformina activa AMPK e inhibe la gluconeogénesis hepática.'"
             },
             {
               "texto": "Vía de las Pentosas Fosfato",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Gluconeogénesis Hepática."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La metformina activa AMPK e inhibe la gluconeogénesis hepática.'"
             }
           ]
         },
@@ -2269,22 +2269,22 @@
             {
               "texto": "Glucosa-6-Fosfato Deshidrogenasa (G6PD)",
               "correcta": true,
-              "feedback": "¡Correcto! El déficit de G6PD impide regenerar glutatión reducido frente a estrés oxidativo."
+              "feedback": "¡Criterio clínico correcto! El déficit de G6PD impide regenerar glutatión reducido frente a estrés oxidativo."
             },
             {
               "texto": "Piruvato Quinasa",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Glucosa-6-Fosfato Deshidrogenasa (G6PD)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El déficit de G6PD impide regenerar glutatión reducido frente a estrés oxidativo.'"
             },
             {
               "texto": "Hexoquinasa",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Glucosa-6-Fosfato Deshidrogenasa (G6PD)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El déficit de G6PD impide regenerar glutatión reducido frente a estrés oxidativo.'"
             },
             {
               "texto": "Fosfofructoquinasa-1",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Glucosa-6-Fosfato Deshidrogenasa (G6PD)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El déficit de G6PD impide regenerar glutatión reducido frente a estrés oxidativo.'"
             }
           ]
         },
@@ -2316,22 +2316,22 @@
             {
               "texto": "Troponina I y T de alta sensibilidad",
               "correcta": true,
-              "feedback": "¡Correcto! Las troponinas cardíacas son altamente específicas de necrosis de miocitos cardíacos."
+              "feedback": "¡Criterio clínico correcto! Las troponinas cardíacas son altamente específicas de necrosis de miocitos cardíacos."
             },
             {
               "texto": "LDH (Lactato Deshidrogenasa)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Troponina I y T de alta sensibilidad."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Las troponinas cardíacas son altamente específicas de necrosis de miocitos cardíacos.'"
             },
             {
               "texto": "GOT / AST Transaminasa",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Troponina I y T de alta sensibilidad."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Las troponinas cardíacas son altamente específicas de necrosis de miocitos cardíacos.'"
             },
             {
               "texto": "Fosfatasa Alcalina",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Troponina I y T de alta sensibilidad."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Las troponinas cardíacas son altamente específicas de necrosis de miocitos cardíacos.'"
             }
           ]
         },
@@ -2363,22 +2363,22 @@
             {
               "texto": "Amilasa y Lipasa séricas",
               "correcta": true,
-              "feedback": "¡Correcto! La lipasa es más específica y perdura más tiempo elevada que la amilasa en pancreatitis."
+              "feedback": "¡Criterio clínico correcto! La lipasa es más específica y perdura más tiempo elevada que la amilasa en pancreatitis."
             },
             {
               "texto": "Transaminasas GOT y GPT",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Amilasa y Lipasa séricas."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La lipasa es más específica y perdura más tiempo elevada que la amilasa en pancreatitis.'"
             },
             {
               "texto": "Fosfatasa Ácida y Aldolasa",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Amilasa y Lipasa séricas."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La lipasa es más específica y perdura más tiempo elevada que la amilasa en pancreatitis.'"
             },
             {
               "texto": "Troponina y CPK",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Amilasa y Lipasa séricas."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La lipasa es más específica y perdura más tiempo elevada que la amilasa en pancreatitis.'"
             }
           ]
         },
@@ -2410,22 +2410,22 @@
             {
               "texto": "Aumenta la Km aparente sin modificar la Vmax",
               "correcta": true,
-              "feedback": "¡Correcto! Un inhibidor competitivo compite por el sitio activo: requiere más sustrato (aumenta Km) pero alcanza Vmax."
+              "feedback": "¡Criterio clínico correcto! Un inhibidor competitivo compite por el sitio activo: requiere más sustrato (aumenta Km) pero alcanza Vmax."
             },
             {
               "texto": "Disminuye la Vmax sin alterar Km",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Aumenta la Km aparente sin modificar la Vmax."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Un inhibidor competitivo compite por el sitio activo: requiere más sustrato (aumenta Km) pero alcanza Vmax.'"
             },
             {
               "texto": "Disminuye tanto Km como Vmax",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Aumenta la Km aparente sin modificar la Vmax."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Un inhibidor competitivo compite por el sitio activo: requiere más sustrato (aumenta Km) pero alcanza Vmax.'"
             },
             {
               "texto": "Aumenta la Vmax",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Aumenta la Km aparente sin modificar la Vmax."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Un inhibidor competitivo compite por el sitio activo: requiere más sustrato (aumenta Km) pero alcanza Vmax.'"
             }
           ]
         },
@@ -2457,22 +2457,22 @@
             {
               "texto": "Receptor de LDL (Apo B-100 / E)",
               "correcta": true,
-              "feedback": "¡Correcto! La hipercolesterolemia familiar se debe a mutaciones en el receptor de LDL."
+              "feedback": "¡Criterio clínico correcto! La hipercolesterolemia familiar se debe a mutaciones en el receptor de LDL."
             },
             {
               "texto": "Receptor Scavenger de macrófagos",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Receptor de LDL (Apo B-100 / E)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La hipercolesterolemia familiar se debe a mutaciones en el receptor de LDL.'"
             },
             {
               "texto": "Receptor de Quilomicrones",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Receptor de LDL (Apo B-100 / E)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La hipercolesterolemia familiar se debe a mutaciones en el receptor de LDL.'"
             },
             {
               "texto": "Lipoproteína Lipasa",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Receptor de LDL (Apo B-100 / E)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La hipercolesterolemia familiar se debe a mutaciones en el receptor de LDL.'"
             }
           ]
         },
@@ -2504,22 +2504,22 @@
             {
               "texto": "Acetoacetato, Beta-hidroxibutirato y Acetona",
               "correcta": true,
-              "feedback": "¡Correcto! Sintetizados en mitocondria hepática durante ayuno prolongado o cetoacidosis."
+              "feedback": "¡Criterio clínico correcto! Sintetizados en mitocondria hepática durante ayuno prolongado o cetoacidosis."
             },
             {
               "texto": "Lactato, Piruvato y Malato",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Acetoacetato, Beta-hidroxibutirato y Acetona."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Sintetizados en mitocondria hepática durante ayuno prolongado o cetoacidosis.'"
             },
             {
               "texto": "Oxaloacetato, Citrato y Succinato",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Acetoacetato, Beta-hidroxibutirato y Acetona."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Sintetizados en mitocondria hepática durante ayuno prolongado o cetoacidosis.'"
             },
             {
               "texto": "Glicerol, Alanina y Colina",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Acetoacetato, Beta-hidroxibutirato y Acetona."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Sintetizados en mitocondria hepática durante ayuno prolongado o cetoacidosis.'"
             }
           ]
         },
@@ -2551,22 +2551,22 @@
             {
               "texto": "Quilomicrones",
               "correcta": true,
-              "feedback": "¡Correcto! Los quilomicrones se ensamblan en enterocitos con Apo B-48 para transportar grasa de la dieta."
+              "feedback": "¡Criterio clínico correcto! Los quilomicrones se ensamblan en enterocitos con Apo B-48 para transportar grasa de la dieta."
             },
             {
               "texto": "VLDL (Muy Baja Densidad)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Quilomicrones."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Los quilomicrones se ensamblan en enterocitos con Apo B-48 para transportar grasa de la dieta.'"
             },
             {
               "texto": "LDL (Baja Densidad)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Quilomicrones."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Los quilomicrones se ensamblan en enterocitos con Apo B-48 para transportar grasa de la dieta.'"
             },
             {
               "texto": "HDL (Alta Densidad)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Quilomicrones."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Los quilomicrones se ensamblan en enterocitos con Apo B-48 para transportar grasa de la dieta.'"
             }
           ]
         },
@@ -2598,22 +2598,22 @@
             {
               "texto": "Ciclo de la Urea (de Krebs-Henseleit)",
               "correcta": true,
-              "feedback": "¡Correcto! El ciclo de la urea detoxifica el amoníaco mitocondrial y citosólico en hepatocitos."
+              "feedback": "¡Criterio clínico correcto! El ciclo de la urea detoxifica el amoníaco mitocondrial y citosólico en hepatocitos."
             },
             {
               "texto": "Ciclo de Krebs (Ácido Cítrico)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ciclo de la Urea (de Krebs-Henseleit)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El ciclo de la urea detoxifica el amoníaco mitocondrial y citosólico en hepatocitos.'"
             },
             {
               "texto": "Ciclo de Cori",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ciclo de la Urea (de Krebs-Henseleit)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El ciclo de la urea detoxifica el amoníaco mitocondrial y citosólico en hepatocitos.'"
             },
             {
               "texto": "Ciclo de la Alanina",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ciclo de la Urea (de Krebs-Henseleit)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El ciclo de la urea detoxifica el amoníaco mitocondrial y citosólico en hepatocitos.'"
             }
           ]
         },
@@ -2645,22 +2645,22 @@
             {
               "texto": "Fenilalanina Hidroxilasa (PAH)",
               "correcta": true,
-              "feedback": "¡Correcto! El déficit de PAH genera fenilcetonuria y daño neurológico prevenible con dieta."
+              "feedback": "¡Criterio clínico correcto! El déficit de PAH genera fenilcetonuria y daño neurológico prevenible con dieta."
             },
             {
               "texto": "Tirosinasa",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Fenilalanina Hidroxilasa (PAH)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El déficit de PAH genera fenilcetonuria y daño neurológico prevenible con dieta.'"
             },
             {
               "texto": "Homogentisato Oxidasa",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Fenilalanina Hidroxilasa (PAH)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El déficit de PAH genera fenilcetonuria y daño neurológico prevenible con dieta.'"
             },
             {
               "texto": "Metionina Sintasa",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Fenilalanina Hidroxilasa (PAH)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El déficit de PAH genera fenilcetonuria y daño neurológico prevenible con dieta.'"
             }
           ]
         },
@@ -2692,22 +2692,22 @@
             {
               "texto": "Ácido Úrico",
               "correcta": true,
-              "feedback": "¡Correcto! La hiperuricemia causa precipitación de cristales de urato monosódico en articulaciones (gota)."
+              "feedback": "¡Criterio clínico correcto! La hiperuricemia causa precipitación de cristales de urato monosódico en articulaciones (gota)."
             },
             {
               "texto": "Urea",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ácido Úrico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La hiperuricemia causa precipitación de cristales de urato monosódico en articulaciones (gota).'"
             },
             {
               "texto": "Creatinina",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ácido Úrico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La hiperuricemia causa precipitación de cristales de urato monosódico en articulaciones (gota).'"
             },
             {
               "texto": "Bilirrubina",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Ácido Úrico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La hiperuricemia causa precipitación de cristales de urato monosódico en articulaciones (gota).'"
             }
           ]
         },
@@ -2739,22 +2739,22 @@
             {
               "texto": "Citocromo c Oxidasa (Complejo IV)",
               "correcta": true,
-              "feedback": "¡Correcto! El cianuro se une al hierro férrico (Fe3+) del hemo a3 en el complejo IV frenando la respiración celular."
+              "feedback": "¡Criterio clínico correcto! El cianuro se une al hierro férrico (Fe3+) del hemo a3 en el complejo IV frenando la respiración celular."
             },
             {
               "texto": "NADH Deshidrogenasa (Complejo I)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Citocromo c Oxidasa (Complejo IV)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El cianuro se une al hierro férrico (Fe3+) del hemo a3 en el complejo IV frenando la respiración celular.'"
             },
             {
               "texto": "Succinato Deshidrogenasa (Complejo II)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Citocromo c Oxidasa (Complejo IV)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El cianuro se une al hierro férrico (Fe3+) del hemo a3 en el complejo IV frenando la respiración celular.'"
             },
             {
               "texto": "ATP Sintasa (Complejo V)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Citocromo c Oxidasa (Complejo IV)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El cianuro se une al hierro férrico (Fe3+) del hemo a3 en el complejo IV frenando la respiración celular.'"
             }
           ]
         },
@@ -2786,22 +2786,22 @@
             {
               "texto": "Tiene una afinidad por la Hemoglobina 200 veces superior a la del Oxígeno",
               "correcta": true,
-              "feedback": "¡Correcto! Forma carboxihemoglobina irreversible desplazando la curva de disociación hacia la izquierda."
+              "feedback": "¡Criterio clínico correcto! Forma carboxihemoglobina irreversible desplazando la curva de disociación hacia la izquierda."
             },
             {
               "texto": "Destruye la membrana del eritrocito en el bazo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tiene una afinidad por la Hemoglobina 200 veces superior a la del Oxígeno."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Forma carboxihemoglobina irreversible desplazando la curva de disociación hacia la izquierda.'"
             },
             {
               "texto": "Inhibe la síntesis de eritropoyetina renal",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tiene una afinidad por la Hemoglobina 200 veces superior a la del Oxígeno."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Forma carboxihemoglobina irreversible desplazando la curva de disociación hacia la izquierda.'"
             },
             {
               "texto": "Provoca deshidratación plasmática aguda",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tiene una afinidad por la Hemoglobina 200 veces superior a la del Oxígeno."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Forma carboxihemoglobina irreversible desplazando la curva de disociación hacia la izquierda.'"
             }
           ]
         },
@@ -2833,22 +2833,22 @@
             {
               "texto": "Hígado por la UDP-Glucuronosiltransferasa",
               "correcta": true,
-              "feedback": "¡Correcto! La bilirrubina no conjugada liposoluble se conjuga en el retículo endoplásmico hepático."
+              "feedback": "¡Criterio clínico correcto! La bilirrubina no conjugada liposoluble se conjuga en el retículo endoplásmico hepático."
             },
             {
               "texto": "Bazo por la Hemo Oxigenasa",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Hígado por la UDP-Glucuronosiltransferasa."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La bilirrubina no conjugada liposoluble se conjuga en el retículo endoplásmico hepático.'"
             },
             {
               "texto": "Riñón por la Glucocinasa",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Hígado por la UDP-Glucuronosiltransferasa."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La bilirrubina no conjugada liposoluble se conjuga en el retículo endoplásmico hepático.'"
             },
             {
               "texto": "Intestino por la Urobilinógeno Sintasa",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Hígado por la UDP-Glucuronosiltransferasa."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La bilirrubina no conjugada liposoluble se conjuga en el retículo endoplásmico hepático.'"
             }
           ]
         },
@@ -2880,22 +2880,22 @@
             {
               "texto": "Bilirrubina Directa (Conjugada)",
               "correcta": true,
-              "feedback": "¡Correcto! Al no poder drenar al duodeno, la bilirrubina directa refluye a sangre y se filtra por orina (coluria)."
+              "feedback": "¡Criterio clínico correcto! Al no poder drenar al duodeno, la bilirrubina directa refluye a sangre y se filtra por orina (coluria)."
             },
             {
               "texto": "Bilirrubina Indirecta (Libre)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Bilirrubina Directa (Conjugada)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Al no poder drenar al duodeno, la bilirrubina directa refluye a sangre y se filtra por orina (coluria).'"
             },
             {
               "texto": "Urobilinógeno urinario puro",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Bilirrubina Directa (Conjugada)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Al no poder drenar al duodeno, la bilirrubina directa refluye a sangre y se filtra por orina (coluria).'"
             },
             {
               "texto": "Biliverdina sérica",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Bilirrubina Directa (Conjugada)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Al no poder drenar al duodeno, la bilirrubina directa refluye a sangre y se filtra por orina (coluria).'"
             }
           ]
         },
@@ -2927,22 +2927,22 @@
             {
               "texto": "Vitamina B1 (Tiamina)",
               "correcta": true,
-              "feedback": "¡Correcto! La tiamina (pirofosfato de tiamina) es cofactor esencial en el metabolismo energético cerebral."
+              "feedback": "¡Criterio clínico correcto! La tiamina (pirofosfato de tiamina) es cofactor esencial en el metabolismo energético cerebral."
             },
             {
               "texto": "Vitamina B12 (Cobalamina)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vitamina B1 (Tiamina)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La tiamina (pirofosfato de tiamina) es cofactor esencial en el metabolismo energético cerebral.'"
             },
             {
               "texto": "Vitamina C (Ácido Ascórbico)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vitamina B1 (Tiamina)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La tiamina (pirofosfato de tiamina) es cofactor esencial en el metabolismo energético cerebral.'"
             },
             {
               "texto": "Vitamina D (Calciferol)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vitamina B1 (Tiamina)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La tiamina (pirofosfato de tiamina) es cofactor esencial en el metabolismo energético cerebral.'"
             }
           ]
         },
@@ -2974,22 +2974,22 @@
             {
               "texto": "Vitamina C (Ácido Ascórbico)",
               "correcta": true,
-              "feedback": "¡Correcto! La vitamina C hidroxila residuos de prolina y lisina permitiendo la triple hélice estable de colágeno."
+              "feedback": "¡Criterio clínico correcto! La vitamina C hidroxila residuos de prolina y lisina permitiendo la triple hélice estable de colágeno."
             },
             {
               "texto": "Vitamina A (Retinol)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vitamina C (Ácido Ascórbico)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La vitamina C hidroxila residuos de prolina y lisina permitiendo la triple hélice estable de colágeno.'"
             },
             {
               "texto": "Vitamina E (Tocoferol)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vitamina C (Ácido Ascórbico)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La vitamina C hidroxila residuos de prolina y lisina permitiendo la triple hélice estable de colágeno.'"
             },
             {
               "texto": "Vitamina K (Fitomenadiona)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vitamina C (Ácido Ascórbico)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La vitamina C hidroxila residuos de prolina y lisina permitiendo la triple hélice estable de colágeno.'"
             }
           ]
         },
@@ -3021,22 +3021,22 @@
             {
               "texto": "Calcio Iónico (Ca2+)",
               "correcta": true,
-              "feedback": "¡Correcto! La PTH eleva la calcemia; su ausencia brusca desencadena hipocalcemia y tetania aguda."
+              "feedback": "¡Criterio clínico correcto! La PTH eleva la calcemia; su ausencia brusca desencadena hipocalcemia y tetania aguda."
             },
             {
               "texto": "Potasio (K+)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Calcio Iónico (Ca2+)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La PTH eleva la calcemia; su ausencia brusca desencadena hipocalcemia y tetania aguda.'"
             },
             {
               "texto": "Magnesio (Mg2+)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Calcio Iónico (Ca2+)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La PTH eleva la calcemia; su ausencia brusca desencadena hipocalcemia y tetania aguda.'"
             },
             {
               "texto": "Sodio (Na+)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Calcio Iónico (Ca2+)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La PTH eleva la calcemia; su ausencia brusca desencadena hipocalcemia y tetania aguda.'"
             }
           ]
         },
@@ -3068,22 +3068,22 @@
             {
               "texto": "Se produce a tasa constante por el músculo y se filtra libremente sin reabsorberse",
               "correcta": true,
-              "feedback": "¡Correcto! La creatinina proviene del fosfato de creatina muscular y se excreta proporcional al filtrado glomerular."
+              "feedback": "¡Criterio clínico correcto! La creatinina proviene del fosfato de creatina muscular y se excreta proporcional al filtrado glomerular."
             },
             {
               "texto": "Es sintetizada activamente por el túbulo distal",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Se produce a tasa constante por el músculo y se filtra libremente sin reabsorberse."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La creatinina proviene del fosfato de creatina muscular y se excreta proporcional al filtrado glomerular.'"
             },
             {
               "texto": "Depende del consumo diario de carbohidratos",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Se produce a tasa constante por el músculo y se filtra libremente sin reabsorberse."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La creatinina proviene del fosfato de creatina muscular y se excreta proporcional al filtrado glomerular.'"
             },
             {
               "texto": "Es degradada por las bacterias colónicas",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Se produce a tasa constante por el músculo y se filtra libremente sin reabsorberse."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La creatinina proviene del fosfato de creatina muscular y se excreta proporcional al filtrado glomerular.'"
             }
           ]
         }
@@ -3126,22 +3126,22 @@
             {
               "texto": "Validar la preocupación materna, consensuar la hidratación oral sin descalificar su cosmovisión",
               "correcta": true,
-              "feedback": "¡Correcto! El modelo deliberativo busca alianza terapéutica respetando la diversidad cultural."
+              "feedback": "¡Criterio clínico correcto! El modelo deliberativo busca alianza terapéutica respetando la diversidad cultural."
             },
             {
               "texto": "Burlarse de la creencia y expulsarla del hospital",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Validar la preocupación materna, consensuar la hidratación oral sin descalificar su cosmovisión."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El modelo deliberativo busca alianza terapéutica respetando la diversidad cultural.'"
             },
             {
               "texto": "Aceptar que el mal de ojo es la causa biológica y no medicar",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Validar la preocupación materna, consensuar la hidratación oral sin descalificar su cosmovisión."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El modelo deliberativo busca alianza terapéutica respetando la diversidad cultural.'"
             },
             {
               "texto": "Amenazar con denunciar a la policía",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Validar la preocupación materna, consensuar la hidratación oral sin descalificar su cosmovisión."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El modelo deliberativo busca alianza terapéutica respetando la diversidad cultural.'"
             }
           ]
         },
@@ -3173,22 +3173,22 @@
             {
               "texto": "Un síndrome cultural ligado a desplazamiento visceral o somatización tras un sobresalto emocional",
               "correcta": true,
-              "feedback": "¡Correcto! En la antropología médica de la región, los síndromes culturales expresan angustia somatizada."
+              "feedback": "¡Criterio clínico correcto! En la antropología médica de la región, los síndromes culturales expresan angustia somatizada."
             },
             {
               "texto": "Una infección bacteriana aguda por Clostridium",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Un síndrome cultural ligado a desplazamiento visceral o somatización tras un sobresalto emocional."
+              "feedback": "Conducta no indicada. Orientación del docente: 'En la antropología médica de la región, los síndromes culturales expresan angustia somatizada.'"
             },
             {
               "texto": "Un trastorno psicótico primario incurable",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Un síndrome cultural ligado a desplazamiento visceral o somatización tras un sobresalto emocional."
+              "feedback": "Conducta no indicada. Orientación del docente: 'En la antropología médica de la región, los síndromes culturales expresan angustia somatizada.'"
             },
             {
               "texto": "Una patología quirúrgica de emergencia",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Un síndrome cultural ligado a desplazamiento visceral o somatización tras un sobresalto emocional."
+              "feedback": "Conducta no indicada. Orientación del docente: 'En la antropología médica de la región, los síndromes culturales expresan angustia somatizada.'"
             }
           ]
         },
@@ -3220,22 +3220,22 @@
             {
               "texto": "Principio de Autonomía",
               "correcta": true,
-              "feedback": "¡Correcto! El paciente competente tiene derecho a autodeterminación sobre su propio cuerpo."
+              "feedback": "¡Criterio clínico correcto! El paciente competente tiene derecho a autodeterminación sobre su propio cuerpo."
             },
             {
               "texto": "Principio de Beneficencia paternalista",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Principio de Autonomía."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El paciente competente tiene derecho a autodeterminación sobre su propio cuerpo.'"
             },
             {
               "texto": "Principio de No Maleficencia coercitiva",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Principio de Autonomía."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El paciente competente tiene derecho a autodeterminación sobre su propio cuerpo.'"
             },
             {
               "texto": "Principio de Justicia distributiva",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Principio de Autonomía."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El paciente competente tiene derecho a autodeterminación sobre su propio cuerpo.'"
             }
           ]
         },
@@ -3267,22 +3267,22 @@
             {
               "texto": "Transfundir de inmediato invocando el interés superior del menor y el deber de salvar la vida",
               "correcta": true,
-              "feedback": "¡Correcto! El derecho a la vida del niño prevalece sobre las convicciones religiosas de los progenitores en riesgo vital."
+              "feedback": "¡Criterio clínico correcto! El derecho a la vida del niño prevalece sobre las convicciones religiosas de los progenitores en riesgo vital."
             },
             {
               "texto": "Esperar la orden de un juez mientras el niño fallece",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Transfundir de inmediato invocando el interés superior del menor y el deber de salvar la vida."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El derecho a la vida del niño prevalece sobre las convicciones religiosas de los progenitores en riesgo vital.'"
             },
             {
               "texto": "Acatar la negativa de los padres sin actuar",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Transfundir de inmediato invocando el interés superior del menor y el deber de salvar la vida."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El derecho a la vida del niño prevalece sobre las convicciones religiosas de los progenitores en riesgo vital.'"
             },
             {
               "texto": "Dar el alta contra voluntad",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Transfundir de inmediato invocando el interés superior del menor y el deber de salvar la vida."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El derecho a la vida del niño prevalece sobre las convicciones religiosas de los progenitores en riesgo vital.'"
             }
           ]
         },
@@ -3314,22 +3314,22 @@
             {
               "texto": "Modelo Paternalista",
               "correcta": true,
-              "feedback": "¡Correcto! El modelo paternalista asume que el médico sabe qué es mejor sin requerir el consentimiento activo."
+              "feedback": "¡Criterio clínico correcto! El modelo paternalista asume que el médico sabe qué es mejor sin requerir el consentimiento activo."
             },
             {
               "texto": "Modelo Informativo (Científico)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Modelo Paternalista."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El modelo paternalista asume que el médico sabe qué es mejor sin requerir el consentimiento activo.'"
             },
             {
               "texto": "Modelo Interpretativo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Modelo Paternalista."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El modelo paternalista asume que el médico sabe qué es mejor sin requerir el consentimiento activo.'"
             },
             {
               "texto": "Modelo Deliberativo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Modelo Paternalista."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El modelo paternalista asume que el médico sabe qué es mejor sin requerir el consentimiento activo.'"
             }
           ]
         },
@@ -3361,22 +3361,22 @@
             {
               "texto": "Modelo Deliberativo",
               "correcta": true,
-              "feedback": "¡Correcto! El modelo deliberativo fomenta una toma de decisiones compartida e informada."
+              "feedback": "¡Criterio clínico correcto! El modelo deliberativo fomenta una toma de decisiones compartida e informada."
             },
             {
               "texto": "Modelo Paternalista",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Modelo Deliberativo."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El modelo deliberativo fomenta una toma de decisiones compartida e informada.'"
             },
             {
               "texto": "Modelo Tecnocrático",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Modelo Deliberativo."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El modelo deliberativo fomenta una toma de decisiones compartida e informada.'"
             },
             {
               "texto": "Modelo Contractual puro",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Modelo Deliberativo."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El modelo deliberativo fomenta una toma de decisiones compartida e informada.'"
             }
           ]
         },
@@ -3408,22 +3408,22 @@
             {
               "texto": "Secreto Médico y Derecho a la Privacidad",
               "correcta": true,
-              "feedback": "¡Correcto! El secreto profesional es absoluto salvo consentimiento expreso o mandamiento judicial."
+              "feedback": "¡Criterio clínico correcto! El secreto profesional es absoluto salvo consentimiento expreso o mandamiento judicial."
             },
             {
               "texto": "Principio de Beneficencia institucional",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Secreto Médico y Derecho a la Privacidad."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El secreto profesional es absoluto salvo consentimiento expreso o mandamiento judicial.'"
             },
             {
               "texto": "Obligación de Notificación pública",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Secreto Médico y Derecho a la Privacidad."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El secreto profesional es absoluto salvo consentimiento expreso o mandamiento judicial.'"
             },
             {
               "texto": "Ley de Libre Acceso a la Información privada",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Secreto Médico y Derecho a la Privacidad."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El secreto profesional es absoluto salvo consentimiento expreso o mandamiento judicial.'"
             }
           ]
         },
@@ -3455,22 +3455,22 @@
             {
               "texto": "Eliminación de criaderos de agua estancada y movilización comunitaria",
               "correcta": true,
-              "feedback": "¡Correcto! El control vectorial mediante eliminación domiciliaria de recipientes es la base del control del dengue."
+              "feedback": "¡Criterio clínico correcto! El control vectorial mediante eliminación domiciliaria de recipientes es la base del control del dengue."
             },
             {
               "texto": "Fumigación aérea indiscriminada de toda la ciudad",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Eliminación de criaderos de agua estancada y movilización comunitaria."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El control vectorial mediante eliminación domiciliaria de recipientes es la base del control del dengue.'"
             },
             {
               "texto": "Administración masiva de antibióticos",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Eliminación de criaderos de agua estancada y movilización comunitaria."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El control vectorial mediante eliminación domiciliaria de recipientes es la base del control del dengue.'"
             },
             {
               "texto": "Distribución de analgésicos en farmacias",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Eliminación de criaderos de agua estancada y movilización comunitaria."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El control vectorial mediante eliminación domiciliaria de recipientes es la base del control del dengue.'"
             }
           ]
         },
@@ -3502,22 +3502,22 @@
             {
               "texto": "Medio Ambiente Físico y Saneamiento Básico",
               "correcta": true,
-              "feedback": "¡Correcto! El informe Lalonde destaca el medio ambiente y saneamiento como determinantes clave de la morbilidad."
+              "feedback": "¡Criterio clínico correcto! El informe Lalonde destaca el medio ambiente y saneamiento como determinantes clave de la morbilidad."
             },
             {
               "texto": "Biología Humana / Genética",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Medio Ambiente Físico y Saneamiento Básico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El informe Lalonde destaca el medio ambiente y saneamiento como determinantes clave de la morbilidad.'"
             },
             {
               "texto": "Estilo de Vida individual puro",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Medio Ambiente Físico y Saneamiento Básico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El informe Lalonde destaca el medio ambiente y saneamiento como determinantes clave de la morbilidad.'"
             },
             {
               "texto": "Sistema de Organización de Servicios de Salud",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Medio Ambiente Físico y Saneamiento Básico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El informe Lalonde destaca el medio ambiente y saneamiento como determinantes clave de la morbilidad.'"
             }
           ]
         },
@@ -3549,22 +3549,22 @@
             {
               "texto": "Por inmadurez hepatorrenal para metabolizar alcaloides y riesgo de sobredosis tóxica",
               "correcta": true,
-              "feedback": "¡Correcto! Los órganos neonatales son inmaduros para metabolizar metabolitos secundarios vegetales."
+              "feedback": "¡Criterio clínico correcto! Los órganos neonatales son inmaduros para metabolizar metabolitos secundarios vegetales."
             },
             {
               "texto": "Porque las plantas no contienen principios activos",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Por inmadurez hepatorrenal para metabolizar alcaloides y riesgo de sobredosis tóxica."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Los órganos neonatales son inmaduros para metabolizar metabolitos secundarios vegetales.'"
             },
             {
               "texto": "Porque el agua hervida destruye los glóbulos rojos",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Por inmadurez hepatorrenal para metabolizar alcaloides y riesgo de sobredosis tóxica."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Los órganos neonatales son inmaduros para metabolizar metabolitos secundarios vegetales.'"
             },
             {
               "texto": "Porque neutralizan la leche materna",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Por inmadurez hepatorrenal para metabolizar alcaloides y riesgo de sobredosis tóxica."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Los órganos neonatales son inmaduros para metabolizar metabolitos secundarios vegetales.'"
             }
           ]
         },
@@ -3596,22 +3596,22 @@
             {
               "texto": "Barrera lingüística: debe utilizar mediación intercultural o comunicación bilingüe clara",
               "correcta": true,
-              "feedback": "¡Correcto! El bilingüismo y la empatía son indispensables para garantizar la adherencia en Paraguay."
+              "feedback": "¡Criterio clínico correcto! El bilingüismo y la empatía son indispensables para garantizar la adherencia en Paraguay."
             },
             {
               "texto": "Debe gritar en español para que entienda mejor",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Barrera lingüística: debe utilizar mediación intercultural o comunicación bilingüe clara."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El bilingüismo y la empatía son indispensables para garantizar la adherencia en Paraguay.'"
             },
             {
               "texto": "Debe asumir que entendió todo y despedirlo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Barrera lingüística: debe utilizar mediación intercultural o comunicación bilingüe clara."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El bilingüismo y la empatía son indispensables para garantizar la adherencia en Paraguay.'"
             },
             {
               "texto": "Debe derivarlo a psiquiatría",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Barrera lingüística: debe utilizar mediación intercultural o comunicación bilingüe clara."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El bilingüismo y la empatía son indispensables para garantizar la adherencia en Paraguay.'"
             }
           ]
         },
@@ -3643,22 +3643,22 @@
             {
               "texto": "Información suficiente y comprensible, Voluntariedad (sin coacción) y Capacidad del paciente",
               "correcta": true,
-              "feedback": "¡Correcto! Información clara, voluntariedad y competencia cognitiva son los 3 pilares del consentimiento."
+              "feedback": "¡Criterio clínico correcto! Información clara, voluntariedad y competencia cognitiva son los 3 pilares del consentimiento."
             },
             {
               "texto": "Firma de testigos, Pago del arancel y Aprobación policial",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Información suficiente y comprensible, Voluntariedad (sin coacción) y Capacidad del paciente."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Información clara, voluntariedad y competencia cognitiva son los 3 pilares del consentimiento.'"
             },
             {
               "texto": "Explicación médica compleja en latín y sumisión",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Información suficiente y comprensible, Voluntariedad (sin coacción) y Capacidad del paciente."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Información clara, voluntariedad y competencia cognitiva son los 3 pilares del consentimiento.'"
             },
             {
               "texto": "Presencia obligatoria de un abogado",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Información suficiente y comprensible, Voluntariedad (sin coacción) y Capacidad del paciente."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Información clara, voluntariedad y competencia cognitiva son los 3 pilares del consentimiento.'"
             }
           ]
         },
@@ -3690,22 +3690,22 @@
             {
               "texto": "Código de Núremberg (1947)",
               "correcta": true,
-              "feedback": "¡Correcto! El Código de Núremberg y la Declaración de Helsinki exigen consentimiento libre e informado absoluto."
+              "feedback": "¡Criterio clínico correcto! El Código de Núremberg y la Declaración de Helsinki exigen consentimiento libre e informado absoluto."
             },
             {
               "texto": "Juramento Hipocrático clásico",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Código de Núremberg (1947)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El Código de Núremberg y la Declaración de Helsinki exigen consentimiento libre e informado absoluto.'"
             },
             {
               "texto": "Tratado de Versalles",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Código de Núremberg (1947)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El Código de Núremberg y la Declaración de Helsinki exigen consentimiento libre e informado absoluto.'"
             },
             {
               "texto": "Informe Lalonde",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Código de Núremberg (1947)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El Código de Núremberg y la Declaración de Helsinki exigen consentimiento libre e informado absoluto.'"
             }
           ]
         },
@@ -3737,22 +3737,22 @@
             {
               "texto": "Contener en privado con empatía, documentar minuciosamente en ficha clínica y activar protocolo de protección",
               "correcta": true,
-              "feedback": "¡Correcto! El registro médico riguroso y la contención psicológica sin revictimización salvan vidas."
+              "feedback": "¡Criterio clínico correcto! El registro médico riguroso y la contención psicológica sin revictimización salvan vidas."
             },
             {
               "texto": "Confrontar a la paciente delante del acompañante",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Contener en privado con empatía, documentar minuciosamente en ficha clínica y activar protocolo de protección."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El registro médico riguroso y la contención psicológica sin revictimización salvan vidas.'"
             },
             {
               "texto": "Ignorar las lesiones ya que la paciente dijo que se cayó",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Contener en privado con empatía, documentar minuciosamente en ficha clínica y activar protocolo de protección."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El registro médico riguroso y la contención psicológica sin revictimización salvan vidas.'"
             },
             {
               "texto": "Expulsar al acompañante a los golpes",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Contener en privado con empatía, documentar minuciosamente en ficha clínica y activar protocolo de protección."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El registro médico riguroso y la contención psicológica sin revictimización salvan vidas.'"
             }
           ]
         },
@@ -3784,22 +3784,22 @@
             {
               "texto": "Inmunidad Colectiva (de Rebaño) y Protección del Derecho Colectivo a la Salud",
               "correcta": true,
-              "feedback": "¡Correcto! La inmunidad de rebaño protege a los inmunocomprometidos y es un deber solidario y legal en salud pública."
+              "feedback": "¡Criterio clínico correcto! La inmunidad de rebaño protege a los inmunocomprometidos y es un deber solidario y legal en salud pública."
             },
             {
               "texto": "Libertad absoluta de mercado farmacéutico",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Inmunidad Colectiva (de Rebaño) y Protección del Derecho Colectivo a la Salud."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La inmunidad de rebaño protege a los inmunocomprometidos y es un deber solidario y legal en salud pública.'"
             },
             {
               "texto": "Experimentación biológica obligatoria",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Inmunidad Colectiva (de Rebaño) y Protección del Derecho Colectivo a la Salud."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La inmunidad de rebaño protege a los inmunocomprometidos y es un deber solidario y legal en salud pública.'"
             },
             {
               "texto": "Aislamiento voluntario de la población",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Inmunidad Colectiva (de Rebaño) y Protección del Derecho Colectivo a la Salud."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La inmunidad de rebaño protege a los inmunocomprometidos y es un deber solidario y legal en salud pública.'"
             }
           ]
         }
@@ -3842,22 +3842,22 @@
             {
               "texto": "Muestra hemolizada con falsa hiperpotasemia (K+ intracelular elevado)",
               "correcta": true,
-              "feedback": "¡Correcto! El potasio intracelular es 30 veces mayor al plasmático; la lisis eritrocitaria arruina el ionograma."
+              "feedback": "¡Criterio clínico correcto! El potasio intracelular es 30 veces mayor al plasmático; la lisis eritrocitaria arruina el ionograma."
             },
             {
               "texto": "Muestra lipémica con alteración de sodio",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Muestra hemolizada con falsa hiperpotasemia (K+ intracelular elevado)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El potasio intracelular es 30 veces mayor al plasmático; la lisis eritrocitaria arruina el ionograma.'"
             },
             {
               "texto": "Muestra coagulada con aumento de cloro",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Muestra hemolizada con falsa hiperpotasemia (K+ intracelular elevado)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El potasio intracelular es 30 veces mayor al plasmático; la lisis eritrocitaria arruina el ionograma.'"
             },
             {
               "texto": "Muestra ictérica normal",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Muestra hemolizada con falsa hiperpotasemia (K+ intracelular elevado)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El potasio intracelular es 30 veces mayor al plasmático; la lisis eritrocitaria arruina el ionograma.'"
             }
           ]
         },
@@ -3889,22 +3889,22 @@
             {
               "texto": "Tubo Tapa Lila / Morada (EDTA)",
               "correcta": true,
-              "feedback": "¡Correcto! El tubo lila con EDTA quelante de calcio preserva la morfología de células sanguíneas."
+              "feedback": "¡Criterio clínico correcto! El tubo lila con EDTA quelante de calcio preserva la morfología de células sanguíneas."
             },
             {
               "texto": "Tubo Tapa Roja (Seco sin anticoagulante)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tubo Tapa Lila / Morada (EDTA)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El tubo lila con EDTA quelante de calcio preserva la morfología de células sanguíneas.'"
             },
             {
               "texto": "Tubo Tapa Celeste (Citrato de Sodio)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tubo Tapa Lila / Morada (EDTA)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El tubo lila con EDTA quelante de calcio preserva la morfología de células sanguíneas.'"
             },
             {
               "texto": "Tubo Tapa Gris (Fluoruro de Sodio)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Tubo Tapa Lila / Morada (EDTA)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El tubo lila con EDTA quelante de calcio preserva la morfología de células sanguíneas.'"
             }
           ]
         },
@@ -3936,22 +3936,22 @@
             {
               "texto": "Citrato de Sodio al 3.2%",
               "correcta": true,
-              "feedback": "¡Correcto! El citrato sódico quelante reversible de calcio es el tubo estándar para pruebas de hemostasia."
+              "feedback": "¡Criterio clínico correcto! El citrato sódico quelante reversible de calcio es el tubo estándar para pruebas de hemostasia."
             },
             {
               "texto": "Heparina de Litio",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Citrato de Sodio al 3.2%."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El citrato sódico quelante reversible de calcio es el tubo estándar para pruebas de hemostasia.'"
             },
             {
               "texto": "EDTA tripotásico",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Citrato de Sodio al 3.2%."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El citrato sódico quelante reversible de calcio es el tubo estándar para pruebas de hemostasia.'"
             },
             {
               "texto": "Oxalato de potasio",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Citrato de Sodio al 3.2%."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El citrato sódico quelante reversible de calcio es el tubo estándar para pruebas de hemostasia.'"
             }
           ]
         },
@@ -3983,22 +3983,22 @@
             {
               "texto": "Falsa elevación de Proteínas totales, Calcio ligado y Enzimas",
               "correcta": true,
-              "feedback": "¡Correcto! La estasis prolongada filtra agua hacia el intersticio concentrando solutos de gran peso molecular."
+              "feedback": "¡Criterio clínico correcto! La estasis prolongada filtra agua hacia el intersticio concentrando solutos de gran peso molecular."
             },
             {
               "texto": "Falsa disminución de hematocrito",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Falsa elevación de Proteínas totales, Calcio ligado y Enzimas."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La estasis prolongada filtra agua hacia el intersticio concentrando solutos de gran peso molecular.'"
             },
             {
               "texto": "Dilución excesiva de electrolitos",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Falsa elevación de Proteínas totales, Calcio ligado y Enzimas."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La estasis prolongada filtra agua hacia el intersticio concentrando solutos de gran peso molecular.'"
             },
             {
               "texto": "Disminución artificial de urea",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Falsa elevación de Proteínas totales, Calcio ligado y Enzimas."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La estasis prolongada filtra agua hacia el intersticio concentrando solutos de gran peso molecular.'"
             }
           ]
         },
@@ -4030,22 +4030,22 @@
             {
               "texto": "Punción accidental y transmisión de patógenos sanguíneos (VIH, Hepatitis B y C)",
               "correcta": true,
-              "feedback": "¡Correcto! Los objetos cortopunzantes deben descartarse en contenedores rígidos imperforables sin reencapuchar."
+              "feedback": "¡Criterio clínico correcto! Los objetos cortopunzantes deben descartarse en contenedores rígidos imperforables sin reencapuchar."
             },
             {
               "texto": "Contaminación bacteriana de la jeringa limpia",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Punción accidental y transmisión de patógenos sanguíneos (VIH, Hepatitis B y C)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Los objetos cortopunzantes deben descartarse en contenedores rígidos imperforables sin reencapuchar.'"
             },
             {
               "texto": "Gasto excesivo de bolsas plásticas",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Punción accidental y transmisión de patógenos sanguíneos (VIH, Hepatitis B y C)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Los objetos cortopunzantes deben descartarse en contenedores rígidos imperforables sin reencapuchar.'"
             },
             {
               "texto": "Ruptura del émbolo plástico",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Punción accidental y transmisión de patógenos sanguíneos (VIH, Hepatitis B y C)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Los objetos cortopunzantes deben descartarse en contenedores rígidos imperforables sin reencapuchar.'"
             }
           ]
         },
@@ -4077,22 +4077,22 @@
             {
               "texto": "Hipoclorito de Sodio (Lavandina) al 0.5% - 1%",
               "correcta": true,
-              "feedback": "¡Correcto! El hipoclorito de sodio al 0.5% es el desinfectante de referencia contra VHB, VHC y VIH en derrames biológicos."
+              "feedback": "¡Criterio clínico correcto! El hipoclorito de sodio al 0.5% es el desinfectante de referencia contra VHB, VHC y VIH en derrames biológicos."
             },
             {
               "texto": "Alcohol en gel al 70%",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Hipoclorito de Sodio (Lavandina) al 0.5% - 1%."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El hipoclorito de sodio al 0.5% es el desinfectante de referencia contra VHB, VHC y VIH en derrames biológicos.'"
             },
             {
               "texto": "Agua oxigenada de 10 volúmenes",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Hipoclorito de Sodio (Lavandina) al 0.5% - 1%."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El hipoclorito de sodio al 0.5% es el desinfectante de referencia contra VHB, VHC y VIH en derrames biológicos.'"
             },
             {
               "texto": "Jabón líquido neutro",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Hipoclorito de Sodio (Lavandina) al 0.5% - 1%."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El hipoclorito de sodio al 0.5% es el desinfectante de referencia contra VHB, VHC y VIH en derrames biológicos.'"
             }
           ]
         },
@@ -4124,22 +4124,22 @@
             {
               "texto": "Bolsa Roja (Residuos Biopatogénicos / Peligrosos)",
               "correcta": true,
-              "feedback": "¡Correcto! La bolsa roja es la convención universal hospitalaria para material biológico con riesgo infeccioso."
+              "feedback": "¡Criterio clínico correcto! La bolsa roja es la convención universal hospitalaria para material biológico con riesgo infeccioso."
             },
             {
               "texto": "Bolsa Negra (Residuos Comunes)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Bolsa Roja (Residuos Biopatogénicos / Peligrosos)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La bolsa roja es la convención universal hospitalaria para material biológico con riesgo infeccioso.'"
             },
             {
               "texto": "Bolsa Amarilla (Residuos Químicos)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Bolsa Roja (Residuos Biopatogénicos / Peligrosos)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La bolsa roja es la convención universal hospitalaria para material biológico con riesgo infeccioso.'"
             },
             {
               "texto": "Caja de cartón blanca",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Bolsa Roja (Residuos Biopatogénicos / Peligrosos)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La bolsa roja es la convención universal hospitalaria para material biológico con riesgo infeccioso.'"
             }
           ]
         },
@@ -4171,22 +4171,22 @@
             {
               "texto": "Reprogramar la extracción advirtiendo que la glucemia e insulina saldrán artefactadas por la ingesta",
               "correcta": true,
-              "feedback": "¡Correcto! El ayuno estandarizado de 8 a 12 horas es requisito crítico para evaluar el metabolismo hidrocarbonado."
+              "feedback": "¡Criterio clínico correcto! El ayuno estandarizado de 8 a 12 horas es requisito crítico para evaluar el metabolismo hidrocarbonado."
             },
             {
               "texto": "Realizar el análisis y restar 50 mg/dL al resultado a ojo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Reprogramar la extracción advirtiendo que la glucemia e insulina saldrán artefactadas por la ingesta."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El ayuno estandarizado de 8 a 12 horas es requisito crítico para evaluar el metabolismo hidrocarbonado.'"
             },
             {
               "texto": "Procesar la muestra sin registrar la transgresión",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Reprogramar la extracción advirtiendo que la glucemia e insulina saldrán artefactadas por la ingesta."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El ayuno estandarizado de 8 a 12 horas es requisito crítico para evaluar el metabolismo hidrocarbonado.'"
             },
             {
               "texto": "Administrar insulina al paciente antes de extraer",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Reprogramar la extracción advirtiendo que la glucemia e insulina saldrán artefactadas por la ingesta."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El ayuno estandarizado de 8 a 12 horas es requisito crítico para evaluar el metabolismo hidrocarbonado.'"
             }
           ]
         },
@@ -4218,22 +4218,22 @@
             {
               "texto": "Lavar la herida inmediatamente con abundante agua y jabón dejando sangrar la zona",
               "correcta": true,
-              "feedback": "¡Correcto! El lavado con agua y jabón arrastra el inóculo; nunca se debe reencapuchar agujas ni exprimir con violencia."
+              "feedback": "¡Criterio clínico correcto! El lavado con agua y jabón arrastra el inóculo; nunca se debe reencapuchar agujas ni exprimir con violencia."
             },
             {
               "texto": "Apretarse con un torniquete proximal apretado",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Lavar la herida inmediatamente con abundante agua y jabón dejando sangrar la zona."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El lavado con agua y jabón arrastra el inóculo; nunca se debe reencapuchar agujas ni exprimir con violencia.'"
             },
             {
               "texto": "Chupar la sangre de la herida con la boca",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Lavar la herida inmediatamente con abundante agua y jabón dejando sangrar la zona."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El lavado con agua y jabón arrastra el inóculo; nunca se debe reencapuchar agujas ni exprimir con violencia.'"
             },
             {
               "texto": "Colocarse lavandina pura en la herida",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Lavar la herida inmediatamente con abundante agua y jabón dejando sangrar la zona."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El lavado con agua y jabón arrastra el inóculo; nunca se debe reencapuchar agujas ni exprimir con violencia.'"
             }
           ]
         },
@@ -4265,22 +4265,22 @@
             {
               "texto": "Mascarilla / Respirador N95 o FFP2",
               "correcta": true,
-              "feedback": "¡Correcto! El bacilo de Koch se transmite por aerosoles; los barbijos quirúrgicos comunes no sellan ni filtran partículas < 5 micras."
+              "feedback": "¡Criterio clínico correcto! El bacilo de Koch se transmite por aerosoles; los barbijos quirúrgicos comunes no sellan ni filtran partículas < 5 micras."
             },
             {
               "texto": "Barbijo quirúrgico triple hoja común",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Mascarilla / Respirador N95 o FFP2."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El bacilo de Koch se transmite por aerosoles; los barbijos quirúrgicos comunes no sellan ni filtran partículas < 5 micras.'"
             },
             {
               "texto": "Barbijo de tela casero",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Mascarilla / Respirador N95 o FFP2."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El bacilo de Koch se transmite por aerosoles; los barbijos quirúrgicos comunes no sellan ni filtran partículas < 5 micras.'"
             },
             {
               "texto": "Máscara de oxígeno con reservorio",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Mascarilla / Respirador N95 o FFP2."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El bacilo de Koch se transmite por aerosoles; los barbijos quirúrgicos comunes no sellan ni filtran partículas < 5 micras.'"
             }
           ]
         }
@@ -4323,22 +4323,22 @@
             {
               "texto": "Priorizar al dolor torácico por riesgo vital inmediato (Síndrome Coronario Agudo)",
               "correcta": true,
-              "feedback": "¡Correcto! El triaje médico prioriza riesgo de muerte sobre el dolor subjetivo articular."
+              "feedback": "¡Criterio clínico correcto! El triaje médico prioriza riesgo de muerte sobre el dolor subjetivo articular."
             },
             {
               "texto": "Atender primero por orden de llegada al que se anotó antes",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Priorizar al dolor torácico por riesgo vital inmediato (Síndrome Coronario Agudo)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El triaje médico prioriza riesgo de muerte sobre el dolor subjetivo articular.'"
             },
             {
               "texto": "Atender a la luxación porque grita más fuerte de dolor",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Priorizar al dolor torácico por riesgo vital inmediato (Síndrome Coronario Agudo)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El triaje médico prioriza riesgo de muerte sobre el dolor subjetivo articular.'"
             },
             {
               "texto": "Derivar a ambos a otro nosocomio",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Priorizar al dolor torácico por riesgo vital inmediato (Síndrome Coronario Agudo)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El triaje médico prioriza riesgo de muerte sobre el dolor subjetivo articular.'"
             }
           ]
         },
@@ -4370,22 +4370,22 @@
             {
               "texto": "Pedir ayuda, activar el sistema de emergencias, solicitar un DEA e iniciar compresiones torácicas",
               "correcta": true,
-              "feedback": "¡Correcto! En el paro cardiorrespiratorio el inicio precoz de RCP de alta calidad salva vidas."
+              "feedback": "¡Criterio clínico correcto! En el paro cardiorrespiratorio el inicio precoz de RCP de alta calidad salva vidas."
             },
             {
               "texto": "Tomar la presión arterial con manguito",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Pedir ayuda, activar el sistema de emergencias, solicitar un DEA e iniciar compresiones torácicas."
+              "feedback": "Conducta no indicada. Orientación del docente: 'En el paro cardiorrespiratorio el inicio precoz de RCP de alta calidad salva vidas.'"
             },
             {
               "texto": "Buscar una vena periférica para colocar suero",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Pedir ayuda, activar el sistema de emergencias, solicitar un DEA e iniciar compresiones torácicas."
+              "feedback": "Conducta no indicada. Orientación del docente: 'En el paro cardiorrespiratorio el inicio precoz de RCP de alta calidad salva vidas.'"
             },
             {
               "texto": "Sentar al paciente y darle agua",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Pedir ayuda, activar el sistema de emergencias, solicitar un DEA e iniciar compresiones torácicas."
+              "feedback": "Conducta no indicada. Orientación del docente: 'En el paro cardiorrespiratorio el inicio precoz de RCP de alta calidad salva vidas.'"
             }
           ]
         },
@@ -4417,22 +4417,22 @@
             {
               "texto": "100 a 120 compresiones por minuto con al menos 5 cm de profundidad permitiendo reexpansión torácica",
               "correcta": true,
-              "feedback": "¡Correcto! 100-120 cpm y 5 cm de profundidad garantizan gasto cardíaco mínimo para perfusión cerebral y coronaria."
+              "feedback": "¡Criterio clínico correcto! 100-120 cpm y 5 cm de profundidad garantizan gasto cardíaco mínimo para perfusión cerebral y coronaria."
             },
             {
               "texto": "60 compresiones por minuto con 2 cm de profundidad",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es 100 a 120 compresiones por minuto con al menos 5 cm de profundidad permitiendo reexpansión torácica."
+              "feedback": "Conducta no indicada. Orientación del docente: '100-120 cpm y 5 cm de profundidad garantizan gasto cardíaco mínimo para perfusión cerebral y coronaria.'"
             },
             {
               "texto": "160 compresiones superficiales muy rápidas",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es 100 a 120 compresiones por minuto con al menos 5 cm de profundidad permitiendo reexpansión torácica."
+              "feedback": "Conducta no indicada. Orientación del docente: '100-120 cpm y 5 cm de profundidad garantizan gasto cardíaco mínimo para perfusión cerebral y coronaria.'"
             },
             {
               "texto": "Solo ventilación boca a boca sin comprimir",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es 100 a 120 compresiones por minuto con al menos 5 cm de profundidad permitiendo reexpansión torácica."
+              "feedback": "Conducta no indicada. Orientación del docente: '100-120 cpm y 5 cm de profundidad garantizan gasto cardíaco mínimo para perfusión cerebral y coronaria.'"
             }
           ]
         },
@@ -4464,22 +4464,22 @@
             {
               "texto": "Shock Hipovolémico Hemorrágico",
               "correcta": true,
-              "feedback": "¡Correcto! La tríada de hipotensión, taquicardia refleja y palidez acral indica pérdida intravascular aguda masiva."
+              "feedback": "¡Criterio clínico correcto! La tríada de hipotensión, taquicardia refleja y palidez acral indica pérdida intravascular aguda masiva."
             },
             {
               "texto": "Shock Cardiogénico puro",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Shock Hipovolémico Hemorrágico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La tríada de hipotensión, taquicardia refleja y palidez acral indica pérdida intravascular aguda masiva.'"
             },
             {
               "texto": "Shock Anafiláctico",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Shock Hipovolémico Hemorrágico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La tríada de hipotensión, taquicardia refleja y palidez acral indica pérdida intravascular aguda masiva.'"
             },
             {
               "texto": "Shock Neurógeno caliente",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Shock Hipovolémico Hemorrágico."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La tríada de hipotensión, taquicardia refleja y palidez acral indica pérdida intravascular aguda masiva.'"
             }
           ]
         },
@@ -4511,22 +4511,22 @@
             {
               "texto": "Vía Aérea permeable con control de la columna cervical",
               "correcta": true,
-              "feedback": "¡Correcto! Airway: asegurar permeabilidad de vía aérea protegiendo siempre la columna cervical."
+              "feedback": "¡Criterio clínico correcto! Airway: asegurar permeabilidad de vía aérea protegiendo siempre la columna cervical."
             },
             {
               "texto": "Auscultación de ruidos cardíacos",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vía Aérea permeable con control de la columna cervical."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Airway: asegurar permeabilidad de vía aérea protegiendo siempre la columna cervical.'"
             },
             {
               "texto": "Acceso venoso periférico",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vía Aérea permeable con control de la columna cervical."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Airway: asegurar permeabilidad de vía aérea protegiendo siempre la columna cervical.'"
             },
             {
               "texto": "Administración de antibióticos",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Vía Aérea permeable con control de la columna cervical."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Airway: asegurar permeabilidad de vía aérea protegiendo siempre la columna cervical.'"
             }
           ]
         },
@@ -4558,22 +4558,22 @@
             {
               "texto": "Adrenalina (Epinefrina) 1:1000 intramuscular en cara anterolateral del muslo",
               "correcta": true,
-              "feedback": "¡Correcto! La adrenalina IM es el único fármaco que revierte el broncoespasmo y el colapso vascular en minutos."
+              "feedback": "¡Criterio clínico correcto! La adrenalina IM es el único fármaco que revierte el broncoespasmo y el colapso vascular en minutos."
             },
             {
               "texto": "Hidrocortisona endovenosa en bolo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Adrenalina (Epinefrina) 1:1000 intramuscular en cara anterolateral del muslo."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La adrenalina IM es el único fármaco que revierte el broncoespasmo y el colapso vascular en minutos.'"
             },
             {
               "texto": "Difenhidramina vía oral",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Adrenalina (Epinefrina) 1:1000 intramuscular en cara anterolateral del muslo."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La adrenalina IM es el único fármaco que revierte el broncoespasmo y el colapso vascular en minutos.'"
             },
             {
               "texto": "Salbutamol en aerosol solo",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Adrenalina (Epinefrina) 1:1000 intramuscular en cara anterolateral del muslo."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La adrenalina IM es el único fármaco que revierte el broncoespasmo y el colapso vascular en minutos.'"
             }
           ]
         },
@@ -4605,22 +4605,22 @@
             {
               "texto": "Código Verde o Azul (No urgente, tiempo de espera hasta 120-240 minutos)",
               "correcta": true,
-              "feedback": "¡Correcto! La cefalea crónica sin banderas rojas es de prioridad baja (verde/azul)."
+              "feedback": "¡Criterio clínico correcto! La cefalea crónica sin banderas rojas es de prioridad baja (verde/azul)."
             },
             {
               "texto": "Código Rojo (Atención inmediata con riesgo de muerte)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Código Verde o Azul (No urgente, tiempo de espera hasta 120-240 minutos)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La cefalea crónica sin banderas rojas es de prioridad baja (verde/azul).'"
             },
             {
               "texto": "Código Naranja (Emergencia con espera máxima de 10 min)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Código Verde o Azul (No urgente, tiempo de espera hasta 120-240 minutos)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La cefalea crónica sin banderas rojas es de prioridad baja (verde/azul).'"
             },
             {
               "texto": "Código Amarillo (Urgencia de 30 min)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Código Verde o Azul (No urgente, tiempo de espera hasta 120-240 minutos)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'La cefalea crónica sin banderas rojas es de prioridad baja (verde/azul).'"
             }
           ]
         },
@@ -4652,22 +4652,22 @@
             {
               "texto": "Glasgow 7/15: Impone intubación orotraqueal inmediata para protección de la vía aérea",
               "correcta": true,
-              "feedback": "¡Correcto! Un puntaje de Glasgow ≤ 8 define coma e indicación obligatoria de aislamiento de vía aérea."
+              "feedback": "¡Criterio clínico correcto! Un puntaje de Glasgow ≤ 8 define coma e indicación obligatoria de aislamiento de vía aérea."
             },
             {
               "texto": "Glasgow 14/15: Observación domiciliaria",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Glasgow 7/15: Impone intubación orotraqueal inmediata para protección de la vía aérea."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Un puntaje de Glasgow ≤ 8 define coma e indicación obligatoria de aislamiento de vía aérea.'"
             },
             {
               "texto": "Glasgow 11/15: Oxígeno por bigotera",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Glasgow 7/15: Impone intubación orotraqueal inmediata para protección de la vía aérea."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Un puntaje de Glasgow ≤ 8 define coma e indicación obligatoria de aislamiento de vía aérea.'"
             },
             {
               "texto": "Glasgow 3/15: Paciente fallecido",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Glasgow 7/15: Impone intubación orotraqueal inmediata para protección de la vía aérea."
+              "feedback": "Conducta no indicada. Orientación del docente: 'Un puntaje de Glasgow ≤ 8 define coma e indicación obligatoria de aislamiento de vía aérea.'"
             }
           ]
         },
@@ -4699,22 +4699,22 @@
             {
               "texto": "Síndrome de Derrame Pleural",
               "correcta": true,
-              "feedback": "¡Correcto! El líquido en la pleura amortigua la transmisión del sonido (silencio auscultatorio) y da matidez percutoria."
+              "feedback": "¡Criterio clínico correcto! El líquido en la pleura amortigua la transmisión del sonido (silencio auscultatorio) y da matidez percutoria."
             },
             {
               "texto": "Síndrome de Neumotórax",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Síndrome de Derrame Pleural."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El líquido en la pleura amortigua la transmisión del sonido (silencio auscultatorio) y da matidez percutoria.'"
             },
             {
               "texto": "Atelectasia obstructiva pura",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Síndrome de Derrame Pleural."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El líquido en la pleura amortigua la transmisión del sonido (silencio auscultatorio) y da matidez percutoria.'"
             },
             {
               "texto": "Enfisema pulmonar bilateral",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Síndrome de Derrame Pleural."
+              "feedback": "Conducta no indicada. Orientación del docente: 'El líquido en la pleura amortigua la transmisión del sonido (silencio auscultatorio) y da matidez percutoria.'"
             }
           ]
         },
@@ -4746,22 +4746,22 @@
             {
               "texto": "Fibrilación Ventricular (FV) y Taquicardia Ventricular sin Pulso (TVSP)",
               "correcta": true,
-              "feedback": "¡Correcto! FV y TVSP son los ritmos desorganizados que se resetean con la descarga eléctrica sincronizada del DEA."
+              "feedback": "¡Criterio clínico correcto! FV y TVSP son los ritmos desorganizados que se resetean con la descarga eléctrica sincronizada del DEA."
             },
             {
               "texto": "Asistolia y Actividad Eléctrica sin Pulso (AESP)",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Fibrilación Ventricular (FV) y Taquicardia Ventricular sin Pulso (TVSP)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'FV y TVSP son los ritmos desorganizados que se resetean con la descarga eléctrica sincronizada del DEA.'"
             },
             {
               "texto": "Bradicardia sinusal y Taquicardia sinusal",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Fibrilación Ventricular (FV) y Taquicardia Ventricular sin Pulso (TVSP)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'FV y TVSP son los ritmos desorganizados que se resetean con la descarga eléctrica sincronizada del DEA.'"
             },
             {
               "texto": "Fibrilación Auricular controlada",
               "correcta": false,
-              "feedback": "Incorrecto. La respuesta clínica correcta es Fibrilación Ventricular (FV) y Taquicardia Ventricular sin Pulso (TVSP)."
+              "feedback": "Conducta no indicada. Orientación del docente: 'FV y TVSP son los ritmos desorganizados que se resetean con la descarga eléctrica sincronizada del DEA.'"
             }
           ]
         }
@@ -4808,7 +4808,7 @@
   }
 
   return {
-    version: "v1.3.0",
+    version: "v1.4.1",
     raw: BANCO_UPMS_PRIMER_ANHO,
     getFlatCases,
     getRandomRotation,

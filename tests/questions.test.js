@@ -2,8 +2,8 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const QuestionsData = require('../js/data/questions.js');
 
-test('Questions Data contains 100 official cases and version v1.3.0', () => {
-  assert.equal(QuestionsData.version, 'v1.3.0');
+test('Questions Data contains 100 official cases and version v1.4.1', () => {
+  assert.equal(QuestionsData.version, 'v1.4.1');
   assert.equal(QuestionsData.totalQuestions, 100);
 
   const flat = QuestionsData.getFlatCases();
@@ -18,10 +18,16 @@ test('Questions Data contains 100 official cases and version v1.3.0', () => {
   assert.ok(materias.has('ciclos'));
 
   // Assert every question has exactly 4 options with 1 correct
+  // and incorrect options offer pedagogical hints without spoiling the answer
   flat.forEach((c) => {
     assert.equal(c.opciones.length, 4, `Case ${c.id} should have 4 options`);
     const correctCount = c.opciones.filter(o => o.correcta).length;
     assert.equal(correctCount, 1, `Case ${c.id} must have exactly 1 correct option`);
+
+    c.opciones.filter(o => !o.correcta).forEach(distractor => {
+      assert.ok(distractor.feedback.includes('Orientación del docente'), `Case ${c.id} distractor feedback must contain teacher hint`);
+      assert.ok(!distractor.feedback.includes('La respuesta clínica correcta es'), `Case ${c.id} distractor feedback must not spoil the answer`);
+    });
   });
 });
 

@@ -189,6 +189,30 @@
           break;
         }
 
+        case 'stamp': {
+          // Golpe de timbre/sello oficial de cátedra
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(160, now);
+          osc.frequency.exponentialRampToValueAtTime(50, now + 0.12);
+          gain.gain.setValueAtTime(0.35 * baseVolume, now);
+          gain.gain.exponentialRampToValueAtTime(0.001 * baseVolume, now + 0.14);
+          osc.start(now);
+          osc.stop(now + 0.14);
+
+          // Campana de aprobación armónica
+          const chime = ctx.createOscillator();
+          const chimeGain = ctx.createGain();
+          chime.type = 'sine';
+          chime.frequency.setValueAtTime(587.33, now + 0.08); // D5
+          chimeGain.gain.setValueAtTime(0.15 * baseVolume, now + 0.08);
+          chimeGain.gain.exponentialRampToValueAtTime(0.001 * baseVolume, now + 0.35);
+          chime.connect(chimeGain);
+          chimeGain.connect(ctx.destination);
+          chime.start(now + 0.08);
+          chime.stop(now + 0.35);
+          break;
+        }
+
         default:
           break;
       }

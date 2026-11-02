@@ -17,7 +17,7 @@
       <!-- Barra superior cinemática -->
       <div class="cinema-bar-top">
         <span class="cinema-title">UPMS FILIAL CDE • PRÓLOGO</span>
-        <span class="game-version-badge">v1.3.0</span>
+        <span class="game-version-badge">v1.4.1</span>
         <button id="btnSkipIntro" class="btn-skip">SALTAR INTRO ⏭</button>
       </div>
 
@@ -46,7 +46,7 @@
     <div id="screenTitle" class="title-screen" style="display: none;">
       <div class="title-badge-wrap">
         <span class="title-badge">🏛️ UNIVERSIDAD PRIVADA MARÍA SERRANA • FILIAL CDE</span>
-        <span class="game-version-badge" style="margin-left: 10px;">v1.3.0</span>
+        <span class="game-version-badge" style="margin-left: 10px;">v1.4.1</span>
       </div>
 
       <div class="title-hero">
@@ -174,7 +174,7 @@
     <div id="screenEntranceWalk" class="entrance-cinematic" style="display: none;">
       <div class="cinema-bar-top">
         <span class="cinema-title">🏛️ INGRESO AL CAMPUS • UNIVERSIDAD PRIVADA MARÍA SERRANA</span>
-        <span class="game-version-badge">v1.3.0</span>
+        <span class="game-version-badge">v1.4.1</span>
         <button id="btnSkipEntrance" class="btn-skip">SALTAR CINEMÁTICA ⏭</button>
       </div>
 
@@ -240,7 +240,7 @@
       <header class="rpg-header">
         <div class="hud-title">
           <span>🩺 <span style="color: #fbbf24; font-weight: 900;">UMS</span> MEDIQUEST: 1° SEMESTRE</span>
-          <span class="game-version-badge" style="margin-left: 8px;">v1.3.0</span>
+          <span class="game-version-badge" style="margin-left: 8px;">v1.4.1</span>
         </div>
         <div class="hud-stats">
           <div class="stat-item streak-stat-wrap" id="hudStreakItem" style="display: none;">
@@ -335,8 +335,37 @@
       <!-- Barra de herramientas inferior -->
       <footer class="stage-footer">
         <button id="btnHint" class="btn-tool">💡 PISTA DEL PROFESOR</button>
+        <button id="btnOpenLogbook" class="btn-tool">📖 LIBRETA DE PRÁCTICAS</button>
         <button id="btnReturnToMenu" class="btn-tool">🏛️ MENÚ DE LA FACHADA</button>
       </footer>
+    </div>
+
+    <!-- ========================================================
+         MODAL: LIBRETA DE ROTACIÓN CLÍNICA Y SELLOS DOCENTES
+         ======================================================== -->
+    <div id="modalLogbook" class="logbook-overlay" style="display: none;">
+      <div class="logbook-card">
+        <div class="logbook-header">
+          <div class="logbook-title-wrap">
+            <span class="logbook-badge">🏛️ UNIVERSIDAD PRIVADA MARÍA SERRANA • FILIAL CDE</span>
+            <h2 class="logbook-heading">LIBRETA OFICIAL DE ROTACIÓN CLÍNICA (1° AÑO)</h2>
+          </div>
+          <button id="btnCloseLogbook" class="btn-close-logbook">✕ CERRAR</button>
+        </div>
+
+        <div class="logbook-student-bar" id="logbookStudentBar">
+          <!-- Datos dinámicos del estudiante -->
+        </div>
+
+        <div class="logbook-stamps-grid" id="logbookStampsGrid">
+          <!-- 5 cátedras con sus sellos -->
+        </div>
+
+        <div class="logbook-footer">
+          <span class="logbook-seal-status" id="logbookSealStatus">SELLOS OBTENIDOS: 0 / 5</span>
+          <button id="btnCloseLogbookFooter" class="btn-action-logbook">VOLVER A LA GUARDIA</button>
+        </div>
+      </div>
     </div>
 
   </div>

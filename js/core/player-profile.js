@@ -18,12 +18,26 @@
     hairStyle: 'corto', // 'corto' | 'fade' | 'coleta' | 'suelto'
     hairColor: 'castano', // 'negro' | 'castano' | 'rubio' | 'pelirrojo'
     build: 'standard', // 'standard' | 'alto' | 'flaco' | 'atletico'
-    outfit: 'guardapolvo' // 'guardapolvo' | 'ambo_celeste' | 'ambo_verde' | 'ambo_upms'
+    outfit: 'guardapolvo', // 'guardapolvo' | 'ambo_celeste' | 'ambo_verde' | 'ambo_upms'
+    stamps: {
+      anatomia: false,
+      bioquimica: false,
+      laboratorios: false,
+      ciclos: false,
+      antropologia: false
+    }
   };
 
   class PlayerProfile {
     constructor(initial = {}) {
-      this.data = { ...DEFAULT_PROFILE, ...initial };
+      this.data = {
+        ...DEFAULT_PROFILE,
+        stamps: { ...DEFAULT_PROFILE.stamps },
+        ...initial
+      };
+      if (initial.stamps) {
+        this.data.stamps = { ...DEFAULT_PROFILE.stamps, ...initial.stamps };
+      }
       this.load();
     }
 
@@ -33,7 +47,14 @@
         const raw = localStorage.getItem(STORAGE_KEY);
         if (raw) {
           const parsed = JSON.parse(raw);
-          this.data = { ...this.data, ...parsed };
+          this.data = {
+            ...this.data,
+            ...parsed,
+            stamps: {
+              ...DEFAULT_PROFILE.stamps,
+              ...(parsed.stamps || {})
+            }
+          };
         }
       } catch (err) {
         console.warn('[PlayerProfile] Could not load profile from localStorage:', err);
@@ -59,8 +80,36 @@
       this.save();
     }
 
+    addStamp(materiaId) {
+      if (!this.data.stamps) {
+        this.data.stamps = { ...DEFAULT_PROFILE.stamps };
+      }
+      const isNew = !this.data.stamps[materiaId];
+      this.data.stamps[materiaId] = true;
+      this.save();
+      return isNew;
+    }
+
+    getStamps() {
+      return { ...(this.data.stamps || DEFAULT_PROFILE.stamps) };
+    }
+
+    getTotalStamps() {
+      const s = this.getStamps();
+      return Object.values(s).filter(Boolean).length;
+    }
+
+    hasAllStamps() {
+      return this.getTotalStamps() >= 5;
+    }
+
+    resetStamps() {
+      this.data.stamps = { ...DEFAULT_PROFILE.stamps };
+      this.save();
+    }
+
     get() {
-      return { ...this.data };
+      return { ...this.data, stamps: this.getStamps() };
     }
 
     getRawName() {

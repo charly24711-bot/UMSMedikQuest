@@ -103,6 +103,31 @@
         btnHint.addEventListener('click', () => this.showHint());
       }
 
+      // Libreta de Prácticas
+      const btnLogbook = document.getElementById('btnOpenLogbook');
+      if (btnLogbook) {
+        btnLogbook.addEventListener('click', () => {
+          this.sound.play('blip');
+          this.view.openLogbook(this.profile, this.engine.getState().xp, this.engine.getState().maxStreak || 0);
+        });
+      }
+
+      const btnCloseLogbook = document.getElementById('btnCloseLogbook');
+      if (btnCloseLogbook) {
+        btnCloseLogbook.addEventListener('click', () => {
+          this.sound.play('blip');
+          this.view.closeLogbook();
+        });
+      }
+
+      const btnCloseLogbookFooter = document.getElementById('btnCloseLogbookFooter');
+      if (btnCloseLogbookFooter) {
+        btnCloseLogbookFooter.addEventListener('click', () => {
+          this.sound.play('blip');
+          this.view.closeLogbook();
+        });
+      }
+
       // Return to Title Menu
       const btnMenu = document.getElementById('btnReturnToMenu');
       if (btnMenu) {
@@ -118,7 +143,12 @@
         const key = e.key.toUpperCase();
         const keyMap = { 'A': 0, '1': 0, 'B': 1, '2': 1, 'C': 2, '3': 2, 'D': 3, '4': 3 };
         if (key in keyMap) {
-          this.handleAnswerSelection(keyMap[key]);
+          const idx = keyMap[key];
+          const buttons = this.view.stage?.optionsContainer?.querySelectorAll('.action-btn');
+          if (buttons && buttons[idx] && buttons[idx].disabled) {
+            return;
+          }
+          this.handleAnswerSelection(idx);
         }
       });
     }
@@ -526,7 +556,16 @@
       this.view.updateHUD(outcome.remainingHp, outcome.totalXp, outcome.streak, outcome.multiplier);
 
       if (outcome.isCorrect) {
-        if (outcome.streak >= 3) {
+        const currentCase = this.engine.getCurrentCase();
+        let stampAwarded = false;
+        if (currentCase && currentCase.materiaId && this.profile && typeof this.profile.addStamp === 'function') {
+          stampAwarded = this.profile.addStamp(currentCase.materiaId);
+        }
+
+        if (stampAwarded) {
+          this.sound.play('stamp');
+          this.view.triggerPatientReaction('⭐ ¡SELLO DE CÁTEDRA OBTENIDO!');
+        } else if (outcome.streak >= 3) {
           this.sound.play('streak_up');
           this.view.showStreakBanner(outcome.streak, outcome.multiplier);
         } else {
@@ -540,7 +579,9 @@
             ? `⚡ ¡RACHA CLÍNICA x${outcome.multiplier.toFixed(1)}! (+${outcome.pointsEarned} XP)\n`
             : '';
 
-        const feedbackText = `${streakBadge}¡CORRECTO! ${outcome.feedback}`;
+        const stampBadge = stampAwarded ? '📜 ¡La cátedra ha firmado y sellado tu libreta de guardia!\n' : '';
+
+        const feedbackText = `${stampBadge}${streakBadge}¡CORRECTO! ${outcome.feedback}`;
         this.view.renderFeedback(
           feedbackText,
           () => {
@@ -571,7 +612,11 @@
         const streakLostMsg = outcome.streakBroken ? '\n(Se interrumpió la racha de guardia)' : '';
 
         if (outcome.isGameOver) {
-          const gameOverMsg = `❌ ${outcome.feedback}${streakLostMsg}\n\n¡Te quedaste sin energía, ${this.profile.getName()}! Repasá los contenidos de la cátedra e intentá nuevamente.`;
+          const currentCase = this.engine.getCurrentCase();
+          const correctOpt = currentCase ? currentCase.opciones.find(o => o.correcta) : null;
+          const solText = correctOpt ? `\n(La conducta clínica esperada era: "${correctOpt.texto}")` : '';
+
+          const gameOverMsg = `❌ ${outcome.feedback}${streakLostMsg}${solText}\n\n¡Te quedaste sin energía, ${this.profile.getName()}! Repasá los fundamentos e intentá una nueva rotación.`;
           this.view.renderFeedback(
             gameOverMsg,
             () => {
@@ -580,7 +625,8 @@
             () => this.sound.play('blip')
           );
         } else {
-          const tryAgainMsg = `❌ ${outcome.feedback}${streakLostMsg}\n\nPerdiste un corazón de energía. ¡Pensá tu respuesta y volvé a intentar!`;
+          const heartsLeft = '❤️'.repeat(Math.max(0, outcome.remainingHp));
+          const tryAgainMsg = `⚠️ ${outcome.feedback}${streakLostMsg}\n\nPerdiste 1 vida (${heartsLeft} restantes). Descartá esa opción errónea y razoná cuál es la conducta indicada:`;
           this.view.renderFeedback(
             tryAgainMsg,
             () => {

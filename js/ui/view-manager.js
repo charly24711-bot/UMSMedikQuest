@@ -350,6 +350,12 @@
       const buttons = this.stage.optionsContainer?.querySelectorAll('.action-btn');
       if (buttons && buttons[index]) {
         buttons[index].classList.add(isCorrect ? 'correct' : 'wrong');
+        if (!isCorrect) {
+          buttons[index].disabled = true;
+          buttons[index].style.opacity = '0.45';
+          buttons[index].style.cursor = 'not-allowed';
+          buttons[index].style.pointerEvents = 'none';
+        }
       }
     }
 
@@ -395,7 +401,98 @@
           const btn = this.stage.optionsContainer.querySelector('.home-btn');
           if (btn) btn.addEventListener('click', onReturnHome);
         }
-      });
+    openLogbook(profile, currentXp = 0, maxStreak = 0) {
+      const modal = document.getElementById('modalLogbook');
+      if (!modal) return;
+      this.renderLogbook(profile, currentXp, maxStreak);
+      modal.style.display = 'flex';
+    }
+
+    closeLogbook() {
+      const modal = document.getElementById('modalLogbook');
+      if (modal) modal.style.display = 'none';
+    }
+
+    renderLogbook(profile, currentXp = 0, maxStreak = 0) {
+      const bar = document.getElementById('logbookStudentBar');
+      const grid = document.getElementById('logbookStampsGrid');
+      const statusEl = document.getElementById('logbookSealStatus');
+      if (!grid || !profile) return;
+
+      const stamps = profile.getStamps ? profile.getStamps() : {};
+      const totalStamps = profile.getTotalStamps ? profile.getTotalStamps() : 0;
+
+      if (bar) {
+        bar.innerHTML = `
+          <div><strong>ESTUDIANTE:</strong> ${profile.getName().toUpperCase()} (${profile.getTitle().toUpperCase()})</div>
+          <div><strong>LEGAJO:</strong> UPMS-2026-MED</div>
+          <div><strong>XP TOTAL:</strong> ${String(currentXp).padStart(4, '0')}</div>
+          <div><strong>RACHA MÁXIMA:</strong> 🔥 ${maxStreak}</div>
+        `;
+      }
+
+      const MATERIAS_DOCENTES = [
+        {
+          id: 'anatomia',
+          docente: 'Dr. Ernaldo René Amarilla',
+          avatar: 'dr_rene_amarilla_pixel.jpg',
+          materia: 'Anatomía Humana Descriptiva y Funcional I (MED-01-01)',
+          selloTexto: 'HABILITADO EN ANATOMÍA'
+        },
+        {
+          id: 'bioquimica',
+          docente: 'Dra. Antonella Antico',
+          avatar: 'dra_antonella_antico_pixel.jpg',
+          materia: 'Bioquímica Clínica y Metabolismo (MED-01-03)',
+          selloTexto: 'HABILITADO EN BIOQUÍMICA'
+        },
+        {
+          id: 'ciclos',
+          docente: 'Dr. Ángel Adrián Gómez Rosso',
+          avatar: 'dr_angel_pixel.jpg',
+          materia: 'Ciclos de Formación Médica & Triaje (MED-01-05)',
+          selloTexto: 'VALIDADO EN TRIAJE'
+        },
+        {
+          id: 'laboratorios',
+          docente: 'Lic. Patricia Gómez',
+          avatar: 'patricia_gomez_pixel.jpg',
+          materia: 'Bioseguridad y Práctica de Laboratorio (MED-01-02)',
+          selloTexto: 'APROBADO EN LABORATORIO'
+        },
+        {
+          id: 'antropologia',
+          docente: 'Dra. Nidia Viviana Ruiz Prieto',
+          avatar: 'dra_viviana_ruiz_fiel.jpg',
+          materia: 'Antropología Médica y Bioética (MED-01-06)',
+          selloTexto: 'DISTINCIÓN EN BIOÉTICA'
+        }
+      ];
+
+      grid.innerHTML = MATERIAS_DOCENTES.map((m) => {
+        const isStamped = Boolean(stamps[m.id]);
+        return `
+          <div class="prof-stamp-item ${isStamped ? 'stamped' : ''}">
+            <div class="prof-stamp-left">
+              <div class="prof-stamp-avatar"><img src="${m.avatar}" alt="${m.docente}"></div>
+              <div class="prof-stamp-info">
+                <span class="prof-stamp-name">${m.docente}</span>
+                <span class="prof-stamp-subject">${m.materia}</span>
+              </div>
+            </div>
+            <div class="stamp-seal-box">
+              ${isStamped
+                ? `<span class="stamp-seal-badge approved">✓ ${m.selloTexto}</span>`
+                : `<span class="stamp-seal-badge pending">⏳ PENDIENTE DE ROTACIÓN</span>`
+              }
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      if (statusEl) {
+        statusEl.textContent = `SELLOS OBTENIDOS: ${totalStamps} / 5 ${totalStamps >= 5 ? '★ MENCIÓN DE HONOR' : ''}`;
+      }
     }
   }
 
