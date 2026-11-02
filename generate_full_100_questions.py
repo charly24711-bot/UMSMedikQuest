@@ -289,7 +289,7 @@ js_content = f"""// Data layer: UPMS 1st Year Clinical Cases (BANCO OFICIAL 100 
   }}
 
   return {{
-    version: "v1.4.1",
+    version: "v1.4.2",
     raw: BANCO_UPMS_PRIMER_ANHO,
     getFlatCases,
     getRandomRotation,

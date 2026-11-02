@@ -401,6 +401,9 @@
           const btn = this.stage.optionsContainer.querySelector('.home-btn');
           if (btn) btn.addEventListener('click', onReturnHome);
         }
+      });
+    }
+
     openLogbook(profile, currentXp = 0, maxStreak = 0) {
       const modal = document.getElementById('modalLogbook');
       if (!modal) return;

@@ -650,9 +650,16 @@
     }
   }
 
-  // Auto-boot on DOM ready
-  window.addEventListener('DOMContentLoaded', () => {
+  // Auto-boot on DOM ready or immediate if already interactive/complete
+  function initApp() {
+    if (window.medikQuestApp) return;
     window.medikQuestApp = new App();
     window.medikQuestApp.start();
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    window.addEventListener('DOMContentLoaded', initApp);
+  } else {
+    initApp();
+  }
 })();
