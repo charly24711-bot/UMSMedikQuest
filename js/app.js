@@ -29,7 +29,10 @@
       this.typewriter = new MedikQuest.Typewriter();
       this.profile = new MedikQuest.PlayerProfile();
       this.view = new MedikQuest.ViewManager(this.typewriter);
-      this.engine = new MedikQuest.GameEngine(MedikQuest.Data.getFlatCases());
+      const initialCases = (MedikQuest.Data && typeof MedikQuest.Data.getRandomRotation === 'function')
+        ? MedikQuest.Data.getRandomRotation(10)
+        : MedikQuest.Data.getFlatCases();
+      this.engine = new MedikQuest.GameEngine(initialCases);
 
       this.cinematicTimer = null;
       this.entranceTimer = null;
@@ -457,6 +460,9 @@
 
     startRotation() {
       this.sound.play('step');
+      if (MedikQuest.Data && typeof MedikQuest.Data.getRandomRotation === 'function') {
+        this.engine.setCases(MedikQuest.Data.getRandomRotation(10));
+      }
       this.engine.startRotation();
     }
 

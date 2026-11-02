@@ -97,6 +97,20 @@ body {
   letter-spacing: 1px;
 }
 
+.game-version-badge {
+  font-family: var(--font-retro);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fbbf24;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(251, 191, 36, 0.5);
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 6px rgba(251, 191, 36, 0.6);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
 .btn-skip {
   background: rgba(30, 41, 59, 0.8);
   border: 1px solid #475569;
