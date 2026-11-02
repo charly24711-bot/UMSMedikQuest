@@ -1093,18 +1093,20 @@ body {
 
 .patient-exam-bubble {
   position: absolute;
-  top: -34px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(15, 23, 42, 0.95);
-  border: 1.5px solid #38bdf8;
+  top: 6px;
+  right: -24px;
+  min-width: 210px;
+  text-align: center;
+  background: rgba(4, 9, 20, 0.96);
+  border: 2px solid #38bdf8;
   color: #7dd3fc;
   font-family: var(--font-retro);
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 5px 12px;
-  border-radius: 6px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9), 0 0 12px rgba(56, 189, 248, 0.4);
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.95), 0 0 16px rgba(56, 189, 248, 0.6);
   pointer-events: none;
   z-index: 30;
   white-space: nowrap;
@@ -1112,8 +1114,8 @@ body {
 }
 
 @keyframes bubble-pop {
-  0% { opacity: 0; transform: translateX(-50%) translateY(8px) scale(0.8); }
-  100% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+  0% { opacity: 0; transform: translateY(6px) scale(0.92); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .btn-semiology {
