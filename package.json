@@ -1,6 +1,6 @@
 {
   "name": "medikquest",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "RPG Clínico de Medicina (1er Año - UPMS)",
   "scripts": {
     "test": "node --test tests/**/*.test.js"

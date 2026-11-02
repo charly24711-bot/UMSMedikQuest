@@ -1010,55 +1010,43 @@ body {
   0% {
     left: 52%;
     bottom: 4%;
-    transform: translateX(-50%) scale(1.30) translateY(0) rotate(-3deg);
+    transform: translateX(-50%) scale(1.20) translateY(0) rotate(-3deg);
     opacity: 1;
   }
-  15% {
+  20% {
     left: 50.5%;
-    bottom: 10%;
-    transform: translateX(-50%) scale(1.16) translateY(-6px) rotate(3deg);
+    bottom: 9%;
+    transform: translateX(-50%) scale(1.05) translateY(-5px) rotate(3deg);
     opacity: 1;
   }
-  30% {
+  40% {
     left: 49.0%;
-    bottom: 16%;
-    transform: translateX(-50%) scale(1.02) translateY(0) rotate(-3deg);
-    opacity: 1;
-  }
-  45% {
-    left: 47.8%;
-    bottom: 22%;
-    transform: translateX(-50%) scale(0.90) translateY(-6px) rotate(3deg);
+    bottom: 14%;
+    transform: translateX(-50%) scale(0.92) translateY(0) rotate(-3deg);
     opacity: 1;
   }
   60% {
+    left: 47.8%;
+    bottom: 19%;
+    transform: translateX(-50%) scale(0.78) translateY(-5px) rotate(3deg);
+    opacity: 1;
+  }
+  80% {
     left: 46.8%;
-    bottom: 27%;
-    transform: translateX(-50%) scale(0.78) translateY(0) rotate(-3deg);
-    opacity: 1;
+    bottom: 23%;
+    transform: translateX(-50%) scale(0.65) translateY(0) rotate(-2deg);
+    opacity: 0.85;
   }
-  75% {
-    left: 45.8%;
-    bottom: 31%;
-    transform: translateX(-50%) scale(0.66) translateY(-5px) rotate(3deg);
-    opacity: 1;
-  }
-  86% {
-    left: 45.2%;
-    bottom: 34%;
-    transform: translateX(-50%) scale(0.56) translateY(0) rotate(-2deg);
-    opacity: 0.9;
-  }
-  93% {
-    left: 45.0%;
-    bottom: 35.5%;
-    transform: translateX(-50%) scale(0.48) translateY(-2px) rotate(1deg);
+  92% {
+    left: 46.2%;
+    bottom: 25.5%;
+    transform: translateX(-50%) scale(0.55) translateY(-3px) rotate(1deg);
     opacity: 0.35;
   }
   100% {
-    left: 45.0%;
-    bottom: 36.5%;
-    transform: translateX(-50%) scale(0.42) translateY(0) rotate(0deg);
+    left: 46.0%;
+    bottom: 26.5%;
+    transform: translateX(-50%) scale(0.48) translateY(0) rotate(0deg);
     opacity: 0;
   }
 }

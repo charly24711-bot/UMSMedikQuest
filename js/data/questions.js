@@ -4808,7 +4808,7 @@
   }
 
   return {
-    version: "v1.4.2",
+    version: "v1.4.3",
     raw: BANCO_UPMS_PRIMER_ANHO,
     getFlatCases,
     getRandomRotation,
