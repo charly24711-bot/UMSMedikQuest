@@ -152,12 +152,12 @@ body {
 }
 
 .stage-student-pixel {
-  width: 64px;
-  height: 102px;
+  width: 120px;
+  height: 192px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.75));
   animation: bob 1.4s ease-in-out infinite alternate;
 }
 
@@ -383,7 +383,7 @@ body {
    ESCENARIO CLÍNICO (AULA / MORGUE / HOSPITAL)
    ======================================================== */
 .rpg-stage {
-  min-height: 235px;
+  min-height: 270px;
   background: linear-gradient(180deg, #0d1527 0%, #172554 60%, #0f172a 100%);
   border-bottom: 2px solid #1e293b;
   position: relative;
