@@ -23,7 +23,9 @@
 
       this.hud = {
         hp: document.getElementById('hpText'),
-        xp: document.getElementById('xpText')
+        xp: document.getElementById('xpText'),
+        streakItem: document.getElementById('hudStreakItem'),
+        streakText: document.getElementById('streakText')
       };
 
       this.stage = {
@@ -234,7 +236,7 @@
       this.clearActiveSemiologyBtns();
     }
 
-    updateHUD(hp, xp) {
+    updateHUD(hp, xp, streak = 0, multiplier = 1.0) {
       if (this.hud.xp) {
         this.hud.xp.textContent = String(xp).padStart(4, '0');
       }
@@ -248,13 +250,55 @@
           this.hud.hp.textContent = hearts;
         }
       }
+
+      if (this.hud.streakItem && this.hud.streakText) {
+        if (streak >= 3) {
+          this.hud.streakItem.style.display = 'flex';
+          if (streak >= 5) {
+            this.hud.streakItem.className = 'stat-item streak-stat-wrap max-streak';
+            this.hud.streakText.textContent = `🔥 x${multiplier.toFixed(1)} (${streak})`;
+          } else {
+            this.hud.streakItem.className = 'stat-item streak-stat-wrap';
+            this.hud.streakText.textContent = `⚡ x${multiplier.toFixed(1)} (${streak})`;
+          }
+        } else {
+          this.hud.streakItem.style.display = 'none';
+        }
+      }
     }
 
-    spawnFloatingXP(amount) {
+    showStreakBanner(streak, multiplier) {
+      const banner = document.getElementById('streakBanner');
+      if (!banner) return;
+
+      if (streak >= 5) {
+        banner.className = 'streak-banner fire';
+        banner.textContent = `🔥 ¡GUARDIA IMPECABLE! x${multiplier.toFixed(1)} (${streak} ACIERTOS SEGUIDOS)`;
+      } else if (streak >= 3) {
+        banner.className = 'streak-banner';
+        banner.textContent = `⚡ ¡RACHA DE CRITERIO CLÍNICO! x${multiplier.toFixed(1)} (${streak} SEGUIDAS)`;
+      } else {
+        banner.style.display = 'none';
+        return;
+      }
+
+      banner.style.display = 'block';
+      clearTimeout(this._streakTimer);
+      this._streakTimer = setTimeout(() => {
+        banner.style.display = 'none';
+      }, 2600);
+    }
+
+    spawnFloatingXP(amount, multiplier = 1.0) {
       if (!this.cabinet) return;
       const banner = document.createElement('div');
       banner.className = 'floating-xp';
-      banner.textContent = `+${amount} XP`;
+      if (multiplier > 1.0) {
+        banner.textContent = `+${amount} XP (x${multiplier.toFixed(1)}) 🔥`;
+        banner.style.color = multiplier >= 2.0 ? '#fca5a5' : '#fbbf24';
+      } else {
+        banner.textContent = `+${amount} XP`;
+      }
       this.cabinet.appendChild(banner);
       setTimeout(() => banner.remove(), 1200);
     }

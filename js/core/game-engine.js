@@ -19,10 +19,19 @@
         screen: 'intro',
         hp: this.maxHp,
         xp: 0,
+        streak: 0,
+        maxStreak: 0,
+        multiplier: 1.0,
         currentCaseIndex: 0,
         cases: Array.isArray(cases) ? cases : [],
         isLocked: false
       };
+    }
+
+    calculateMultiplier(streak = this.state.streak) {
+      if (streak >= 5) return 2.0; // Guardia Impecable
+      if (streak >= 3) return 1.5; // Racha de Criterio
+      return 1.0;
     }
 
     setCases(cases) {
@@ -50,6 +59,9 @@
     startRotation() {
       this.state.hp = this.maxHp;
       this.state.xp = 0;
+      this.state.streak = 0;
+      this.state.maxStreak = 0;
+      this.state.multiplier = 1.0;
       this.state.currentCaseIndex = 0;
       this.state.screen = 'game';
       this.state.isLocked = false;
@@ -70,10 +82,21 @@
       const isCorrect = Boolean(selectedOption.correcta);
 
       let pointsEarned = 0;
+      const previousStreak = this.state.streak;
+      let streakBroken = false;
+
       if (isCorrect) {
-        pointsEarned = this.pointsPerCorrect;
+        this.state.streak++;
+        this.state.maxStreak = Math.max(this.state.maxStreak, this.state.streak);
+        this.state.multiplier = this.calculateMultiplier(this.state.streak);
+        pointsEarned = Math.round(this.pointsPerCorrect * this.state.multiplier);
         this.state.xp += pointsEarned;
       } else {
+        if (this.state.streak > 0) {
+          streakBroken = true;
+        }
+        this.state.streak = 0;
+        this.state.multiplier = 1.0;
         this.state.hp = Math.max(0, this.state.hp - 1);
       }
 
@@ -92,6 +115,11 @@
         isCorrect,
         feedback: selectedOption.feedback,
         pointsEarned,
+        streak: this.state.streak,
+        maxStreak: this.state.maxStreak,
+        multiplier: this.state.multiplier,
+        previousStreak,
+        streakBroken,
         remainingHp: this.state.hp,
         totalXp: this.state.xp,
         isGameOver,

@@ -97,3 +97,66 @@ test('GameEngine notifies subscribers on events', () => {
   assert.equal(events.some(e => e.event === 'screenChanged'), true);
   assert.equal(events.some(e => e.event === 'rotationStarted'), true);
 });
+
+test('GameEngine tracks streaks and awards multipliers (1.5x and 2.0x)', () => {
+  const dummyCases = Array.from({ length: 7 }, (_, i) => ({
+    id: `c-${i}`,
+    paciente: `Paciente ${i}`,
+    pregunta: `Pregunta ${i}`,
+    opciones: [
+      { texto: 'Correcta', correcta: true },
+      { texto: 'Incorrecta', correcta: false }
+    ]
+  }));
+
+  const engine = new GameEngine(dummyCases);
+  engine.startRotation();
+
+  // 1st correct answer: streak 1, multiplier 1.0x (100 XP)
+  let o1 = engine.submitAnswer(0);
+  assert.equal(o1.streak, 1);
+  assert.equal(o1.multiplier, 1.0);
+  assert.equal(o1.pointsEarned, 100);
+  assert.equal(engine.getState().xp, 100);
+  engine.advanceCase();
+
+  // 2nd correct answer: streak 2, multiplier 1.0x (100 XP)
+  let o2 = engine.submitAnswer(0);
+  assert.equal(o2.streak, 2);
+  assert.equal(o2.multiplier, 1.0);
+  assert.equal(engine.getState().xp, 200);
+  engine.advanceCase();
+
+  // 3rd correct answer: streak 3 -> MULTIPLIER 1.5x (150 XP)
+  let o3 = engine.submitAnswer(0);
+  assert.equal(o3.streak, 3);
+  assert.equal(o3.multiplier, 1.5);
+  assert.equal(o3.pointsEarned, 150);
+  assert.equal(engine.getState().xp, 350);
+  engine.advanceCase();
+
+  // 4th correct answer: streak 4 -> multiplier 1.5x (150 XP)
+  let o4 = engine.submitAnswer(0);
+  assert.equal(o4.streak, 4);
+  assert.equal(o4.multiplier, 1.5);
+  assert.equal(engine.getState().xp, 500);
+  engine.advanceCase();
+
+  // 5th correct answer: streak 5 -> MULTIPLIER 2.0x (200 XP - Guardia Impecable)
+  let o5 = engine.submitAnswer(0);
+  assert.equal(o5.streak, 5);
+  assert.equal(o5.multiplier, 2.0);
+  assert.equal(o5.pointsEarned, 200);
+  assert.equal(engine.getState().xp, 700);
+  assert.equal(engine.getState().maxStreak, 5);
+  engine.advanceCase();
+
+  // 6th answer is WRONG: streak resets to 0, multiplier resets to 1.0x
+  let o6 = engine.submitAnswer(1);
+  assert.equal(o6.isCorrect, false);
+  assert.equal(o6.streak, 0);
+  assert.equal(o6.streakBroken, true);
+  assert.equal(o6.multiplier, 1.0);
+  assert.equal(engine.getState().streak, 0);
+  assert.equal(engine.getState().maxStreak, 5); // maxStreak preserved
+});

@@ -490,6 +490,7 @@
         this.engine.setCases(MedikQuest.Data.getRandomRotation(10));
       }
       this.engine.startRotation();
+      this.view.updateHUD(this.engine.state.hp, this.engine.state.xp, 0, 1.0);
     }
 
     loadCurrentCase() {
@@ -522,13 +523,24 @@
 
     _handleAnswerOutcome(outcome) {
       this.view.markOptionResult(outcome.optionIndex, outcome.isCorrect);
-      this.view.updateHUD(outcome.remainingHp, outcome.totalXp);
+      this.view.updateHUD(outcome.remainingHp, outcome.totalXp, outcome.streak, outcome.multiplier);
 
       if (outcome.isCorrect) {
-        this.sound.play('correct');
-        this.view.spawnFloatingXP(outcome.pointsEarned);
+        if (outcome.streak >= 3) {
+          this.sound.play('streak_up');
+          this.view.showStreakBanner(outcome.streak, outcome.multiplier);
+        } else {
+          this.sound.play('correct');
+        }
+        this.view.spawnFloatingXP(outcome.pointsEarned, outcome.multiplier);
 
-        const feedbackText = `¡CORRECTO! ${outcome.feedback}`;
+        const streakBadge = outcome.streak >= 5
+          ? `🔥 ¡GUARDIA IMPECABLE! (Racha x${outcome.multiplier.toFixed(1)} • +${outcome.pointsEarned} XP)\n`
+          : outcome.streak >= 3
+            ? `⚡ ¡RACHA CLÍNICA x${outcome.multiplier.toFixed(1)}! (+${outcome.pointsEarned} XP)\n`
+            : '';
+
+        const feedbackText = `${streakBadge}¡CORRECTO! ${outcome.feedback}`;
         this.view.renderFeedback(
           feedbackText,
           () => {
@@ -550,10 +562,16 @@
           () => this.sound.play('blip')
         );
       } else {
-        this.sound.play('wrong');
+        if (outcome.streakBroken) {
+          this.sound.play('streak_lost');
+        } else {
+          this.sound.play('wrong');
+        }
+
+        const streakLostMsg = outcome.streakBroken ? '\n(Se interrumpió la racha de guardia)' : '';
 
         if (outcome.isGameOver) {
-          const gameOverMsg = `❌ ${outcome.feedback}\n\n¡Te quedaste sin energía, ${this.profile.getName()}! Repasá los contenidos de la cátedra e intentá nuevamente.`;
+          const gameOverMsg = `❌ ${outcome.feedback}${streakLostMsg}\n\n¡Te quedaste sin energía, ${this.profile.getName()}! Repasá los contenidos de la cátedra e intentá nuevamente.`;
           this.view.renderFeedback(
             gameOverMsg,
             () => {
@@ -562,7 +580,7 @@
             () => this.sound.play('blip')
           );
         } else {
-          const tryAgainMsg = `❌ ${outcome.feedback}\n\nPerdiste un corazón de energía. ¡Pensá tu respuesta y volvé a intentar!`;
+          const tryAgainMsg = `❌ ${outcome.feedback}${streakLostMsg}\n\nPerdiste un corazón de energía. ¡Pensá tu respuesta y volvé a intentar!`;
           this.view.renderFeedback(
             tryAgainMsg,
             () => {

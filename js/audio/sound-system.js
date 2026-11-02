@@ -159,6 +159,36 @@
           break;
         }
 
+        case 'streak_up': {
+          // Arpegio retro ascendente brillante al subir racha
+          const freqs = [440, 554.37, 659.25, 880];
+          freqs.forEach((f, idx) => {
+            const o = ctx.createOscillator();
+            const g = ctx.createGain();
+            o.type = 'square';
+            o.frequency.setValueAtTime(f, now + idx * 0.06);
+            g.gain.setValueAtTime(0.14 * baseVolume, now + idx * 0.06);
+            g.gain.linearRampToValueAtTime(0.001 * baseVolume, now + idx * 0.06 + 0.12);
+            o.connect(g);
+            g.connect(ctx.destination);
+            o.start(now + idx * 0.06);
+            o.stop(now + idx * 0.06 + 0.12);
+          });
+          break;
+        }
+
+        case 'streak_lost': {
+          // Caída retro cuando se corta la racha
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(320, now);
+          osc.frequency.exponentialRampToValueAtTime(120, now + 0.25);
+          gain.gain.setValueAtTime(0.18 * baseVolume, now);
+          gain.gain.exponentialRampToValueAtTime(0.001 * baseVolume, now + 0.28);
+          osc.start(now);
+          osc.stop(now + 0.28);
+          break;
+        }
+
         default:
           break;
       }
