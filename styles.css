@@ -998,57 +998,155 @@ body {
   filter: drop-shadow(0 10px 14px rgba(0,0,0,0.9));
 }
 
-/* Animación: Subida de escalinatas hacia la puerta de acceso de vidrio (recuadro rojo) */
+/* Animación: Subida de escalinatas según flechas rojas (diagonal derecha -> escalones -> giro a puerta de vidrio) */
 .climb-stairs-anim {
-  left: 52%;
+  left: 53%;
   bottom: 4%;
-  transform: translateX(-50%) scale(1.30);
+  transform: translateX(-50%) scale(1.20);
   animation: climb-stairs-walk 4.2s linear forwards;
 }
 
 @keyframes climb-stairs-walk {
   0% {
-    left: 52%;
+    left: 53%;
     bottom: 4%;
-    transform: translateX(-50%) scale(1.20) translateY(0) rotate(-3deg);
+    transform: translateX(-50%) scale(1.20) translateY(0) rotate(-2deg);
     opacity: 1;
   }
-  20% {
-    left: 50.5%;
-    bottom: 9%;
-    transform: translateX(-50%) scale(1.05) translateY(-5px) rotate(3deg);
+  28% {
+    /* Flecha 1: Diagonal hacia la base de la escalinata a la derecha */
+    left: 59%;
+    bottom: 12%;
+    transform: translateX(-50%) scale(1.02) translateY(-4px) rotate(3deg);
     opacity: 1;
   }
-  40% {
-    left: 49.0%;
-    bottom: 14%;
-    transform: translateX(-50%) scale(0.92) translateY(0) rotate(-3deg);
+  62% {
+    /* Flecha 2: Subiendo escalones hacia el descanso */
+    left: 55%;
+    bottom: 22%;
+    transform: translateX(-50%) scale(0.80) translateY(-4px) rotate(-3deg);
     opacity: 1;
   }
-  60% {
-    left: 47.8%;
-    bottom: 19%;
-    transform: translateX(-50%) scale(0.78) translateY(-5px) rotate(3deg);
-    opacity: 1;
-  }
-  80% {
-    left: 46.8%;
-    bottom: 23%;
-    transform: translateX(-50%) scale(0.65) translateY(0) rotate(-2deg);
-    opacity: 0.85;
-  }
-  92% {
-    left: 46.2%;
+  86% {
+    /* Flecha 3: Desplazamiento horizontal a la izquierda hacia la puerta bajo Aula Magna */
+    left: 49%;
     bottom: 25.5%;
-    transform: translateX(-50%) scale(0.55) translateY(-3px) rotate(1deg);
-    opacity: 0.35;
+    transform: translateX(-50%) scale(0.60) translateY(0) rotate(1deg);
+    opacity: 0.90;
   }
   100% {
-    left: 46.0%;
+    /* Cruce final de la puerta de vidrio */
+    left: 46%;
     bottom: 26.5%;
-    transform: translateX(-50%) scale(0.48) translateY(0) rotate(0deg);
+    transform: translateX(-50%) scale(0.50) translateY(0) rotate(0deg);
     opacity: 0;
   }
+}
+
+/* ========================================================
+   ESCENA 2.5: SALA TECNOLÓGICA 3D (ANATOMÍA Y SIMULACIÓN)
+   ======================================================== */
+.sala-3d-screen {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  background-image: url('sala_3d_upms_pixel.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.rpg-stage.stage-sala-3d {
+  background-image: linear-gradient(rgba(10, 15, 29, 0.45), rgba(10, 15, 29, 0.65)), url('sala_3d_upms_pixel.jpg');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.stage-location-badge {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.88);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--font-retro);
+  font-size: 0.70rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  z-index: 4;
+}
+
+/* Panel Flotante de Pista No Destructiva */
+.hint-card-panel {
+  position: relative;
+  margin: 10px 0 12px;
+  background: #111827;
+  border: 2px solid #eab308;
+  border-radius: 10px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 24px rgba(234, 179, 8, 0.25);
+  animation: fadeIn 0.25s ease-out;
+  z-index: 10;
+}
+
+.hint-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #374151;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  font-family: var(--font-retro);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fde047;
+}
+
+.btn-close-hint {
+  background: #374151;
+  border: 1px solid #4b5563;
+  color: #f3f4f6;
+  font-family: var(--font-retro);
+  font-size: 0.70rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-close-hint:hover {
+  background: #ef4444;
+  border-color: #dc2626;
+  color: #fff;
+}
+
+.hint-card-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.90rem;
+  line-height: 1.5;
+  color: #fef08a;
+}
+
+/* Botón Siguiente Caso Clínico */
+.next-case-btn {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+  border: 2px solid #34d399 !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  grid-column: 1 / -1;
+  padding: 14px 20px !important;
+  font-size: 0.95rem !important;
+  animation: pulse-next 1.2s infinite alternate;
+}
+
+@keyframes pulse-next {
+  0% { transform: scale(1); box-shadow: 0 0 10px rgba(16, 185, 129, 0.4); }
+  100% { transform: scale(1.02); box-shadow: 0 0 20px rgba(52, 211, 153, 0.8); }
 }
 
 /* Animación: Caminata al mostrador de recepción - Escalado al diseño (recuadro rojo alto: ~200px alto x 115px ancho) */
@@ -1513,6 +1611,181 @@ body {
 .btn-action-logbook:hover {
   transform: scale(1.02);
   box-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
+}
+
+/* ========================================================
+   DISEÑO ADAPTATIVO / JUEGO ADAPTATIVO (RESPONSIVE ENGINE)
+   Adaptación dinámica según resolución, orientación y aspect ratio
+   ======================================================== */
+
+/* Adaptabilidad del contenedor Arcade en pantallas medianas y grandes */
+@media (min-width: 1024px) {
+  .rpg-cabinet {
+    max-width: min(1040px, 92vw);
+  }
+}
+
+/* Tablets y pantallas medianas (<= 900px) */
+@media (max-width: 900px) {
+  .rpg-cabinet {
+    max-width: 96vw;
+    border-radius: 14px;
+    margin: 4px auto;
+  }
+
+  .entrance-viewport,
+  .reception-screen,
+  .sala-3d-screen {
+    height: clamp(380px, 50vh, 520px);
+  }
+
+  .custom-split {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .dialog-box {
+    padding: 12px 14px;
+  }
+}
+
+/* Teléfonos y pantallas angostas (<= 680px) */
+@media (max-width: 680px) {
+  body {
+    padding: 4px;
+  }
+
+  .rpg-cabinet {
+    border-radius: 10px;
+    border-width: 2px;
+  }
+
+  /* HUD compacto en móvil */
+  .rpg-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 14px;
+  }
+
+  .hud-stats {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    gap: 8px;
+  }
+
+  .stat-val-hp {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+  }
+
+  /* Escenario y Cama en móvil */
+  .rpg-stage {
+    min-height: 220px;
+    padding: 10px 12px 16px;
+  }
+
+  .patient-stage-actor svg {
+    max-width: 190px;
+    height: auto;
+  }
+
+  .stage-student-pixel svg {
+    max-width: 64px;
+    height: auto;
+  }
+
+  /* Barra de Semiología en grilla 2x2 */
+  .semiology-toolbar {
+    padding: 8px 12px;
+  }
+
+  .semiology-btns-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .btn-semiology {
+    padding: 8px 6px;
+    font-size: 0.70rem;
+  }
+
+  /* Diálogo del profesor en móvil */
+  .dialog-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .prof-avatar-frame {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+  }
+
+  .dialog-content {
+    width: 100%;
+  }
+
+  .prof-speech {
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  /* Opciones clínicas apiladas a 1 sola columna para lectura táctil óptima */
+  .action-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .action-btn {
+    padding: 12px 14px;
+    font-size: 0.84rem;
+  }
+
+  /* Barra de herramientas inferior */
+  .stage-footer {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .btn-tool {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    font-size: 0.75rem;
+  }
+
+  /* Cinemáticas y transiciones en vertical */
+  .entrance-viewport,
+  .reception-screen,
+  .sala-3d-screen {
+    height: 360px;
+    padding: 12px;
+  }
+
+  .reception-badge {
+    font-size: 0.72rem;
+    padding: 6px 10px;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+/* Modo Ultra-ancho / Pantallas Ultrawide (21:9 o 32:9) */
+@media (min-aspect-ratio: 21/9) {
+  body {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rpg-cabinet {
+    max-height: 94vh;
+  }
 }
 
 

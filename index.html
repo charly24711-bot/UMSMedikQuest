@@ -149,7 +149,6 @@
             <span class="custom-label">ATUENDO CLÍNICO / UNIFORME:</span>
             <div class="choice-row" id="outfitChoices">
               <button class="choice-btn active" data-type="outfit" data-val="guardapolvo">🥼 Guardapolvo Blanco</button>
-              <button class="choice-btn" data-type="outfit" data-val="ambo_celeste">👕 Ambo Celeste</button>
               <button class="choice-btn" data-type="outfit" data-val="ambo_verde">👕 Ambo Verde Quirúrgico</button>
               <button class="choice-btn" data-type="outfit" data-val="ambo_upms">🟢 Ambo Verde UPMS</button>
             </div>
@@ -227,7 +226,35 @@
 
       <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
         <button id="btnStartRotation" class="btn-start" style="padding: 12px 20px; font-size: 0.85rem;">
-          <span>🩺</span> PASAR A LAS AULAS Y PRÁCTICAS CLÍNICAS ▶
+          <span>🔬</span> PASAR A LA SALA TECNOLÓGICA 3D ▶
+        </button>
+      </div>
+    </div>
+
+    <!-- ========================================================
+         ESCENA 2.5: SALA TECNOLÓGICA 3D (ANATOMÍA Y SIMULACIÓN DIGITAL)
+         ======================================================== -->
+    <div id="screenSala3D" class="sala-3d-screen" style="display: none;">
+      <span class="reception-badge">📍 SALA TECNOLÓGICA 3D • MESA DE ANATOMÍA VIRTUAL UPMS</span>
+
+      <section class="dialog-box" style="margin: 0; border-radius: 14px; border: 2px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.9);">
+        <div class="prof-avatar-frame" style="border-color: var(--gold);">
+          <img src="dr_rene_amarilla_pixel.jpg" alt="Dr. Ernaldo René Amarilla">
+        </div>
+        <div class="dialog-content">
+          <div>
+            <span class="prof-name" style="color: var(--gold);">DR. ERNALDO RENÉ AMARILLA</span>
+            <span class="case-subject-badge" style="border-color: var(--gold); color: var(--gold);">CÁTEDRA DE ANATOMÍA I • SIMULACIÓN DIGITAL</span>
+          </div>
+          <p class="prof-speech" id="sala3DSpeech">
+            ¡Bienvenidos a la Sala Tecnológica 3D! Aquí sincronizamos la mesa digital táctil de 65'' con los 3 televisores murales para disección virtual y razonamiento clínico de alta fidelidad.
+          </p>
+        </div>
+      </section>
+
+      <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
+        <button id="btnEnterClinicalFrom3D" class="btn-start" style="padding: 12px 20px; font-size: 0.85rem;">
+          <span>🩺</span> COMENZAR ROTACIÓN CLÍNICA ▶
         </button>
       </div>
     </div>
@@ -240,7 +267,7 @@
       <header class="rpg-header">
         <div class="hud-title">
           <span>🩺 <span style="color: #fbbf24; font-weight: 900;">UMS</span> MEDIQUEST: 1° SEMESTRE</span>
-          <span class="game-version-badge" style="margin-left: 8px;">v1.4.4</span>
+          <span class="game-version-badge" style="margin-left: 8px;">v1.4.5</span>
         </div>
         <div class="hud-stats">
           <div class="stat-item streak-stat-wrap" id="hudStreakItem" style="display: none;">
@@ -249,7 +276,7 @@
           </div>
           <div class="stat-item">
             <span class="stat-label">ENERGÍA:</span>
-            <span class="stat-val-hp" id="hpText">❤️❤️❤️</span>
+            <span class="stat-val-hp" id="hpText">❤️❤️❤️❤️❤️</span>
           </div>
           <div class="stat-item">
             <span class="stat-label">XP:</span>
@@ -259,7 +286,10 @@
       </header>
 
       <!-- Escenario Clínico -->
-      <main class="rpg-stage">
+      <main class="rpg-stage" id="rpgMainStage">
+        <!-- Badge de Ubicación Dinámica -->
+        <div id="stageLocationBadge" class="stage-location-badge">📍 SALA TECNOLÓGICA 3D</div>
+
         <!-- Banner de Racha / Guardia Impecable -->
         <div id="streakBanner" class="streak-banner" style="display: none;"></div>
 
@@ -308,6 +338,17 @@
         </div>
         <div class="semi-findings-body" id="semiologyFindingsBody">
           <!-- Hallazgo semiológico cargado dinámicamente -->
+        </div>
+      </div>
+
+      <!-- Panel Flotante / Tarjeta de Pista Pedagógica (No destructiva) -->
+      <div id="hintCard" class="hint-card-panel" style="display: none;">
+        <div class="hint-card-header">
+          <span id="hintCardTitle">💡 PISTA CLÍNICA DEL PROFESOR</span>
+          <button id="btnCloseHintCard" class="btn-close-hint">✕ VOLVER A LAS OPCIONES</button>
+        </div>
+        <div class="hint-card-body" id="hintCardBody">
+          <!-- Pista cargada dinámicamente -->
         </div>
       </div>
 

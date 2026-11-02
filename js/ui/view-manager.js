@@ -18,6 +18,7 @@
         customizer: document.getElementById('screenCustomizer'),
         entrance: document.getElementById('screenEntranceWalk'),
         reception: document.getElementById('screenReception'),
+        sala3d: document.getElementById('screenSala3D'),
         game: document.getElementById('screenGame')
       };
 
@@ -36,7 +37,17 @@
         optionsContainer: document.getElementById('optionsContainer'),
         cinemaSubtitle: document.getElementById('cinemaSubtitle'),
         receptionSpeech: document.getElementById('receptionSpeech'),
-        actorTag: document.querySelector('.actor-tag')
+        sala3DSpeech: document.getElementById('sala3DSpeech'),
+        actorTag: document.querySelector('.actor-tag'),
+        rpgMainStage: document.getElementById('rpgMainStage'),
+        stageLocationBadge: document.getElementById('stageLocationBadge')
+      };
+
+      this.hintCard = {
+        panel: document.getElementById('hintCard'),
+        title: document.getElementById('hintCardTitle'),
+        body: document.getElementById('hintCardBody'),
+        closeBtn: document.getElementById('btnCloseHintCard')
       };
 
       this.customizer = {
@@ -236,6 +247,22 @@
       this.clearActiveSemiologyBtns();
     }
 
+    showHintCard(text, onCharSound) {
+      if (!this.hintCard.panel) return;
+      this.hintCard.panel.style.display = 'block';
+      if (this.hintCard.body) {
+        this.typewriter.type(this.hintCard.body, text, 12, {
+          onCharSound
+        });
+      }
+    }
+
+    hideHintCard() {
+      if (this.hintCard.panel) {
+        this.hintCard.panel.style.display = 'none';
+      }
+    }
+
     updateHUD(hp, xp, streak = 0, multiplier = 1.0) {
       if (this.hud.xp) {
         this.hud.xp.textContent = String(xp).padStart(4, '0');
@@ -308,6 +335,26 @@
 
       this.renderPatientBed();
       this.hideSemiologyFinding();
+      this.hideHintCard();
+
+      // Adaptación dinámica de escenario: Sala 3D para Anatomía / Simulación
+      const isSala3D = currentCase.materiaId === 'anatomia' ||
+                       (currentCase.unidad && currentCase.unidad.toUpperCase().includes('ANATOMÍA')) ||
+                       (currentCase.docente && currentCase.docente.nombre.includes('Amarilla'));
+
+      if (this.stage.rpgMainStage) {
+        if (isSala3D) {
+          this.stage.rpgMainStage.classList.add('stage-sala-3d');
+        } else {
+          this.stage.rpgMainStage.classList.remove('stage-sala-3d');
+        }
+      }
+
+      if (this.stage.stageLocationBadge) {
+        this.stage.stageLocationBadge.textContent = isSala3D
+          ? '📍 SALA TECNOLÓGICA 3D • MESA VIRTUAL UPMS'
+          : '📍 SALA DE SIMULACIÓN CLÍNICA';
+      }
 
       if (this.stage.profImg) this.stage.profImg.src = currentCase.docente.avatar;
       if (this.stage.profName) this.stage.profName.textContent = currentCase.docente.nombre.toUpperCase();
@@ -338,6 +385,21 @@
         btn.addEventListener('click', () => onSelectCallback(idx));
         this.stage.optionsContainer.appendChild(btn);
       });
+    }
+
+    renderNextCaseButton(onNextCallback) {
+      if (!this.stage.optionsContainer) return;
+      let nextBtn = document.getElementById('btnNextCaseDirect');
+      if (!nextBtn) {
+        nextBtn = document.createElement('button');
+        nextBtn.id = 'btnNextCaseDirect';
+        nextBtn.className = 'action-btn next-case-btn';
+        nextBtn.innerHTML = `<span>▶</span><span>SIGUIENTE CASO CLÍNICO (Avanzar ahora) ▶</span>`;
+        nextBtn.addEventListener('click', () => {
+          if (typeof onNextCallback === 'function') onNextCallback();
+        });
+        this.stage.optionsContainer.appendChild(nextBtn);
+      }
     }
 
     clearOptions() {

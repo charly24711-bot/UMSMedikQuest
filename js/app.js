@@ -32,10 +32,13 @@
       const initialCases = (MedikQuest.Data && typeof MedikQuest.Data.getRandomRotation === 'function')
         ? MedikQuest.Data.getRandomRotation(10)
         : MedikQuest.Data.getFlatCases();
-      this.engine = new MedikQuest.GameEngine(initialCases);
+      this.engine = new MedikQuest.GameEngine(initialCases, { maxHp: 5 });
 
       this.cinematicTimer = null;
       this.entranceTimer = null;
+      this._advanceTimer = null;
+      this._hasAdvanced = false;
+      this._currentOutcome = null;
       this.cinematicStep = 0;
       this.isAnswering = false;
       this.exploredCases = new Set();
@@ -91,16 +94,43 @@
         btnStartCust.addEventListener('click', () => this.openCustomizer());
       }
 
-      // Start Rotation from Reception
+      // Start Rotation from Reception -> Enters Sala 3D
       const btnStartRot = document.getElementById('btnStartRotation');
       if (btnStartRot) {
-        btnStartRot.addEventListener('click', () => this.startRotation());
+        btnStartRot.addEventListener('click', () => this.enterSala3D());
+      }
+
+      // Enter Clinical Rotation from Sala 3D
+      const btnEnter3D = document.getElementById('btnEnterClinicalFrom3D');
+      if (btnEnter3D) {
+        btnEnter3D.addEventListener('click', () => this.startRotation());
       }
 
       // Hint
       const btnHint = document.getElementById('btnHint');
       if (btnHint) {
         btnHint.addEventListener('click', () => this.showHint());
+      }
+
+      // Close Hint Card
+      const btnCloseHint = document.getElementById('btnCloseHintCard');
+      if (btnCloseHint) {
+        btnCloseHint.addEventListener('click', () => {
+          this.sound.play('blip');
+          this.view.hideHintCard();
+        });
+      }
+
+      // Click on professor speech to advance or skip typewriter
+      const speechBox = document.getElementById('profSpeech');
+      if (speechBox) {
+        speechBox.addEventListener('click', () => {
+          if (this._currentOutcome && this._currentOutcome.isCorrect) {
+            this.advanceToNextCase(this._currentOutcome);
+          } else if (this.typewriter.isTyping) {
+            this.typewriter.skip();
+          }
+        });
       }
 
       // Libreta de Prácticas
@@ -134,9 +164,20 @@
         btnMenu.addEventListener('click', () => this.skipToTitle());
       }
 
-      // Keyboard support (A, B, C, D or 1, 2, 3, 4)
+      // Keyboard support (A, B, C, D or 1, 2, 3, 4, Enter/Space to advance)
       window.addEventListener('keydown', (e) => {
-        if (this.engine.getState().screen !== 'game' || this.isAnswering || this.typewriter.isTyping) {
+        if (this.engine.getState().screen !== 'game') return;
+
+        if (this._currentOutcome && this._currentOutcome.isCorrect && (e.key === 'Enter' || e.key === ' ')) {
+          e.preventDefault();
+          this.advanceToNextCase(this._currentOutcome);
+          return;
+        }
+
+        if (this.isAnswering || this.typewriter.isTyping) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            this.typewriter.skip();
+          }
           return;
         }
 
@@ -361,6 +402,25 @@
       });
     }
 
+    enterSala3D() {
+      if (this.entranceTimer) {
+        clearTimeout(this.entranceTimer);
+        this.entranceTimer = null;
+      }
+      this.sound.play('fanfare');
+      this.view.showScreen('sala3d');
+
+      const studentName = this.profile.getName();
+      const introText =
+        `¡Hola, ${studentName}! Te doy la bienvenida a la Sala Tecnológica 3D de la Universidad Privada María Serrana.\n\n` +
+        `En este laboratorio interactivo sincronizamos la mesa digital táctil de 65 pulgadas con los 3 televisores murales para la disección anatómica virtual y el razonamiento clínico.\n\n` +
+        `Analizá cada estructura anatómica con precisión y criterio profesional. ¡Iniciemos tu rotación!`;
+
+      this.typewriter.type('sala3DSpeech', introText, 14, {
+        onCharSound: () => this.sound.play('blip')
+      });
+    }
+
     _bindSemiologyEvents() {
       // Semiology Toolbar Buttons
       const toolbar = document.getElementById('semiologyToolbar');
@@ -536,26 +596,55 @@
       }
 
       this.isAnswering = false;
+      this._hasAdvanced = false;
+      this._currentOutcome = null;
+      if (this._advanceTimer) {
+        clearTimeout(this._advanceTimer);
+        this._advanceTimer = null;
+      }
+
+      // Re-habilitar botón de pista
+      const btnHint = document.getElementById('btnHint');
+      if (btnHint) {
+        btnHint.disabled = false;
+        btnHint.style.opacity = '1';
+        btnHint.style.cursor = 'pointer';
+      }
+
+      // 1. Renderizar el caso clínico en el diálogo
       this.view.renderCase(
         currentCase,
-        () => {
-          this.view.renderOptions(currentCase.opciones, (idx) => this.handleAnswerSelection(idx));
-        },
+        () => {},
         () => this.sound.play('blip')
       );
+
+      // 2. Renderizar las opciones INMEDIATAMENTE (nunca quedan vacías)
+      this.view.renderOptions(currentCase.opciones, (idx) => this.handleAnswerSelection(idx));
     }
 
     handleAnswerSelection(optionIndex) {
-      if (this.isAnswering || this.typewriter.isTyping) return;
+      if (this.isAnswering) return;
+      if (this.typewriter.isTyping) {
+        this.typewriter.skip();
+      }
       this.isAnswering = true;
       this.engine.submitAnswer(optionIndex);
     }
 
     _handleAnswerOutcome(outcome) {
+      this._currentOutcome = outcome;
       this.view.markOptionResult(outcome.optionIndex, outcome.isCorrect);
       this.view.updateHUD(outcome.remainingHp, outcome.totalXp, outcome.streak, outcome.multiplier);
 
       if (outcome.isCorrect) {
+        // Deshabilitar botón de pista durante transición
+        const btnHint = document.getElementById('btnHint');
+        if (btnHint) {
+          btnHint.disabled = true;
+          btnHint.style.opacity = '0.5';
+          btnHint.style.cursor = 'not-allowed';
+        }
+
         const currentCase = this.engine.getCurrentCase();
         let stampAwarded = false;
         if (currentCase && currentCase.materiaId && this.profile && typeof this.profile.addStamp === 'function') {
@@ -580,28 +669,22 @@
             : '';
 
         const stampBadge = stampAwarded ? '📜 ¡La cátedra ha firmado y sellado tu libreta de guardia!\n' : '';
-
         const feedbackText = `${stampBadge}${streakBadge}¡CORRECTO! ${outcome.feedback}`;
+
         this.view.renderFeedback(
           feedbackText,
-          () => {
-            setTimeout(() => {
-              if (outcome.isVictory) {
-                this.sound.play('fanfare');
-                this.view.renderVictory(
-                  this.profile,
-                  outcome.totalXp,
-                  () => this.skipToTitle(),
-                  () => this.sound.play('blip')
-                );
-              } else {
-                this.engine.advanceCase();
-                this.loadCurrentCase();
-              }
-            }, 1800);
-          },
+          () => {},
           () => this.sound.play('blip')
         );
+
+        // Botón directo para avanzar sin esperar
+        this.view.renderNextCaseButton(() => this.advanceToNextCase(outcome));
+
+        // Temporizador de avance automático garantizado
+        this._advanceTimer = setTimeout(() => {
+          this.advanceToNextCase(outcome);
+        }, 2200);
+
       } else {
         if (outcome.streakBroken) {
           this.sound.play('streak_lost');
@@ -616,7 +699,7 @@
           const correctOpt = currentCase ? currentCase.opciones.find(o => o.correcta) : null;
           const solText = correctOpt ? `\n(La conducta clínica esperada era: "${correctOpt.texto}")` : '';
 
-          const gameOverMsg = `❌ ${outcome.feedback}${streakLostMsg}${solText}\n\n¡Te quedaste sin energía, ${this.profile.getName()}! Repasá los fundamentos e intentá una nueva rotación.`;
+          const gameOverMsg = `❌ ${outcome.feedback}${streakLostMsg}${solText}\n\n¡Agotaste los 5 corazones de energía, ${this.profile.getName()}! Repasá los fundamentos e intentá una nueva rotación.`;
           this.view.renderFeedback(
             gameOverMsg,
             () => {
@@ -626,7 +709,7 @@
           );
         } else {
           const heartsLeft = '❤️'.repeat(Math.max(0, outcome.remainingHp));
-          const tryAgainMsg = `⚠️ ${outcome.feedback}${streakLostMsg}\n\nPerdiste 1 vida (${heartsLeft} restantes). Descartá esa opción errónea y razoná cuál es la conducta indicada:`;
+          const tryAgainMsg = `⚠️ ${outcome.feedback}${streakLostMsg}\n\nPerdiste 1 vida (${heartsLeft} restantes de 5). Descartá esa opción errónea y razoná cuál es la conducta indicada:`;
           this.view.renderFeedback(
             tryAgainMsg,
             () => {
@@ -638,13 +721,46 @@
       }
     }
 
+    advanceToNextCase(outcome = this._currentOutcome) {
+      if (this._hasAdvanced) return;
+      this._hasAdvanced = true;
+      if (this._advanceTimer) {
+        clearTimeout(this._advanceTimer);
+        this._advanceTimer = null;
+      }
+
+      if (outcome && outcome.isVictory) {
+        this.sound.play('fanfare');
+        this.view.renderVictory(
+          this.profile,
+          outcome.totalXp,
+          () => this.skipToTitle(),
+          () => this.sound.play('blip')
+        );
+      } else {
+        this.engine.advanceCase();
+        this.loadCurrentCase();
+      }
+    }
+
     showHint() {
       const currentCase = this.engine.getCurrentCase();
       if (!currentCase || !currentCase.pistaDocente || this.isAnswering) return;
 
-      this.view.renderFeedback(
-        `💡 PISTA DEL PROFESOR: "${currentCase.pistaDocente}"`,
-        null,
+      // Si el texto de la pregunta aún se está escribiendo, completarlo de inmediato
+      if (this.typewriter && this.typewriter.isTyping) {
+        this.typewriter.skip();
+      }
+
+      // Asegurar que las opciones sigan estando presentes y activas
+      if (!this.view.stage?.optionsContainer?.children?.length) {
+        this.view.renderOptions(currentCase.opciones, (idx) => this.handleAnswerSelection(idx));
+      }
+
+      // Mostrar la pista en el panel flotante no destructivo
+      this.sound.play('blip');
+      this.view.showHintCard(
+        `"${currentCase.pistaDocente}"`,
         () => this.sound.play('blip')
       );
     }

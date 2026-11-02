@@ -11,7 +11,7 @@
 
   class GameEngine {
     constructor(cases = [], options = {}) {
-      this.maxHp = options.maxHp || 3;
+      this.maxHp = options.maxHp || 5;
       this.pointsPerCorrect = options.pointsPerCorrect || 100;
       this.listeners = new Set();
 
