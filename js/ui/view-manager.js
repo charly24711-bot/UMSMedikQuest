@@ -352,8 +352,8 @@
 
       if (this.stage.stageLocationBadge) {
         this.stage.stageLocationBadge.textContent = isSala3D
-          ? '📍 SALA TECNOLÓGICA 3D • MESA VIRTUAL UPMS'
-          : '📍 SALA DE SIMULACIÓN CLÍNICA';
+          ? '📍 SALA DE SIMULACIÓN 3D • MESA VIRTUAL'
+          : '📍 SALA DE SIMULACIÓN 3D';
       }
 
       if (this.stage.profImg) this.stage.profImg.src = currentCase.docente.avatar;
@@ -382,7 +382,10 @@
           <span class="action-key">${keys[idx] || idx + 1}</span>
           <span>${opt.texto}</span>
         `;
-        btn.addEventListener('click', () => onSelectCallback(idx));
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          onSelectCallback(idx);
+        });
         this.stage.optionsContainer.appendChild(btn);
       });
     }
@@ -395,7 +398,8 @@
         nextBtn.id = 'btnNextCaseDirect';
         nextBtn.className = 'action-btn next-case-btn';
         nextBtn.innerHTML = `<span>▶</span><span>SIGUIENTE CASO CLÍNICO (Avanzar ahora) ▶</span>`;
-        nextBtn.addEventListener('click', () => {
+        nextBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
           if (typeof onNextCallback === 'function') onNextCallback();
         });
         this.stage.optionsContainer.appendChild(nextBtn);
@@ -418,6 +422,16 @@
           buttons[index].style.cursor = 'not-allowed';
           buttons[index].style.pointerEvents = 'none';
         }
+      }
+      // Aseguramos que todas las demás opciones no correctas ni erradas permanezcan activas
+      if (!isCorrect && buttons) {
+        buttons.forEach((b, i) => {
+          if (i !== index && !b.classList.contains('wrong')) {
+            b.disabled = false;
+            b.style.pointerEvents = 'auto';
+            b.style.cursor = 'pointer';
+          }
+        });
       }
     }
 

@@ -174,22 +174,21 @@
           return;
         }
 
-        if (this.isAnswering || this.typewriter.isTyping) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            this.typewriter.skip();
-          }
-          return;
-        }
-
         const key = e.key.toUpperCase();
         const keyMap = { 'A': 0, '1': 0, 'B': 1, '2': 1, 'C': 2, '3': 2, 'D': 3, '4': 3 };
         if (key in keyMap) {
           const idx = keyMap[key];
           const buttons = this.view.stage?.optionsContainer?.querySelectorAll('.action-btn');
-          if (buttons && buttons[idx] && buttons[idx].disabled) {
+          if (buttons && buttons[idx] && (buttons[idx].disabled || buttons[idx].classList.contains('wrong'))) {
             return;
           }
           this.handleAnswerSelection(idx);
+          return;
+        }
+
+        if (this.typewriter.isTyping && (e.key === 'Enter' || e.key === ' ')) {
+          this.typewriter.skip();
+          return;
         }
       });
     }
@@ -623,10 +622,22 @@
     }
 
     handleAnswerSelection(optionIndex) {
-      if (this.isAnswering) return;
-      if (this.typewriter.isTyping) {
+      // 1. Si la opción ya fue descartada o está deshabilitada, ignorar
+      const buttons = this.view.stage?.optionsContainer?.querySelectorAll('.action-btn');
+      if (buttons && buttons[optionIndex] && (buttons[optionIndex].disabled || buttons[optionIndex].classList.contains('wrong'))) {
+        return;
+      }
+
+      // 2. Si ya acertó o el caso ya avanzó, no procesar más respuestas
+      if (this._hasAdvanced || (this._currentOutcome && this._currentOutcome.isCorrect)) {
+        return;
+      }
+
+      // 3. Si el typewriter estaba escribiendo feedback previo, saltarlo al instante
+      if (this.typewriter && this.typewriter.isTyping) {
         this.typewriter.skip();
       }
+
       this.isAnswering = true;
       this.engine.submitAnswer(optionIndex);
     }
@@ -691,6 +702,9 @@
         } else {
           this.sound.play('wrong');
         }
+
+        // LIBERACIÓN INMEDIATA DEL ESTADO: El alumno puede elegir otra opción de inmediato
+        this.isAnswering = false;
 
         const streakLostMsg = outcome.streakBroken ? '\n(Se interrumpió la racha de guardia)' : '';
 
